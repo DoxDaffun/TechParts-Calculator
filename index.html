@@ -85,7 +85,10 @@
       .then(response => response.text())
       .then(text => {
         const lines = text.trim().split('\n');
-        console.log('CSV 2行目:', lines[1]);
+        console.log('=== CSV ヘッダー ===');
+        console.log(lines[0]);   // 例: "Const1,Const2,Const3,Chip,Total"
+        console.log('=== CSV 2行目（サンプルデータ） ===');
+        console.log(lines[1]);
         for (let i = 1; i < lines.length; i++) {
           const [c1, c2, c3, chipStr, totalStr] = lines[i].split(',');
           const parts = [c1, c2, c3].sort().join(',');
