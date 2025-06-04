@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>Drone & Soccer Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- タイトル -->
+  <h1>共振最適化ツール</h1>
+
+  <!-- 説明・補足欄 -->
+  <div class="description">
+    <p>
+      左の入力欄に、「マイパーツ」にあるレジェンド以上の各パーツと、合計共振チップ数の所持数を入力し、
+      <strong>Calculate</strong> ボタンを押してください。  
+      “双生ドローン” と “双生サッカー” の最適なパーツ組み合わせとチップ数、Total共振エネルギー・Target共振エネルギー を表示します。<br>
+      <em>※パーツ合計が 6 未満の場合は エピック+3 を使って計算を行います。</em>
+    </p>
+  </div>
+
+  <!-- 入力欄エリア -->
+  <div class="inputs">
+    <!-- E -->
+    <div class="item">
+      <img src="images/E.png" alt="E" />
+      <div><input id="inputE" type="number" min="0" value="0" /></div>
+      <label for="inputE">エターナル</label>
+    </div>
+    <!-- L0 -->
+    <div class="item">
+      <img src="images/L0.png" alt="L0" />
+      <div><input id="inputL0" type="number" min="0" value="0" /></div>
+      <label for="inputL0">レジェンド</label>
+    </div>
+    <!-- L1 -->
+    <div class="item">
+      <img src="images/L1.png" alt="L1" />
+      <div><input id="inputL1" type="number" min="0" value="0" /></div>
+      <label for="inputL1">レジェンド+1</label>
+    </div>
+    <!-- L2 -->
+    <div class="item">
+      <img src="images/L2.png" alt="L2" />
+      <div><input id="inputL2" type="number" min="0" value="0" /></div>
+      <label for="inputL2">レジェンド+2</label>
+    </div>
+    <!-- L3 -->
+    <div class="item">
+      <img src="images/L3.png" alt="L3" />
+      <div><input id="inputL3" type="number" min="0" value="0" /></div>
+      <label for="inputL3">レジェンド+3</label>
+    </div>
+    <!-- L4 -->
+    <div class="item">
+      <img src="images/L4.png" alt="L4" />
+      <div><input id="inputL4" type="number" min="0" value="0" /></div>
+      <label for="inputL4">レジェンド+4</label>
+    </div>
+
+    <!-- Chip -->
+    <div class="item chip">
+      <img src="images/chip_icon.png" alt="Chip" />
+      <div><input id="inputChip" type="number" min="0" max="50" value="0" /></div>
+      <label for="inputChip">共振チップ</label>
+    </div>
+  </div>
+
+  <!-- Calculate ボタン -->
+  <button onclick="calculate()">Calculate</button>
+
+  <!-- 結果表示エリア -->
+  <div class="result" id="resultArea">
+    <!-- JavaScript -->
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // ─── CSV をfetchしてルックアップを作成 ───
+    let lookup = {};
+    const targets = [900, 1200, 1650, 2100, 2550, 3000, 4500];
+
+    fetch('Lookup_Table_for_Consts_and_Chip.csv')
+      .then(response => response.text())
+      .then(text => {
+        const lines = text.trim().split('\n');
+        for (let i = 1; i < lines.length; i++) {
+          const [c1, c2, c3, chipStr, totalStr] = lines[i].split(',');
+          const parts = [c1, c2, c3].sort().join(',');
+          const chip = parseInt(chipStr);
+          const total = parseFloat(totalStr);
+          let target_index = -1;
+          for (let j = 0; j < targets.length; j++) {
+            if (total >= targets[j]) target_index = j;
+          }
+          lookup[`${parts}|${chip}`] = { total, target_index };
+        }
+      })
+      .catch(err => console.error('CSV 読み込みエラー:', err));
+
+    // 入力値を取得
+    function getPartCounts() {
+      return {
+        'E': parseInt(document.getElementById('inputE').value) || 0,
+        'L0': parseInt(document.getElementById('inputL0').value) || 0,
+        'L1': parseInt(document.getElementById('inputL1').value) || 0,
+        'L2': parseInt(document.getElementById('inputL2').value) || 0,
+        'L3': parseInt(document.getElementById('inputL3').value) || 0,
+        'L4': parseInt(document.getElementById('inputL4').value) || 0
+      };
+    }
+
+    // target 用最小 total 探索
+    function findMinTotalForTarget(partCounts, availChip, targetIndex) {
+      let best = { total: Infinity, parts: null, chip: null };
+      Object.keys(lookup).forEach(key => {
+        const [partsStr, chipStr] = key.split('|');
+        const chip = parseInt(chipStr);
+        const info = lookup[key];
+        if (info.target_index !== targetIndex) return;
+        if (chip > availChip) return;
+        const parts = partsStr.split(',');
+        const used = {};
+        let ok = true;
+        parts.forEach(p => {
+          if (p !== 'Y') {
+            used[p] = (used[p] || 0) + 1;
+            if (used[p] > (partCounts[p] || 0)) ok = false;
+          }
+        });
+        if (!ok) return;
+        if (info.total < best.total) {
+          best = { total: info.total, parts: parts, chip: chip };
+        }
+      });
+      return best.parts ? best : null;
+    }
+
+    // target 無視で total 最大化
+    function findBestComboWithoutTarget(partCounts, availChip) {
+      let best = { total: -1, parts: null, chip: null };
+      const candidates = ['E','L0','L1','L2','L3','L4','Y'];
+      for (let i = 0; i < candidates.length; i++) {
+        for (let j = i; j < candidates.length; j++) {
+          for (let k = j; k < candidates.length; k++) {
+            const combo = [candidates[i], candidates[j], candidates[k]];
+            const used = {};
+            let ok = true;
+            combo.forEach(p => {
+              if (p !== 'Y') {
+                used[p] = (used[p] || 0) + 1;
+                if (used[p] > (partCounts[p] || 0)) ok = false;
+              }
+            });
+            if (!ok) continue;
+            const sortedParts = combo.slice().sort().join(',');
+            for (let chip = 0; chip <= availChip; chip++) {
+              const key = `${sortedParts}|${chip}`;
+              if (!(key in lookup)) continue;
+              const tot = lookup[key].total;
+              if (tot > best.total) {
+                best = { total: tot, parts: combo, chip: chip };
+              }
+            }
+          }
+        }
+      }
+      return best.parts ? best : null;
+    }
+
+    // Calculate ボタン押下
+    function calculate() {
+      const partCounts = getPartCounts();
+      const totalChip = parseInt(document.getElementById('inputChip').value) || 0;
+      const sumParts = ['E','L0','L1','L2','L3','L4']
+        .reduce((acc, p) => acc + (partCounts[p] || 0), 0);
+
+      let results = [];
+      if (sumParts >= 6) {
+        // ターゲットありロジック
+        let patterns = [];
+        const seen = new Set();
+
+        for (let ti = targets.length - 1; ti >= 0; ti--) {
+          const d = findMinTotalForTarget(partCounts, totalChip, ti);
+          if (!d) continue;
+          const dParts = d.parts;
+          const dChip  = d.chip;
+          const dTotal = d.total;
+          const dTarget= targets[ti];
+
+          const rem = { ...partCounts };
+          dParts.forEach(p => { if (p !== 'Y') rem[p]--; });
+          const remChip = totalChip - dChip;
+
+          let bestSoccer = null;
+          for (let sti = targets.length - 1; sti >= 0; sti--) {
+            const s = findMinTotalForTarget(rem, remChip, sti);
+            if (s) { bestSoccer = [sti, s]; break; }
+          }
+          let sParts, sChip, sTotal, sTarget;
+          if (bestSoccer) {
+            [ , s ] = bestSoccer;
+            sParts  = s.parts;
+            sChip   = s.chip;
+            sTotal  = s.total;
+            sTarget = targets[bestSoccer[0]];
+          } else {
+            sParts = null;
+            sChip = 0;
+            sTotal = 0;
+            sTarget= 0;
+          }
+
+          const key = `${dParts.join(',')}|${dChip}|${sParts ? sParts.join(',') : ''}|${sChip}`;
+          if (!seen.has(key)) {
+            seen.add(key);
+            patterns.push({
+              Drone: { parts: dParts, chip: dChip, total: dTotal, target: dTarget },
+              Soccer:{ parts: sParts, chip: sChip, total: sTotal, target: sTarget },
+              leftover: remChip - sChip
+            });
+          }
+        }
+
+        // フィルタリング：Drone.total > Soccer.total
+        patterns = patterns.filter(p => p.Drone.total > p.Soccer.total);
+
+        // フィルタリング：同じ Drone.target で Soccer.target 最大のみ
+        const bestByDrone = {};
+        patterns.forEach(p => {
+          const dT = p.Drone.target;
+          const sT = p.Soccer.target;
+          if (!(dT in bestByDrone) || sT > bestByDrone[dT].Soccer.target) {
+            bestByDrone[dT] = p;
+          }
+        });
+
+        results = Object.keys(bestByDrone)
+          .map(k => bestByDrone[k])
+          .sort((a, b) => a.Drone.target - b.Drone.target);
+
+      } else {
+        // ターゲットなし・Y必須ロジック
+        const d = findBestComboWithoutTarget(partCounts, totalChip);
+        if (d) {
+          const dParts = d.parts;
+          const dChip  = d.chip;
+          const dTotal = d.total;
+
+          const rem = { ...partCounts };
+          dParts.forEach(p => { if (p !== 'Y') rem[p]--; });
+          const remChip = totalChip - dChip;
+
+          const s = findBestComboWithoutTarget(rem, remChip);
+          if (s && dTotal > s.total) {
+            if (dParts.includes('Y') || s.parts.includes('Y')) {
+              results.push({
+                Drone: { parts: dParts, chip: dChip, total: dTotal },
+                Soccer:{ parts: s.parts, chip: s.chip, total: s.total },
+                leftover: remChip - s.chip
+              });
+            }
+          } else if (!s) {
+            if (dParts.includes('Y')) {
+              results.push({
+                Drone: { parts: dParts, chip: dChip, total: dTotal },
+                Soccer: null,
+                leftover: remChip
+              });
+            }
+          }
+        }
+      }
+
+      // ─── 結果描画 ───
+      const area = document.getElementById('resultArea');
+      area.innerHTML = ''; // クリア
+
+      if (!results.length) {
+        area.innerHTML = '<p>No pattern</p>';
+        return;
+      }
+
+      results.forEach((pat, idx) => {
+        // Drone
+        const dl = pat.Drone;
+        const droneDiv = document.createElement('div');
+        droneDiv.className = 'section';
+        const droneTitle = document.createElement('h2');
+        droneTitle.innerHTML =
+          `<img src="images/drone_icon.png" alt="Drone" /> Drone`;
+        droneDiv.appendChild(droneTitle);
+        const droneInfo = document.createElement('p');
+        droneInfo.textContent =
+          `パーツ: ${dl.parts.join(', ')} | Chip: ${dl.chip} | Total: ${dl.total}${dl.target !== undefined ? ' | Target: '+dl.target : ''}`;
+        droneDiv.appendChild(droneInfo);
+        area.appendChild(droneDiv);
+
+        // Soccer
+        const sl = pat.Soccer;
+        const socDiv = document.createElement('div');
+        socDiv.className = 'section';
+        const socTitle = document.createElement('h2');
+        socTitle.innerHTML =
+          `<img src="images/soccer_icon.png" alt="Soccer" /> Soccer`;
+        socDiv.appendChild(socTitle);
+        const socInfo = document.createElement('p');
+        if (sl) {
+          socInfo.textContent =
+            `パーツ: ${sl.parts.join(', ')} | Chip: ${sl.chip} | Total: ${sl.total}${sl.target !== undefined ? ' | Target: '+sl.target : ''}`;
+        } else {
+          socInfo.textContent = 'No result';
+        }
+        socDiv.appendChild(socInfo);
+        area.appendChild(socDiv);
+
+        // 余り Chip
+        const remDiv = document.createElement('div');
+        remDiv.className = 'section leftover';
+        remDiv.innerHTML = 
+          `<img src="images/chip_icon.png" alt="Chip" /> 余剰共振チップ: ${pat.leftover}`;
+        area.appendChild(remDiv);
+
+        if (idx < results.length - 1) {
+          const hr = document.createElement('hr');
+          area.appendChild(hr);
+        }
+      });
+    }
+  </script>
+</body>
+</html>
