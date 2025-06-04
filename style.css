@@ -1,0 +1,69 @@
+/* style.css */
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.description {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.inputs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.inputs .item {
+  text-align: center;
+}
+
+.inputs img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 5px;
+}
+
+/* チップアイコンだけ少し小さめにする例 */
+.inputs .item.chip img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+button {
+  display: block;
+  margin: 0 auto 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.result {
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+
+.result .section {
+  margin-bottom: 20px;
+}
+
+.result .section img {
+  width: 40px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+/* 余りチップアイコン用に少し小さめ */
+.result .leftover img {
+  width: 30px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
