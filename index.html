@@ -100,6 +100,8 @@
           }
           lookup[`${parts}|${chip}`] = { total, target_index };
         }
+        console.log('=== lookup キー一覧 ===');
+        console.log(Object.keys(lookup).slice(0, 10));
       })
       .catch(err => console.error('CSV 読み込みエラー:', err));
 
