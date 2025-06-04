@@ -120,15 +120,16 @@
     // target 用最小 total 探索
     function findMinTotalForTarget(partCounts, availableChip, targetIndex) {
       const best = { total: Infinity, parts: null, chip: null };
+
       for (const [keyStr, info] of Object.entries(lookup)) {
         if (info.target_index < targetIndex) continue;
 
         const [partsStr, chipStr] = keyStr.split('|');
         const parts = partsStr.split(',');
         const chip = parseInt(chipStr);
-        if (chip > availableChip) continue;
+        if (chip > availableChip) continue;  // ★ここで足切り
 
-    // 在庫チェック
+    // パーツの在庫チェック
         const usedCounts = {};
         let valid = true;
         for (const p of parts) {
@@ -141,6 +142,7 @@
         }
         if (!valid) continue;
 
+    // 条件を満たし、かつ total が最小のものを採用
         if (info.total < best.total) {
           best.total = info.total;
           best.parts = parts;
@@ -148,9 +150,9 @@
         }
       }
 
-      if (best.parts === null) return null;
-      return best;
+      return best.parts ? best : null;
     }
+
 
 
     // target 無視で total 最大化
