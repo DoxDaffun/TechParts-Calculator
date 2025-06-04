@@ -118,36 +118,40 @@
     }
 
     // target 用最小 total 探索
-    function findMinTotalForTarget(partCounts, availChip, targetIndex) {
-      let best = { total: Infinity, parts: null, chip: null };
-      Object.keys(lookup).forEach(key => {
-        const [partsStr, chipStr] = key.split('|');
+    function findMinTotalForTarget(partCounts, availableChip, targetIndex) {
+      const best = { total: Infinity, parts: null, chip: null };
+      for (const [keyStr, info] of Object.entries(lookup)) {
+        if (info.target_index < targetIndex) continue;
+
+        const [partsStr, chipStr] = keyStr.split('|');
+        const parts = partsStr.split(',');
         const chip = parseInt(chipStr);
-        const info = lookup[key];
-        if (info.target_index !== targetIndex) return;
-        if (chip > availChip) return;
-        const partsArr = partsStr.split(',');
-        console.log('--- Checking parts=', partsArr, 'chip=', chip);
-        const used = {};
-        let ok = true;
-        parts.forEach(p => {
-          if (p !== 'Y') {
-            used[p] = (used[p] || 0) + 1;
-            console.log(`   need ${used[p]} of ${p}, available=${partCounts[p]||0}`);
-            if (used[p] > (partCounts[p] || 0)) ok = false;
+        if (chip > availableChip) continue;
+
+    // 在庫チェック
+        const usedCounts = {};
+        let valid = true;
+        for (const p of parts) {
+          if (p === 'Y') continue;
+          usedCounts[p] = (usedCounts[p] || 0) + 1;
+          if (usedCounts[p] > partCounts[p]) {
+            valid = false;
+            break;
           }
-        });
-        if (!ok) {
-          console.log('   → In stock check, failed. skip this combination.');
-          return;
         }
-        console.log('   → In stock OK! total=', info.total);
+        if (!valid) continue;
+
         if (info.total < best.total) {
-          best = { total: info.total, parts: parts, chip: chip };
+          best.total = info.total;
+          best.parts = parts;
+          best.chip = chip;
         }
-      });
-      return best.parts ? best : null;
+      }
+
+      if (best.parts === null) return null;
+      return best;
     }
+
 
     // target 無視で total 最大化
     function findBestComboWithoutTarget(partCounts, availChip) {
