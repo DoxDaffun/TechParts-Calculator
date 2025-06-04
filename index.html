@@ -176,6 +176,9 @@
       const sumParts = ['E','L0','L1','L2','L3','L4']
         .reduce((acc, p) => acc + (partCounts[p] || 0), 0);
 
+      console.log("=== Debug: partCounts, totalChip, sumParts ===");
+      console.log(partCounts, totalChip, sumParts);
+
       let results = [];
       if (sumParts >= 6) {
         // ターゲットありロジック
@@ -184,6 +187,7 @@
 
         for (let ti = targets.length - 1; ti >= 0; ti--) {
           const d = findMinTotalForTarget(partCounts, totalChip, ti);
+          console.log(`-- try Drone.target=${targets[ti]}, found d = `, d);
           if (!d) continue;
           const dParts = d.parts;
           const dChip  = d.chip;
@@ -194,11 +198,15 @@
           dParts.forEach(p => { if (p !== 'Y') rem[p]--; });
           const remChip = totalChip - dChip;
 
+          console.log(`   > remParts after Drone (${dParts}), remChip=${remChip}`);
+
           let bestSoccer = null;
           for (let sti = targets.length - 1; sti >= 0; sti--) {
             const s = findMinTotalForTarget(rem, remChip, sti);
             if (s) { bestSoccer = [sti, s]; break; }
           }
+          console.log(`   > bestSoccer for this Drone =`, bestSoccer);
+
           let sParts, sChip, sTotal, sTarget;
           if (bestSoccer) {
             [ , s ] = bestSoccer;
@@ -213,7 +221,10 @@
             sTarget= 0;
           }
 
+          const leftover = remChip - sChip;
           const key = `${dParts.join(',')}|${dChip}|${sParts ? sParts.join(',') : ''}|${sChip}`;
+          console.log(`   > pushing pattern: Drone(${dParts},chip=${dChip},total=${dTotal},target=${dTarget})` +
+                      ` /Soccer(${sParts},chip=${sChip},total=${sTotal},target=${sTarget}) leftover=${leftover}`);
           if (!seen.has(key)) {
             seen.add(key);
             patterns.push({
@@ -224,8 +235,11 @@
           }
         }
 
+        console.log(">>> 全候補パターン（patterns）=", patterns);
+
         // フィルタリング：Drone.total > Soccer.total
         patterns = patterns.filter(p => p.Drone.total > p.Soccer.total);
+        console.log(">>> フィルタリング後 (Drone.total>Soccer.total) patterns=", patterns);
 
         // フィルタリング：同じ Drone.target で Soccer.target 最大のみ
         const bestByDrone = {};
@@ -240,6 +254,8 @@
         results = Object.keys(bestByDrone)
           .map(k => bestByDrone[k])
           .sort((a, b) => a.Drone.target - b.Drone.target);
+
+        console.log(">>> 最終的に返す results=", results);
 
       } else {
         // ターゲットなし・Y必須ロジック
