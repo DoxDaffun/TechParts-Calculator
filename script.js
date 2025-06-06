@@ -181,11 +181,14 @@ function handleGreaterEqualSix(counts, totalPartsCount) {
     }
   }
 
+  console.log("【DEBUG】partPool:", partPool, "length=", partPool.length);
+
   // 2) すべての「3つの部品組み合わせペア」を列挙
   //    - Drone側3つを選ぶ → 残りからSoccer側3つを選ぶ
   //    - 部品数管理が必要（順序ではなく、カウントで重複を扱う）
   const allPairs = generateAllPartTripletPairs(partPool);
   // allPairs 例: [ { droneParts: ["E","L1","L1"], soccerParts: ["L0","L2","L3"] }, ... ]
+  console.log("【DEBUG】全ペア数:", allPairs.length, allPairs.slice(0, 5)); // 先頭5件だけ表示
 
   if (allPairs.length === 0) {
     const msg = document.createElement("div");
@@ -201,6 +204,7 @@ function handleGreaterEqualSix(counts, totalPartsCount) {
   for (let d = 0; d <= chipTotal; d++) {
     chipSplits.push({ droneChip: d, soccerChip: chipTotal - d });
   }
+  console.log("【DEBUG】chipSplits（分割パターン）:", chipSplits);
 
   // 4) 条件を満たす組み合わせをすべて記録しつつ、一旦配列に入れる
   //    { droneParts, soccerParts, droneChip, soccerChip, droneTotal, soccerTotal, droneTarget, soccerTarget }
@@ -210,14 +214,22 @@ function handleGreaterEqualSix(counts, totalPartsCount) {
     for (let split of chipSplits) {
       const dTotal = lookupTotalForCombination(pair.droneParts, split.droneChip);
       const sTotal = lookupTotalForCombination(pair.soccerParts, split.soccerChip);
-      if (dTotal === null || sTotal === null) continue; // ルックアップに該当なし
+      if (dTotal === null || sTotal === null){
+        console.log("【DEBUG】lookup miss:", pair.droneParts, split.droneChip, "→", dTotal, 
+                    "|", pair.soccerParts, split.soccerChip, "→", sTotal);
+        continue;
+      } // ルックアップに該当なし
 
-      if (dTotal < sTotal) continue; // Drone >= Soccer の条件を満たさない場合は除外
+      if (dTotal < sTotal) {
+        console.log("【DEBUG】Drone<Soceker skip:", pair.droneParts, dTotal, "<", pair.soccerParts, sTotal);
+        continue;
+      } // Drone >= Soccer の条件を満たさない場合は除外
 
       // それぞれが TARGETS のいずれかを超えるか検証し、最小の target 値を探す
       const dTarget = smallestTargetGreaterOrEqual(dTotal);
       const sTarget = smallestTargetGreaterOrEqual(sTotal);
       if (dTarget === null || sTarget === null) {
+        console.log("【DEBUG】Target miss:", dTotal, "->", dTarget, "|", sTotal, "->", sTarget);
         // どちらかがすべてのTARGETSを満たせない場合は除外
         continue;
       }
@@ -234,6 +246,8 @@ function handleGreaterEqualSix(counts, totalPartsCount) {
       });
     }
   }
+
+  console.log("【DEBUG】最終 validCombinations length =", validCombinations.length);
 
   if (validCombinations.length === 0) {
     const msg = document.createElement("div");
