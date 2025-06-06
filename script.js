@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
  * Calculate ボタン押下時のメイン処理
  */
 function onClickCalculate() {
+  console.log("【DEBUG】onClickCalculate が呼ばれました");
   // 1) 各パーツ所持数とチップ数を取得
   const counts = {
     E: parseInt(document.getElementById("count-E").value, 10) || 0,
