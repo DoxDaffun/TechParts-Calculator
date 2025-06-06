@@ -1,0 +1,9410 @@
+[
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "E",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "3000.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "E",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "3600.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "E",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "4200.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "E",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "4800.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "E",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "5400.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "E",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "6000.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "E",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "6600.000000000001"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "E",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "7200.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "E",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "7800.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "E",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "8400.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "E",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "9000.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "E",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "9600.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "E",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "10200.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "E",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "10800.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L0",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "2300.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L0",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2760.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L0",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "3220.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L0",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "3680.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L0",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "4140.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L0",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "4600.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L0",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "5060.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L0",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "5520.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L0",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "5980.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L0",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "6440.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L0",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "6900.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L0",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "7360.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L0",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "7820.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L0",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "8280.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L1",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "2400.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L1",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2880.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L1",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "3360.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L1",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "3840.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L1",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "4320.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L1",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "4800.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L1",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "5280.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L1",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "5760.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L1",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "6240.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L1",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "6720.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L1",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "7200.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L1",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "7680.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L1",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "8160.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L1",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "8640.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L2",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "2550.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L2",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "3060.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L2",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "3570.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L2",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "4080.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L2",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "4590.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L2",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "5100.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L2",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "5610.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L2",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "6120.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L2",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "6630.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L2",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "7140.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L2",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "7650.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L2",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "8160.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L2",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "8670.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L2",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "9180.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L3",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "2700.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L3",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "3240.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L3",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "3779.9999999999995"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L3",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "4320.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L3",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "4860.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L3",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "5400.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L3",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "5940.000000000001"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L3",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "6480.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L3",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "7020.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L3",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "7559.999999999999"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L3",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "8100.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L3",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "8640.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L3",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "9180.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L3",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "9720.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L4",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "2850.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L4",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "3420.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L4",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "3989.9999999999995"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L4",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "4560.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L4",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "5130.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L4",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "5700.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L4",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "6270.000000000001"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L4",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "6840.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L4",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "7410.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L4",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "7979.999999999999"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L4",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "8550.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L4",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "9120.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L4",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "9690.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "L4",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "10260.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "Y",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "2200.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "Y",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2640.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "Y",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "3080.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "Y",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "3520.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "Y",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "3960.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "Y",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "4400.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "Y",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "4840.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "Y",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "5280.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "Y",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "5720.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "Y",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "6160.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "Y",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "6600.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "Y",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "7040.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "Y",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "7480.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "E",
+        "Const3": "Y",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "7920.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L0",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1600.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L0",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1920.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L0",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2240.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L0",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2560.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L0",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "2880.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L0",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "3200.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L0",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "3520.0000000000005"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L0",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "3840.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L0",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "4160.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L0",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "4480.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L0",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "4800.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L0",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "5120.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L0",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "5440.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L0",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "5760.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L1",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1700.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L1",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2040.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L1",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2380.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L1",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2720.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L1",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "3060.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L1",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "3400.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L1",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "3740.0000000000005"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L1",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "4080.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L1",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "4420.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L1",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "4760.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L1",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "5100.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L1",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "5440.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L1",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "5780.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L1",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "6120.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L2",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1850.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L2",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2220.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L2",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2590.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L2",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2960.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L2",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "3330.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L2",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "3700.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L2",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "4070.0000000000005"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L2",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "4440.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L2",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "4810.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L2",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "5180.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L2",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "5550.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L2",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "5920.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L2",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "6290.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L2",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "6660.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L3",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "2000.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L3",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2400.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L3",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2800.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L3",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "3200.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L3",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "3600.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L3",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "4000.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L3",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "4400.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L3",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "4800.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L3",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "5200.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L3",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "5600.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L3",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "6000.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L3",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "6400.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L3",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "6800.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L3",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "7200.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L4",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "2150.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L4",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2580.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L4",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "3010.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L4",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "3440.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L4",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "3870.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L4",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "4300.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L4",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "4730.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L4",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "5160.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L4",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "5590.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L4",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "6020.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L4",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "6450.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L4",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "6880.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L4",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "7310.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "L4",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "7740.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "Y",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1500.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "Y",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1800.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "Y",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2100.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "Y",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2400.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "Y",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "2700.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "Y",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "3000.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "Y",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "3300.0000000000005"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "Y",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "3600.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "Y",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "3900.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "Y",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "4200.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "Y",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "4500.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "Y",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "4800.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "Y",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "5100.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L0",
+        "Const3": "Y",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "5400.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1800.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2160.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2520.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2880.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "3240.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "3600.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "3960.0000000000005"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "4320.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "4680.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "5040.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "5400.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "5760.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "6120.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "6480.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1950.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2340.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2730.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "3120.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "3510.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "3900.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "4290.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "4680.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "5070.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "5460.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "5850.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "6240.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "6630.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "7020.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "2100.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2520.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2940.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "3360.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "3780.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "4200.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "4620.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "5040.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "5460.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "5880.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "6300.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "6720.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "7140.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "7560.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "2250.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2700.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "3150.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "3600.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "4050.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "4500.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "4950.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "5400.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "5850.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "6300.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "6750.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "7200.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "7650.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "8100.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1600.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1920.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2240.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2560.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "2880.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "3200.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "3520.0000000000005"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "3840.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "4160.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "4480.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "4800.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "5120.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "5440.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "5760.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "2100.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2520.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2940.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "3360.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "3780.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "4200.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "4620.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "5040.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "5460.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "5880.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "6300.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "6720.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "7140.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "7560.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "2250.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2700.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "3150.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "3600.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "4050.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "4500.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "4950.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "5400.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "5850.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "6300.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "6750.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "7200.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "7650.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "8100.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "2400.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2880.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "3360.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "3840.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "4320.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "4800.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "5280.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "5760.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "6240.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "6720.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "7200.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "7680.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "8160.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "8640.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1750.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2100.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2450.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2800.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "3150.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "3500.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "3850.0000000000005"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "4200.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "4550.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "4900.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "5250.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "5600.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "5950.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "6300.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "2400.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2880.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "3360.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "3840.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "4320.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "4800.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "5280.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "5760.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "6240.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "6720.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "7200.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "7680.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "8160.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "8640.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "2550.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "3060.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "3570.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "4080.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "4590.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "5100.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "5610.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "6120.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "6630.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "7140.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "7650.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "8160.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "8670.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "9180.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1900.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2280.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2660.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "3040.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "3420.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "3800.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "4180.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "4560.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "4940.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "5320.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "5700.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "6080.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "6460.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "6840.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "2700.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "3240.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "3779.9999999999995"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "4320.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "4860.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "5400.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "5940.000000000001"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "6480.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "7020.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "7559.999999999999"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "8100.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "8640.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "9180.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "9720.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "2050.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2460.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2870.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "3280.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "3690.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "4100.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "4510.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "4920.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "5330.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "5740.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "6150.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "6560.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "6970.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "7380.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1400.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1680.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "1959.9999999999998"
+    },
+    {
+        "Const1": "E",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2240.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "2520.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "2800.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "3080.0000000000005"
+    },
+    {
+        "Const1": "E",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "3360.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "3640.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "3919.9999999999995"
+    },
+    {
+        "Const1": "E",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "4200.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "4480.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "4760.0"
+    },
+    {
+        "Const1": "E",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "5040.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L0",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "900.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L0",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1080.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L0",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "1260.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L0",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "1440.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L0",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "1620.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L0",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "1800.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L0",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "1980.0000000000002"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L0",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "2160.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L0",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "2340.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L0",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "2520.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L0",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "2700.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L0",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "2880.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L0",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "3060.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L0",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "3240.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L1",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1000.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L1",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1200.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L1",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "1400.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L1",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "1600.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L1",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "1800.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L1",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "2000.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L1",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "2200.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L1",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "2400.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L1",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "2600.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L1",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "2800.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L1",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "3000.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L1",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "3200.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L1",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "3400.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L1",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "3600.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L2",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1150.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L2",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1380.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L2",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "1610.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L2",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "1840.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L2",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "2070.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L2",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "2300.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L2",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "2530.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L2",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "2760.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L2",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "2990.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L2",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "3220.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L2",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "3450.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L2",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "3680.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L2",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "3910.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L2",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "4140.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L3",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1300.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L3",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1560.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L3",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "1819.9999999999998"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L3",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2080.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L3",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "2340.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L3",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "2600.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L3",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "2860.0000000000005"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L3",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "3120.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L3",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "3380.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L3",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "3639.9999999999995"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L3",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "3900.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L3",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "4160.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L3",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "4420.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L3",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "4680.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L4",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1450.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L4",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1740.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L4",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2029.9999999999998"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L4",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2320.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L4",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "2610.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L4",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "2900.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L4",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "3190.0000000000005"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L4",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "3480.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L4",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "3770.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L4",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "4059.9999999999995"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L4",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "4350.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L4",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "4640.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L4",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "4930.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "L4",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "5220.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "Y",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "800.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "Y",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "960.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "Y",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "1120.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "Y",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "1280.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "Y",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "1440.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "Y",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "1600.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "Y",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "1760.0000000000002"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "Y",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "1920.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "Y",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "2080.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "Y",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "2240.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "Y",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "2400.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "Y",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "2560.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "Y",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "2720.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L0",
+        "Const3": "Y",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "2880.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1100.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1320.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "1540.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "1760.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "1980.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "2200.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "2420.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "2640.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "2860.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "3080.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "3300.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "3520.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "3740.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "3960.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1250.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1500.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "1750.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2000.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "2250.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "2500.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "2750.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "3000.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "3250.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "3500.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "3750.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "4000.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "4250.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "4500.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1400.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1680.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "1959.9999999999998"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2240.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "2520.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "2800.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "3080.0000000000005"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "3360.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "3640.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "3919.9999999999995"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "4200.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "4480.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "4760.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "5040.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1550.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1860.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2170.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2480.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "2790.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "3100.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "3410.0000000000005"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "3720.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "4030.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "4340.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "4650.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "4960.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "5270.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "5580.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "900.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1080.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "1260.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "1440.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "1620.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "1800.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "1980.0000000000002"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "2160.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "2340.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "2520.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "2700.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "2880.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "3060.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "3240.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1400.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1680.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "1959.9999999999998"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2240.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "2520.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "2800.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "3080.0000000000005"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "3360.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "3640.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "3919.9999999999995"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "4200.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "4480.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "4760.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "5040.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1550.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1860.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2170.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2480.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "2790.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "3100.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "3410.0000000000005"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "3720.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "4030.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "4340.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "4650.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "4960.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "5270.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "5580.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1700.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2040.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2380.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2720.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "3060.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "3400.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "3740.0000000000005"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "4080.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "4420.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "4760.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "5100.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "5440.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "5780.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "6120.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1050.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1260.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "1470.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "1680.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "1890.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "2100.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "2310.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "2520.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "2730.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "2940.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "3150.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "3360.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "3570.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "3780.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1700.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2040.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2380.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2720.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "3060.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "3400.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "3740.0000000000005"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "4080.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "4420.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "4760.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "5100.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "5440.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "5780.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "6120.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1850.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2220.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2590.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2960.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "3330.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "3700.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "4070.0000000000005"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "4440.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "4810.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "5180.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "5550.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "5920.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "6290.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "6660.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1200.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1440.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "1680.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "1920.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "2160.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "2400.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "2640.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "2880.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "3120.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "3360.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "3600.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "3840.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "4080.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "4320.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "2000.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2400.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2800.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "3200.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "3600.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "4000.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "4400.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "4800.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "5200.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "5600.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "6000.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "6400.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "6800.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "7200.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1350.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1620.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "1889.9999999999998"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2160.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "2430.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "2700.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "2970.0000000000005"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "3240.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "3510.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "3779.9999999999995"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "4050.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "4320.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "4590.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "4860.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "700.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "840.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "979.9999999999999"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "1120.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "1260.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "1400.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "1540.0000000000002"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "1680.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "1820.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "1959.9999999999998"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "2100.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "2240.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "2380.0"
+    },
+    {
+        "Const1": "L0",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "2520.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1200.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1440.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "1680.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "1920.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "2160.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "2400.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "2640.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "2880.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "3120.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "3360.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "3600.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "3840.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "4080.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L1",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "4320.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1350.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1620.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "1889.9999999999998"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2160.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "2430.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "2700.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "2970.0000000000005"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "3240.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "3510.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "3779.9999999999995"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "4050.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "4320.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "4590.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L2",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "4860.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1500.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1800.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2100.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2400.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "2700.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "3000.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "3300.0000000000005"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "3600.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "3900.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "4200.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "4500.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "4800.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "5100.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L3",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "5400.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1650.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1980.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2310.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2640.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "2970.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "3300.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "3630.0000000000005"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "3960.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "4290.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "4620.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "4950.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "5280.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "5610.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "L4",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "5940.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1000.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1200.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "1400.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "1600.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "1800.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "2000.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "2200.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "2400.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "2600.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "2800.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "3000.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "3200.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "3400.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L1",
+        "Const3": "Y",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "3600.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1500.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1800.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2100.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2400.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "2700.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "3000.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "3300.0000000000005"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "3600.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "3900.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "4200.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "4500.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "4800.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "5100.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "5400.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1650.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1980.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2310.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2640.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "2970.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "3300.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "3630.0000000000005"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "3960.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "4290.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "4620.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "4950.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "5280.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "5610.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "5940.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1800.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2160.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2520.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2880.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "3240.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "3600.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "3960.0000000000005"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "4320.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "4680.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "5040.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "5400.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "5760.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "6120.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "6480.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1150.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1380.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "1610.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "1840.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "2070.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "2300.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "2530.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "2760.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "2990.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "3220.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "3450.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "3680.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "3910.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "4140.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1800.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2160.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2520.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2880.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "3240.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "3600.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "3960.0000000000005"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "4320.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "4680.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "5040.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "5400.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "5760.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "6120.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "6480.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1950.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2340.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2730.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "3120.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "3510.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "3900.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "4290.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "4680.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "5070.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "5460.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "5850.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "6240.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "6630.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "7020.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1300.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1560.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "1819.9999999999998"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2080.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "2340.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "2600.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "2860.0000000000005"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "3120.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "3380.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "3639.9999999999995"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "3900.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "4160.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "4420.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "4680.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "2100.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2520.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2940.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "3360.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "3780.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "4200.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "4620.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "5040.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "5460.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "5880.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "6300.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "6720.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "7140.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "7560.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1450.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1740.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2029.9999999999998"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2320.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "2610.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "2900.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "3190.0000000000005"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "3480.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "3770.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "4059.9999999999995"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "4350.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "4640.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "4930.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "5220.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "800.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "960.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "1120.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "1280.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "1440.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "1600.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "1760.0000000000002"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "1920.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "2080.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "2240.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "2400.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "2560.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "2720.0"
+    },
+    {
+        "Const1": "L1",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "2880.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1650.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1980.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2310.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2640.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "2970.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "3300.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "3630.0000000000005"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "3960.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "4290.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "4620.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "4950.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "5280.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "5610.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L2",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "5940.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1800.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2160.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2520.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2880.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "3240.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "3600.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "3960.0000000000005"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "4320.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "4680.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "5040.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "5400.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "5760.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "6120.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L3",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "6480.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1950.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2340.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2730.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "3120.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "3510.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "3900.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "4290.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "4680.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "5070.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "5460.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "5850.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "6240.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "6630.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "L4",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "7020.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1300.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1560.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "1819.9999999999998"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2080.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "2340.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "2600.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "2860.0000000000005"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "3120.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "3380.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "3639.9999999999995"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "3900.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "4160.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "4420.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L2",
+        "Const3": "Y",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "4680.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1950.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2340.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2730.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "3120.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "3510.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "3900.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "4290.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "4680.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "5070.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "5460.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "5850.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "6240.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "6630.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "7020.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "2100.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2520.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2940.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "3360.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "3780.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "4200.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "4620.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "5040.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "5460.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "5880.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "6300.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "6720.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "7140.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "7560.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1450.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1740.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2029.9999999999998"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2320.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "2610.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "2900.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "3190.0000000000005"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "3480.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "3770.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "4059.9999999999995"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "4350.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "4640.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "4930.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "5220.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "2250.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2700.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "3150.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "3600.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "4050.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "4500.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "4950.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "5400.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "5850.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "6300.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "6750.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "7200.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "7650.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "8100.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1600.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1920.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2240.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2560.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "2880.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "3200.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "3520.0000000000005"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "3840.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "4160.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "4480.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "4800.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "5120.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "5440.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "5760.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "950.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1140.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "1330.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "1520.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "1710.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "1900.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "2090.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "2280.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "2470.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "2660.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "2850.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "3040.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "3230.0"
+    },
+    {
+        "Const1": "L2",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "3420.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "2100.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2520.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2940.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "3360.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "3780.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "4200.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "4620.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "5040.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "5460.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "5880.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "6300.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "6720.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "7140.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "L3",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "7560.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "2250.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2700.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "3150.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "3600.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "4050.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "4500.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "4950.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "5400.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "5850.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "6300.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "6750.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "7200.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "7650.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "L4",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "8100.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1600.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1920.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2240.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2560.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "2880.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "3200.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "3520.0000000000005"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "3840.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "4160.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "4480.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "4800.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "5120.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "5440.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L3",
+        "Const3": "Y",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "5760.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "2400.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2880.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "3360.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "3840.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "4320.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "4800.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "5280.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "5760.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "6240.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "6720.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "7200.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "7680.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "8160.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "8640.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1750.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2100.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2450.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2800.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "3150.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "3500.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "3850.0000000000005"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "4200.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "4550.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "4900.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "5250.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "5600.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "5950.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "6300.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1100.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1320.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "1540.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "1760.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "1980.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "2200.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "2420.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "2640.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "2860.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "3080.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "3300.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "3520.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "3740.0"
+    },
+    {
+        "Const1": "L3",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "3960.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "2550.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "3060.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "3570.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "4080.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "4590.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "5100.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "5610.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "6120.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "6630.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "7140.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "7650.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "8160.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "8670.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "L4",
+        "Const3": "L4",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "9180.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1900.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "2280.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "2660.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "3040.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "3420.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "3800.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "4180.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "4560.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "4940.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "5320.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "5700.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "6080.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "6460.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "L4",
+        "Const3": "Y",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "6840.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "1250.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "1500.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "1750.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "2000.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "2250.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "2500.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "2750.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "3000.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "3250.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "3500.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "3750.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "4000.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "4250.0"
+    },
+    {
+        "Const1": "L4",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "4500.0"
+    },
+    {
+        "Const1": "Y",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "0",
+        "Multiplier": "1.0",
+        "Total": "600.0"
+    },
+    {
+        "Const1": "Y",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "1",
+        "Multiplier": "1.2",
+        "Total": "720.0"
+    },
+    {
+        "Const1": "Y",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "2",
+        "Multiplier": "1.4",
+        "Total": "840.0"
+    },
+    {
+        "Const1": "Y",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "4",
+        "Multiplier": "1.6",
+        "Total": "960.0"
+    },
+    {
+        "Const1": "Y",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "6",
+        "Multiplier": "1.8",
+        "Total": "1080.0"
+    },
+    {
+        "Const1": "Y",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "9",
+        "Multiplier": "2.0",
+        "Total": "1200.0"
+    },
+    {
+        "Const1": "Y",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "12",
+        "Multiplier": "2.2",
+        "Total": "1320.0"
+    },
+    {
+        "Const1": "Y",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "16",
+        "Multiplier": "2.4",
+        "Total": "1440.0"
+    },
+    {
+        "Const1": "Y",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "20",
+        "Multiplier": "2.6",
+        "Total": "1560.0"
+    },
+    {
+        "Const1": "Y",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "25",
+        "Multiplier": "2.8",
+        "Total": "1680.0"
+    },
+    {
+        "Const1": "Y",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "30",
+        "Multiplier": "3.0",
+        "Total": "1800.0"
+    },
+    {
+        "Const1": "Y",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "36",
+        "Multiplier": "3.2",
+        "Total": "1920.0"
+    },
+    {
+        "Const1": "Y",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "42",
+        "Multiplier": "3.4",
+        "Total": "2040.0"
+    },
+    {
+        "Const1": "Y",
+        "Const2": "Y",
+        "Const3": "Y",
+        "Chip": "48",
+        "Multiplier": "3.6",
+        "Total": "2160.0"
+    }
+]
