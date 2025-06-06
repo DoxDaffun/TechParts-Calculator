@@ -1,4 +1,3 @@
-console.log("【DEBUG】script.js が読み込まれました");
 // script.js
 
 // ────────────────────────────────────────────
@@ -18,8 +17,6 @@ let lookupTable = []; // JSON読み込み後、全レコードがここに入る
  * - ボタンにクリックイベントを登録する
  */
 document.addEventListener("DOMContentLoaded", () => {
-  const calculateBtn = document.getElementById("calculate-btn");
-  calculateBtn.disabled = true;
   // 1) lookup.json を読み込む
   fetch("lookup.json")
     .then(response => {
@@ -31,17 +28,15 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(jsonData => {
       lookupTable = jsonData; // [{ Const1:"E",Const2:"E",Const3:"E", Chip:0, Multiplier:1.0, Total:3000.0 }, ...]
       console.log("lookupTable の読み込み完了。件数:", lookupTable.length);
-      // 読み込みが終わったので、Calculate ボタンを有効化
-      calculateBtn.disabled = false;
-      // クリックイベントを登録
-      calculateBtn.addEventListener("click", onClickCalculate);
     })
     .catch(err => {
       console.error(err);
       alert("エラー：lookup.json の読み込みに失敗しました。\n詳細はコンソールを確認してください。");
     });
 
- 
+  // 2) Calculate ボタンにイベントリスナーを登録
+  const calculateBtn = document.getElementById("calculate-btn");
+  calculateBtn.addEventListener("click", onClickCalculate);
 });
 
 
@@ -49,7 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
  * Calculate ボタン押下時のメイン処理
  */
 function onClickCalculate() {
-  console.log("【DEBUG】onClickCalculate が呼ばれました");
   // 1) 各パーツ所持数とチップ数を取得
   const counts = {
     E: parseInt(document.getElementById("count-E").value, 10) || 0,
@@ -65,7 +59,6 @@ function onClickCalculate() {
 
   // 2) 部品の合計数を算出
   const totalPartsCount = counts.E + counts.L0 + counts.L1 + counts.L2 + counts.L3 + counts.L4;
-  console.log("【DEBUG】totalPartsCount =", totalPartsCount);
   // （Y は計算に使わないためカウントに含まない）
 
   // 3) 出力エリアをクリア
@@ -74,11 +67,9 @@ function onClickCalculate() {
 
   // 4) partsCount の大小で分岐
   if (totalPartsCount < 6) {
-    console.log("【DEBUG】handleLessThanSix を呼び出します");
     // ＜6 の場合
     handleLessThanSix(counts, totalPartsCount);
   } else {
-    console.log("【DEBUG】handleGreaterEqualSix を呼び出します");
     // 6以上の場合
     handleGreaterEqualSix(counts, totalPartsCount);
   }
@@ -190,27 +181,11 @@ function handleGreaterEqualSix(counts, totalPartsCount) {
     }
   }
 
-  console.log("【DEBUG】partPool:", partPool, "length=", partPool.length);
-
   // 2) すべての「3つの部品組み合わせペア」を列挙
   //    - Drone側3つを選ぶ → 残りからSoccer側3つを選ぶ
   //    - 部品数管理が必要（順序ではなく、カウントで重複を扱う）
   const allPairs = generateAllPartTripletPairs(partPool);
   // allPairs 例: [ { droneParts: ["E","L1","L1"], soccerParts: ["L0","L2","L3"] }, ... ]
-  //console.log("【DEBUG】generateAllPartTripletPairs 後の allPairs.length =", allPairs.length);
-  // 先頭 10 件だけサンプル表示
-  //console.log("【DEBUG】allPairs sample:", allPairs.slice(0, 10));
-  console.log("【DEBUG】全ペア数:", allPairs.length, allPairs.slice(0, 5)); // 先頭5件だけ表示
-
-  const testDrone = ["L0", "L0", "L0"];
-  const testSoccer = ["L1", "L1", "L1"];
-  const testDroneTotal = lookupTotalForCombination(testDrone, 20);
-  const testSoccerTotal = lookupTotalForCombination(testSoccer, 0);
-  console.log(
-    "【DEBUG】テスト lookup:",
-    testDrone, 20, "→ dTotal =", testDroneTotal,
-    "|", testSoccer, 0, "→ sTotal =", testSoccerTotal
-  );
 
   if (allPairs.length === 0) {
     const msg = document.createElement("div");
@@ -226,41 +201,27 @@ function handleGreaterEqualSix(counts, totalPartsCount) {
   for (let d = 0; d <= chipTotal; d++) {
     chipSplits.push({ droneChip: d, soccerChip: chipTotal - d });
   }
-  console.log("【DEBUG】chipSplits（分割パターン）:", chipSplits);
 
   // 4) 条件を満たす組み合わせをすべて記録しつつ、一旦配列に入れる
   //    { droneParts, soccerParts, droneChip, soccerChip, droneTotal, soccerTotal, droneTarget, soccerTarget }
-  let candidateCount = 0;
   const validCombinations = [];
 
   for (let pair of allPairs) {
     for (let split of chipSplits) {
       const dTotal = lookupTotalForCombination(pair.droneParts, split.droneChip);
       const sTotal = lookupTotalForCombination(pair.soccerParts, split.soccerChip);
-      if (dTotal === null || sTotal === null){
-        console.log("【DEBUG】lookup miss:", pair.droneParts, split.droneChip, "→", dTotal, 
-                    "|", pair.soccerParts, split.soccerChip, "→", sTotal);
-        continue;
-      } // ルックアップに該当なし
+      if (dTotal === null || sTotal === null) continue; // ルックアップに該当なし
 
-      if (dTotal < sTotal) {
-        console.log(
-          "【DEBUG】Drone<Soceker skip／dTotal=", dTotal, "< sTotal=", sTotal,
-          "（ペア:", pair.droneParts, split.droneChip, "|", pair.soccerParts, split.soccerChip, "）"
-        );
-        continue;
-      } // Drone >= Soccer の条件を満たさない場合は除外
+      if (dTotal < sTotal) continue; // Drone >= Soccer の条件を満たさない場合は除外
 
       // それぞれが TARGETS のいずれかを超えるか検証し、最小の target 値を探す
       const dTarget = smallestTargetGreaterOrEqual(dTotal);
       const sTarget = smallestTargetGreaterOrEqual(sTotal);
       if (dTarget === null || sTarget === null) {
-        console.log("【DEBUG】Target miss:", dTotal, "->", dTarget, "|", sTotal, "->", sTarget);
         // どちらかがすべてのTARGETSを満たせない場合は除外
         continue;
       }
 
-      candidateCount++;
       validCombinations.push({
         droneParts: [...pair.droneParts],
         soccerParts: [...pair.soccerParts],
@@ -273,9 +234,6 @@ function handleGreaterEqualSix(counts, totalPartsCount) {
       });
     }
   }
-
-  console.log("【DEBUG】最終候補 before filter count =", candidateCount);
-  console.log("【DEBUG】validCombinations length =", validCombinations.length);
 
   if (validCombinations.length === 0) {
     const msg = document.createElement("div");
@@ -474,7 +432,6 @@ function generateAllPartTripletPairs(partPool) {
  * @returns {number|null}
  */
 function lookupTotalForCombination(parts, chipCount) {
-  console.log("【DEBUG】lookupTotalForCombination 呼び出し:", parts, chipCount);
   // parts をソートして順序を決定してから検索
   const sortedParts = parts.slice().sort();
   // lookupTable のレコードは Const1, Const2, Const3 がそれぞれ文字列で、
