@@ -40,9 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("エラー：lookup.json の読み込みに失敗しました。\n詳細はコンソールを確認してください。");
     });
 
-  // 2) Calculate ボタンにイベントリスナーを登録
-  const calculateBtn = document.getElementById("calculate-btn");
-  calculateBtn.addEventListener("click", onClickCalculate);
+ 
 });
 
 
