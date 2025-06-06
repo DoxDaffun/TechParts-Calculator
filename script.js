@@ -186,11 +186,11 @@ function handleGreaterEqualSix(counts, totalPartsCount) {
   // 2) すべての「3つの部品組み合わせペア」を列挙
   //    - Drone側3つを選ぶ → 残りからSoccer側3つを選ぶ
   //    - 部品数管理が必要（順序ではなく、カウントで重複を扱う）
-  //const allPairs = generateAllPartTripletPairs(partPool);
+  const allPairs = generateAllPartTripletPairs(partPool);
   // allPairs 例: [ { droneParts: ["E","L1","L1"], soccerParts: ["L0","L2","L3"] }, ... ]
-  console.log("【DEBUG】generateAllPartTripletPairs 後の allPairs.length =", allPairs.length);
+  //console.log("【DEBUG】generateAllPartTripletPairs 後の allPairs.length =", allPairs.length);
   // 先頭 10 件だけサンプル表示
-  console.log("【DEBUG】allPairs sample:", allPairs.slice(0, 10));
+  //console.log("【DEBUG】allPairs sample:", allPairs.slice(0, 10));
   console.log("【DEBUG】全ペア数:", allPairs.length, allPairs.slice(0, 5)); // 先頭5件だけ表示
 
   if (allPairs.length === 0) {
