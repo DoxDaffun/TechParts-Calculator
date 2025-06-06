@@ -18,6 +18,7 @@ let lookupTable = []; // JSON読み込み後、全レコードがここに入る
  * - ボタンにクリックイベントを登録する
  */
 document.addEventListener("DOMContentLoaded", () => {
+  const calculateBtn = document.getElementById("calculate-btn");
   // 1) lookup.json を読み込む
   fetch("lookup.json")
     .then(response => {
@@ -29,6 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(jsonData => {
       lookupTable = jsonData; // [{ Const1:"E",Const2:"E",Const3:"E", Chip:0, Multiplier:1.0, Total:3000.0 }, ...]
       console.log("lookupTable の読み込み完了。件数:", lookupTable.length);
+      // 読み込みが終わったので、Calculate ボタンを有効化
+      calculateBtn.disabled = false;
+      // クリックイベントを登録
+      calculateBtn.addEventListener("click", onClickCalculate);
     })
     .catch(err => {
       console.error(err);
@@ -470,6 +475,7 @@ function generateAllPartTripletPairs(partPool) {
  * @returns {number|null}
  */
 function lookupTotalForCombination(parts, chipCount) {
+  console.log("【DEBUG】lookupTotalForCombination 呼び出し:", parts, chipCount);
   // parts をソートして順序を決定してから検索
   const sortedParts = parts.slice().sort();
   // lookupTable のレコードは Const1, Const2, Const3 がそれぞれ文字列で、
