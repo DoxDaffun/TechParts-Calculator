@@ -61,6 +61,7 @@ function onClickCalculate() {
 
   // 2) 部品の合計数を算出
   const totalPartsCount = counts.E + counts.L0 + counts.L1 + counts.L2 + counts.L3 + counts.L4;
+  console.log("【DEBUG】totalPartsCount =", totalPartsCount);
   // （Y は計算に使わないためカウントに含まない）
 
   // 3) 出力エリアをクリア
@@ -69,9 +70,11 @@ function onClickCalculate() {
 
   // 4) partsCount の大小で分岐
   if (totalPartsCount < 6) {
+    console.log("【DEBUG】handleLessThanSix を呼び出します");
     // ＜6 の場合
     handleLessThanSix(counts, totalPartsCount);
   } else {
+    console.log("【DEBUG】handleGreaterEqualSix を呼び出します");
     // 6以上の場合
     handleGreaterEqualSix(counts, totalPartsCount);
   }
