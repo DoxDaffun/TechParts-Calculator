@@ -193,6 +193,16 @@ function handleGreaterEqualSix(counts, totalPartsCount) {
   //console.log("【DEBUG】allPairs sample:", allPairs.slice(0, 10));
   console.log("【DEBUG】全ペア数:", allPairs.length, allPairs.slice(0, 5)); // 先頭5件だけ表示
 
+  const testDrone = ["L0", "L0", "L0"];
+  const testSoccer = ["L1", "L1", "L1"];
+  const testDroneTotal = lookupTotalForCombination(testDrone, 20);
+  const testSoccerTotal = lookupTotalForCombination(testSoccer, 0);
+  console.log(
+    "【DEBUG】テスト lookup:",
+    testDrone, 20, "→ dTotal =", testDroneTotal,
+    "|", testSoccer, 0, "→ sTotal =", testSoccerTotal
+  );
+
   if (allPairs.length === 0) {
     const msg = document.createElement("div");
     msg.style.color = "red";
@@ -211,6 +221,7 @@ function handleGreaterEqualSix(counts, totalPartsCount) {
 
   // 4) 条件を満たす組み合わせをすべて記録しつつ、一旦配列に入れる
   //    { droneParts, soccerParts, droneChip, soccerChip, droneTotal, soccerTotal, droneTarget, soccerTarget }
+  let candidateCount = 0;
   const validCombinations = [];
 
   for (let pair of allPairs) {
@@ -224,7 +235,10 @@ function handleGreaterEqualSix(counts, totalPartsCount) {
       } // ルックアップに該当なし
 
       if (dTotal < sTotal) {
-        console.log("【DEBUG】Drone<Soceker skip:", pair.droneParts, dTotal, "<", pair.soccerParts, sTotal);
+        console.log(
+          "【DEBUG】Drone<Soceker skip／dTotal=", dTotal, "< sTotal=", sTotal,
+          "（ペア:", pair.droneParts, split.droneChip, "|", pair.soccerParts, split.soccerChip, "）"
+        );
         continue;
       } // Drone >= Soccer の条件を満たさない場合は除外
 
@@ -237,6 +251,7 @@ function handleGreaterEqualSix(counts, totalPartsCount) {
         continue;
       }
 
+      candidateCount++;
       validCombinations.push({
         droneParts: [...pair.droneParts],
         soccerParts: [...pair.soccerParts],
@@ -250,7 +265,8 @@ function handleGreaterEqualSix(counts, totalPartsCount) {
     }
   }
 
-  console.log("【DEBUG】最終 validCombinations length =", validCombinations.length);
+  console.log("【DEBUG】最終候補 before filter count =", candidateCount);
+  console.log("【DEBUG】validCombinations length =", validCombinations.length);
 
   if (validCombinations.length === 0) {
     const msg = document.createElement("div");
