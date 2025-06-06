@@ -19,6 +19,7 @@ let lookupTable = []; // JSON読み込み後、全レコードがここに入る
  */
 document.addEventListener("DOMContentLoaded", () => {
   const calculateBtn = document.getElementById("calculate-btn");
+  calculateBtn.disabled = true;
   // 1) lookup.json を読み込む
   fetch("lookup.json")
     .then(response => {
