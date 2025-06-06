@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>パーツ＋チップ最適化計算ツール</title>
+  <title>共振最適化計算ツール</title>
   <style>
     body { font-family: Arial, sans-serif; margin: 20px; }
     h1 { text-align: center; }
@@ -37,19 +37,19 @@
     table {
       width: 100%;
       border-collapse: collapse;
-      table-layout: auto; /* fixedからautoに変更 */
+      table-layout: auto; /* fixedからautoに */
       font-size: 14px;
     }
     thead th {
       border-bottom: 2px solid #333;
-      padding: 6px; /* 少し狭く */
+      padding: 6px;
       background: #f0f0f0;
       text-align: center;
       white-space: nowrap;
     }
     tbody td {
       border-bottom: 1px solid #ccc;
-      padding: 4px 6px; /* 少し狭く */
+      padding: 4px 6px; 
       text-align: center;
       white-space: nowrap;
     }
@@ -64,12 +64,12 @@
     .col-soccer-total { border-right: 1px solid #999; }
     .col-soccer-target { border-right: 2px solid #666; }
     .col-rem { }
-    /* Drone/Soccer アイコン大きめ */
+    /* Drone/Soccer アイコン */
     .col-drone-icon img, .col-soccer-icon img {
       width: 70px;
       height: 70px;
     }
-    /* レスポンシブ対応：スマホではフォント・画像を少し調整 */
+    /* レスポンシブ対応：スマホではフォント・画像を調整 */
     @media (max-width: 600px) {
       .part-item img { width: 30px; height: 30px; }
       .part-item input[type="number"] { width: 40px; }
@@ -77,7 +77,7 @@
       #calculate-btn { font-size: 14px; padding: 6px 12px; }
       table { font-size: 12px; }
       thead th, tbody td { padding: 3px 4px; }
-      /* 結果アイコンも少し小さく */
+     
       .col-drone-icon img, .col-soccer-icon img {
         width: 54px;
         height: 54px;
@@ -87,50 +87,53 @@
 </head>
 <body>
 
-  <h1>パーツ＋チップ 最適化計算ツール</h1>
+  <h1>共振最適化計算ツール</h1>
   <p style="text-align:center;">
-    以下に所持パーツの枚数と Chip の数を入力し、「Calculate」を押すと、
-    Drone／Soccer の最適組合せを一覧で表示します。<br>
-    ※Y は在庫に含めず、自動で補充されます。パーツ数が 6 未満の場合は、Drone≥Soccer となる 1 パターンだけを返却します。
+    「マイパーツ」にあるレジェンド以上のテックパーツの枚数と共振チップの所持数を入力し、「Calculate」を押すと、
+    双生ドローン／サッカーの最適組合せを一覧で表示します。<br>
+    ※必要に応じてエピック＋３のパーツが使われることがあります。<br>
+    ※「Target」とは、各種倍率がupする、<br>
+    「900/1200/1650/2100/2550/3000/4500/6000/7500/9000/10500/12000/13500/15000」<br>
+    を指します。
   </p>
 
   <div class="input-container">
     <div class="parts-input">
       <div class="part-item">
         <img src="E.png" alt="E" /><br>
-        <label>E</label><br>
+        <label>エターナル</label><br>
         <input type="number" id="input-E" min="0" value="0" />
       </div>
       <div class="part-item">
         <img src="L0.png" alt="L0" /><br>
-        <label>L0</label><br>
+        <label>レジェンド</label><br>
         <input type="number" id="input-L0" min="0" value="0" />
       </div>
       <div class="part-item">
         <img src="L1.png" alt="L1" /><br>
-        <label>L1</label><br>
+        <label>レジェンド＋１</label><br>
         <input type="number" id="input-L1" min="0" value="0" />
       </div>
       <div class="part-item">
         <img src="L2.png" alt="L2" /><br>
-        <label>L2</label><br>
+        <label>レジェンド＋２</label><br>
         <input type="number" id="input-L2" min="0" value="0" />
       </div>
       <div class="part-item">
         <img src="L3.png" alt="L3" /><br>
-        <label>L3</label><br>
+        <label>レジェンド＋３</label><br>
         <input type="number" id="input-L3" min="0" value="0" />
       </div>
       <div class="part-item">
         <img src="L4.png" alt="L4" /><br>
-        <label>L4</label><br>
+        <label>レジェンド＋４</label><br>
         <input type="number" id="input-L4" min="0" value="0" />
       </div>
     </div>
 
     <div class="chip-input">
       <img src="chip_icon.png" alt="Chip" />
-      <label>Chip 数:</label>
+      <label>共振チップ</label>
       <input type="number" id="input-chip" min="0" max="330" value="0" />
     </div>
 
@@ -221,7 +224,7 @@
       const targetD = computeTargetFromTotal(totalD);
       const targetS = computeTargetFromTotal(totalS);
       return [{
-        id: '',  // 下で設定
+        id: '',  
         partsDrone: droneCombo,
         chipDrone: c_d,
         totalDrone: totalD,
@@ -406,9 +409,9 @@
       const headerRow = document.createElement('tr');
       const headers = [
         '番号', 
-        '<img src="drone_icon.png" alt="Drone" width="30" height="30">', 'Chip_D', 'Total_D', 'Target_D',
-        '<img src="soccer_icon.png" alt="Soccer" width="30" height="30">', 'Chip_S', 'Total_S', 'Target_S',
-        '余りChip'
+        '<img src="drone_icon.png" alt="Drone" width="30" height="30">', '必要チップ', '共振エネルギー', 'Target',
+        '<img src="soccer_icon.png" alt="Soccer" width="30" height="30">', '必要チップ', '共振エネルギー', 'Target',
+        '余剰チップ'
       ];
       const thClasses = ['col-number', 'col-drone-icon', 'col-drone-chip', 'col-drone-total', 'col-drone-target',
                          'col-soccer-icon', 'col-soccer-chip', 'col-soccer-total', 'col-soccer-target', 'col-rem'];
