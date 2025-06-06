@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <title>パーツ＆チップ計算ツール</title>
+  <title>共振自動計算ツール</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- 必要ならこの下で external CSS を読み込む -->
   <link rel="stylesheet" href="style.css" />
@@ -89,12 +89,11 @@
 </head>
 
 <body>
-  <h1>パーツ＆チップ計算ツール</h1>
+  <h1>共振自動計算ツール</h1>
   <div id="description">
     <p>
-      以下に、各パーツの所持数とチップの総数（0〜50）を入力して「Calculate」ボタンを押してください。<br />
-      Drone と Soccer の出力パターンを自動判定し、ルックアップテーブルから対応する3つのパーツとチップ数に応じた合計値（Total）を表示します。<br />
-      Part合計数が6未満の場合は、Drone のみ1パターン、6以上の場合は最適化された全パターンを出力します。
+      以下に、「マイパーツ」にあるレジェンド以上のテックパーツと共振チップの所持数を入力して「Calculate」ボタンを押してください。<br />
+      双生ドローン/フォースフィールドと双生ドリアン/サッカーの共振パターンを自動計算し、対応する3つのテックパーツと共振チップ数に応じた合計値（Total）を表示します。<br />
     </p>
   </div>
 
@@ -142,7 +141,7 @@
     <div id="chip-row">
       <img src="images/chip_icon.png" alt="Chip" />
       <label for="count-chip">Chip：</label>
-      <input type="number" id="count-chip" min="0" max="50" value="0" />
+      <input type="number" id="count-chip" min="0" max="330" value="0" />
     </div>
     <!-- 計算ボタン -->
     <button id="calculate-btn">Calculate</button>
