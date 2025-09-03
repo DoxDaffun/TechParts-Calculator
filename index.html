@@ -61,12 +61,17 @@
     .col-drill-chip { border-right: 1px solid #999; }
     .col-drill-total { border-right: 1px solid #999; }
     .col-drill-target { border-right: 2px solid #666; }
+    .col-lightning-icon { border-right: 1px solid #999; }
+    .col-lightning-chip { border-right: 1px solid #999; }
+    .col-lightning-total { border-right: 1px solid #999; }
+    .col-lightning-target { border-right: 2px solid #666; }
     .col-soccer-icon { border-right: 1px solid #999; }
     .col-soccer-chip { border-right: 1px solid #999; }
     .col-soccer-total { border-right: 1px solid #999; }
     .col-soccer-target { border-right: 2px solid #666; }
     .col-rem { }
-    .col-drone-icon img, .col-drill-icon img, .col-soccer-icon img {
+    .col-need { }
+    .col-drone-icon img, .col-drill-icon img, .col-lightning-icon img, .col-soccer-icon img {
       width: 40px;
       height: 40px;
     }
@@ -77,7 +82,7 @@
       #calculate-btn { font-size: 14px; padding: 6px 12px; }
       table { font-size: 12px; }
       thead th, tbody td { padding: 3px 4px; }
-      .col-drone-icon img, .col-drill-icon img, .col-soccer-icon img { width: 28px; height: 28px; }
+      .col-drone-icon img, .col-drill-icon img, .col-lightning-icon img, .col-soccer-icon img { width: 28px; height: 28px; }
       .target-list { display:inline-block; white-space:normal; max-width:100vw; }
     }
     .target-list { display:inline-block; white-space:normal; max-width:580px; }
@@ -142,7 +147,10 @@
   </div>
 
   <footer>
-    <span id="footer-version">Version: v.2.2 &nbsp; / &nbsp; Created by Dox_Daffun</span><br>
+    <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'V7V71KOLL8');kofiwidget2.draw();</script> 
+    <br><br>
+    <span id="footer-version">Version: v.3.0 &nbsp; / &nbsp; Created by Dox_Daffun<br>
+    Special thanks to: YAMATO</span><br>
     <span id="footer-discord" style="color:#555;">
       Feedback or bug reports:&nbsp;
       <b>Discord: <a href="https://discord.com/" target="_blank">dox_daffun</a></b>
@@ -155,7 +163,7 @@
       ja: {
         title:        '共振最適化計算ツール',
         mainTitle:    '共振最適化計算ツール',
-        subtitle:     '「マイパーツ」にあるレジェンド以上のテックパーツの枚数と共振チップの所持数を入力し、「Calculate」を押すと、双生ドローン／ドリル／サッカーの最適組合せを一覧で表示します。<br>※必要に応じてエピック＋３のパーツが使われることがあります。<br>※「Target」とは、特に強力な効果が発動する共振エネルギーを指します。<br>※実際に装着しているパーツを除いた数を入力してください。',
+        subtitle:     '「マイパーツ」にあるレジェンド以上のテックパーツの枚数と共振チップの所持数を入力し、「Calculate」を押すと、双生ドローン／ドリル／サッカー／雷の最適組合せを一覧で表示します。<br>※必要に応じてエピック＋３のパーツが使われることがあります。<br>※「Target」とは、特に強力な効果が発動する共振エネルギーを指します。<br>※実際に装着しているパーツを除いた数を入力してください。<br>※計算に時間がかかることがあります。「Calculate」を押したらしばらくお待ちください。<br>倍率が3.2倍以上の組み合わせが含まれる場合は、必要な追加パーツをL0換算で差し引いた残数を表示し、さらに不足分を別列に表示します。3.2倍未満の組み合わせのみの場合は追加パーツ列は表示されません。',
         labelE:       'エターナル',
         labelL0:      'レジェンド',
         labelL1:      'レジェ＋１',
@@ -173,14 +181,16 @@
           energy:  '共振エネルギー',
           target:  'Target',
           drill:   '<img src="drill_icon.png" alt="Drill" width="40" height="40">',
+          lightning: '<img src="lightning_icon.png" alt="Lightning" width="40" height="40">',
           soccer:  '<img src="soccer_icon.png" alt="Soccer" width="40" height="40">',
           rem:     '余剰チップ',
-        } 
+          need:    '必要パーツ(レジェンド)',
+        }
       },
       en: {
         title:        'Resonance Optimization Calculator',
         mainTitle:    'Resonance Optimization Calculator',
-        subtitle:     'Enter the number of Tech Parts (Legend or higher) and Resonance Chips you own, then press "Calculate" to see all optimal patterns for Twin Drone / Drill / Soccer.<br>*Epic+3 parts may be used as needed.<br>*"Target" means a Resonance Energy that reaches a powerful effect.<br>*Do not include parts currently equipped.',
+        subtitle:     'Enter the number of Tech Parts (Legend or higher) and Resonance Chips you own, then press "Calculate" to see all optimal patterns for Twin Drone / Drill / Soccer / Lightning.<br>*Epic+3 parts may be used as needed.<br>*"Target" means a Resonance Energy that reaches a powerful effect.<br>*Do not include parts currently equipped.<br>*Calculations may take a while. After pressing "Calculate", please wait a moment.<br>If any combination includes a resonance multiplier of 3.2× or higher, the remaining parts after subtracting the required materials (in Legend equivalents) are shown and the needed amount is displayed in a separate column. The extra column is hidden when all multipliers are below 3.2×.',
         labelE:       'Eternal',
         labelL0:      'Legend',
         labelL1:      'Legend+1',
@@ -198,14 +208,16 @@
           energy:  'Resonance Energy',
           target:  'Target',
           drill:   '<img src="drill_icon.png" alt="Drill" width="40" height="40">',
+          lightning: '<img src="lightning_icon.png" alt="Lightning" width="40" height="40">',
           soccer:  '<img src="soccer_icon.png" alt="Soccer" width="40" height="40">',
           rem:     'Chip Left',
+          need:    'Parts Needed (L0)',
         } 
       },
       zh: {
         title:        '共振优化计算器',
         mainTitle:    '共振优化计算器',
-        subtitle:     '请输入你拥有的传奇及以上*科技零件数量和共振芯片数量，然后点击“计算”按钮，显示双生无人机/钻头/足球的最优组合一览。<br>*如有需要，可能会使用史诗+3零件。<br>*“目标”是指能够激发强力效果的共振能量。<br>*请不要计入当前已装备的部件。',
+        subtitle:     '请输入你拥有的传奇及以上*科技零件数量和共振芯片数量，然后点击“计算”按钮，显示双生无人机/钻头/足球/雷电的最优组合一览。<br>*如有需要，可能会使用史诗+3零件。<br>*“目标”是指能够激发强力效果的共振能量。<br>*请不要计入当前已装备的部件。<br>*计算可能需要一些时间。点击“计算”后请稍候。<br>若组合包含3.2倍及以上的共振倍率，将按传奇等值扣除所需的追加零件并显示扣除后的剩余，同时在另一列显示所需数量；若仅有3.2倍未满的组合则不显示该列。',
         labelE:       '永恒',
         labelL0:      '传奇',
         labelL1:      '传奇+1',
@@ -223,14 +235,16 @@
           energy:  '共振能量',
           target:  '目标',
           drill:   '<img src="drill_icon.png" alt="Drill" width="40" height="40">',
+          lightning: '<img src="lightning_icon.png" alt="Lightning" width="40" height="40">',
           soccer:  '<img src="soccer_icon.png" alt="Soccer" width="40" height="40">',
           rem:     '剩余芯片',
+          need:    '需要零件(传奇)',
         } 
       },
       ko: {
         title:        '공진 최적화 계산기',
         mainTitle:    '공진 최적화 계산기',
-        subtitle:     '내 파츠 중 레전드 이상의 테크 파츠 개수와 공진 칩 보유 수를 입력하고 "Calculate"를 누르면, 트윈 드론/드릴/사커의 최적 조합을 모두 표시합니다.<br>*필요시 에픽+3 파츠가 사용될 수 있습니다.<br>*"Target"는 강력한 효과가 발동되는 공진 에너지를 의미합니다.<br>*현재 장착 중인 파츠는 제외하고 입력하세요.',
+        subtitle:     '내 파츠 중 레전드 이상의 테크 파츠 개수와 공진 칩 보유 수를 입력하고 "Calculate"를 누르면, 트윈 드론/드릴/사커/번개의 최적 조합을 모두 표시합니다.<br>*필요시 에픽+3 파츠가 사용될 수 있습니다.<br>*"Target"는 강력한 효과가 발동되는 공진 에너지를 의미합니다.<br>*현재 장착 중인 파츠는 제외하고 입력하세요.<br>*계산에 시간이 걸릴 수 있습니다. "Calculate" 버튼을 누른 후 잠시 기다려 주세요.<br>3.2배 이상의 배율이 포함된 경우, 필요한 추가 파츠를 L0 환산으로 차감한 잔량을 표시하고 부족분을 별도 열에 보여 주며, 모든 배율이 3.2배 미만이면 해당 열은 표시되지 않습니다.',
         labelE:       '이터널',
         labelL0:      '레전드',
         labelL1:      '레전드+1',
@@ -248,8 +262,10 @@
           energy:  '공진 에너지',
           target:  'Target',
           drill:   '<img src="drill_icon.png" alt="Drill" width="40" height="40">',
+          lightning: '<img src="lightning_icon.png" alt="Lightning" width="40" height="40">',
           soccer:  '<img src="soccer_icon.png" alt="Soccer" width="40" height="40">',
           rem:     '남은 칩',
+          need:    '필요 파츠(레전드)',
         } 
       }
     };
@@ -319,6 +335,31 @@
     const partValues = { E:1000, L0:300, L1:400, L2:550, L3:700, L4:850, Y:200 };
     const targets = [900,1200,1650,2100,2550,3000,4500,6000,7500,9000,10500,12000,13500,15000];
     const allowedChips = [0,1,2,4,6,9,12,16,20,25,30,36,42,48,54,60,66,72,78,84,90];
+    const l0NeedMap = {36:1,42:2,48:3,54:4,60:5,66:6,72:7,78:8,84:9,90:10};
+
+    function requiredL0FromChip(chip) {
+      return l0NeedMap[chip] || 0;
+    }
+
+    function deductMaterials(inv, need) {
+      const order = ['L0','L1','L2','L3','L4','E'];
+      const eq = {L0:1,L1:2,L2:3,L3:4,L4:5,E:7};
+      let invCopy = { ...inv };
+      for (let t of order) {
+        while (need > 0 && invCopy[t] > 0) {
+          if (eq[t] <= need) {
+            invCopy[t]--;
+            need -= eq[t];
+          } else {
+            invCopy[t]--;
+            invCopy['L0'] = (invCopy['L0']||0) + (eq[t]-need);
+            need = 0;
+          }
+        }
+      }
+      if (need > 0) return null;
+      return invCopy;
+    }
     let lookupTable = {};
 
     // CSV Loading
@@ -415,11 +456,17 @@
         if (cD > C_total) continue;
         for (let cR of allowedChips) {
           if (cD + cR > C_total) continue;
-          for (let cS of allowedChips) {
-            let used = cD + cR + cS;
-            if (used > C_total) continue;
-            let rem = C_total - used;
-            splits.push({ cD, cR, cS, rem });
+          for (let cL of allowedChips) {
+            if (cD + cR + cL > C_total) continue;
+            for (let cS of allowedChips) {
+              let used = cD + cR + cL + cS;
+              if (used > C_total) continue;
+              if (used === 0 && C_total > 0) continue;
+              if (C_total >= 36 && cD < 36 && cR < 36 && cL < 36 && cS < 36) continue;
+              let rem = C_total - used;
+              let needL0 = requiredL0FromChip(cD) + requiredL0FromChip(cR) + requiredL0FromChip(cL) + requiredL0FromChip(cS);
+              splits.push({ cD, cR, cL, cS, rem, needL0 });
+            }
           }
         }
       }
@@ -453,113 +500,134 @@
     }
     function computeOverOrEqualNine(inv, C_total) {
       let results = [];
-      const dCombos = enumerateCombosFromInventory(inv, 3);
-      for (let partsD of dCombos) {
-        let invR = { ...inv };
-        for (let p of partsD) invR[p]--;
-        const rCombos = enumerateCombosFromInventory(invR, 3);
-        for (let partsR of rCombos) {
-          let invS = { ...invR };
-          for (let p of partsR) invS[p]--;
-          const sCombos = enumerateCombosFromInventory(invS, 3);
-          for (let partsS of sCombos) {
-            for (let { cD, cR, cS, rem } of enumerateChipSplits(C_total)) {
-              const totalD = getTotal('D', partsD, cD);
-              const totalR = getTotal('R', partsR, cR);
-              const totalS = getTotal('S', partsS, cS);
-              if (totalD < totalR || totalR < totalS) continue;
-              const targetD = computeTargetFromTotal(totalD);
-              const targetR = computeTargetFromTotal(totalR);
-              const targetS = computeTargetFromTotal(totalS);
-              results.push({
-                partsDrone: partsD.slice(),
-                chipDrone: cD,
-                totalDrone: totalD,
-                targetDrone: targetD,
-                partsDrill: partsR.slice(),
-                chipDrill: cR,
-                totalDrill: totalR,
-                targetDrill: targetR,
-                partsSoccer: partsS.slice(),
-                chipSoccer: cS,
-                totalSoccer: totalS,
-                targetSoccer: targetS,
-                chipRemainder: rem
-              });
+      for (let { cD, cR, cL, cS, rem, needL0 } of enumerateChipSplits(C_total)) {
+        const baseInv = deductMaterials(inv, needL0);
+        if (!baseInv) continue;
+        const dCombos = enumerateCombosFromInventory(baseInv, 3);
+        for (let partsD of dCombos) {
+          let invR = { ...baseInv };
+          for (let p of partsD) invR[p]--;
+          const rCombos = enumerateCombosFromInventory(invR, 3);
+          for (let partsR of rCombos) {
+            let invL = { ...invR };
+            for (let p of partsR) invL[p]--;
+            const lCombos = enumerateCombosFromInventory(invL, 3);
+            for (let partsL of lCombos) {
+              let invS = { ...invR };
+              for (let p of partsR) invS[p]--;
+              const sCombos = enumerateCombosFromInventory(invS, 3);
+              for (let partsS of sCombos) {
+                let invRemain = { ...invS };
+                for (let p of partsS) invRemain[p]--;
+                const totalD = getTotal('D', partsD, cD);
+                const totalR = getTotal('R', partsR, cR);
+                const totalL = getTotal('L', partsL, cL);
+                const totalS = getTotal('S', partsS, cS);
+                if (totalD < totalR || totalR < totalL || totalL < totalS) continue;
+                const targetD = computeTargetFromTotal(totalD);
+                const targetR = computeTargetFromTotal(totalR);
+                const targetL = computeTargetFromTotal(totalL);
+                const targetS = computeTargetFromTotal(totalS);
+                results.push({
+                  partsDrone: partsD.slice(),
+                  chipDrone: cD,
+                  totalDrone: totalD,
+                  targetDrone: targetD,
+                  partsDrill: partsR.slice(),
+                  chipDrill: cR,
+                  totalDrill: totalR,
+                  targetDrill: targetR,
+                  partsLightning: partsL.slice(),
+                  chipLightning: cL,
+                  totalLightning: totalL,
+                  targetLightning: targetL,
+                  partsSoccer: partsS.slice(),
+                  chipSoccer: cS,
+                  totalSoccer: totalS,
+                  targetSoccer: targetS,
+                  chipRemainder: rem,
+                  needL0: needL0
+                });
+              }
             }
           }
         }
       }
-      return filterBestResultsPareto3D(results);
+      return filterBestResultsPareto4D(results);
     }
 
-    // グローバル3軸Pareto＋細かいタイbreak
-    function filterBestResultsPareto3D(candidates) {
-      if (!candidates || candidates.length === 0) return [];
-      // Pareto front抽出（3軸）
-      let isDominated = Array(candidates.length).fill(false);
-      for (let i=0; i<candidates.length; i++) {
-        for (let j=0; j<candidates.length; j++) {
-          if (i===j) continue;
-          const a = candidates[i], b = candidates[j];
-          if (
-            (b.targetDrone > a.targetDrone || b.targetDrill > a.targetDrill || b.targetSoccer > a.targetSoccer) &&
-            (b.targetDrone >= a.targetDrone && b.targetDrill >= a.targetDrill && b.targetSoccer >= a.targetSoccer)
-          ) {
-            isDominated[i] = true;
-            break;
+    // グローバル5軸Pareto＋細かいタイbreak
+      function filterBestResultsPareto4D(candidates) {
+        if (!candidates || candidates.length === 0) return [];
+        // Pareto front抽出（4軸＋必要パーツ）
+        let isDominated = Array(candidates.length).fill(false);
+        for (let i=0; i<candidates.length; i++) {
+          for (let j=0; j<candidates.length; j++) {
+            if (i===j) continue;
+            const a = candidates[i], b = candidates[j];
+            if (
+              (b.targetDrone > a.targetDrone || b.targetDrill > a.targetDrill || b.targetLightning > a.targetLightning || b.targetSoccer > a.targetSoccer || b.needL0 < a.needL0) &&
+              (b.targetDrone >= a.targetDrone && b.targetDrill >= a.targetDrill && b.targetLightning >= a.targetLightning && b.targetSoccer >= a.targetSoccer && b.needL0 <= a.needL0)
+            ) {
+              isDominated[i] = true;
+              break;
+            }
           }
         }
-      }
       let paretoSet = candidates.filter((_,i)=>!isDominated[i]);
-      // (Target_D,Target_R,Target_S)ごとに
-      let groupMap = {};
-      for (let item of paretoSet) {
-        const k = [item.targetDrone,item.targetDrill,item.targetSoccer].join('-');
-        if (!groupMap[k]) groupMap[k]=[];
-        groupMap[k].push(item);
-      }
-      // 余りchip→Total_D→Total_R→Total_S最小化、パーツ違いは全残し
-      let groupArr = [];
-      for (let k in groupMap) {
-        let sub = groupMap[k];
-        let minRem = Math.min(...sub.map(x=>x.chipRemainder));
-        sub = sub.filter(x=>x.chipRemainder===minRem);
-        let minTD = Math.min(...sub.map(x=>x.totalDrone));
-        sub = sub.filter(x=>x.totalDrone===minTD);
-        let minTR = Math.min(...sub.map(x=>x.totalDrill));
-        sub = sub.filter(x=>x.totalDrill===minTR);
-        let minTS = Math.min(...sub.map(x=>x.totalSoccer));
-        sub = sub.filter(x=>x.totalSoccer===minTS);
-        // パーツ構成次第でユニークに
-        let uniq = [];
-        let seen = [];
-        for (let it of sub) {
-          let sign = [
-            it.partsDrone.join(','),
-            it.partsDrill.join(','),
-            it.partsSoccer.join(','),
-            it.chipDrone,it.chipDrill,it.chipSoccer
-          ].join('/');
-          if (!seen.includes(sign)) {
-            uniq.push(it);
-            seen.push(sign);
-          }
+        // (Target_D,Target_R,Target_L,Target_S,必要パーツ)ごとに
+        let groupMap = {};
+        for (let item of paretoSet) {
+          const k = [item.targetDrone,item.targetDrill,item.targetLightning,item.targetSoccer,item.needL0].join('-');
+          if (!groupMap[k]) groupMap[k]=[];
+          groupMap[k].push(item);
         }
-        groupArr = groupArr.concat(uniq);
+        // 余りchip→Total_D→Total_R→Total_L→Total_S最小化、パーツ違いは全残し
+        let groupArr = [];
+        for (let k in groupMap) {
+          let sub = groupMap[k];
+          let minRem = Math.min(...sub.map(x=>x.chipRemainder));
+          sub = sub.filter(x=>x.chipRemainder===minRem);
+          let minTD = Math.min(...sub.map(x=>x.totalDrone));
+          sub = sub.filter(x=>x.totalDrone===minTD);
+          let minTR = Math.min(...sub.map(x=>x.totalDrill));
+          sub = sub.filter(x=>x.totalDrill===minTR);
+          let minTL = Math.min(...sub.map(x=>x.totalLightning));
+          sub = sub.filter(x=>x.totalLightning===minTL);
+          let minTS = Math.min(...sub.map(x=>x.totalSoccer));
+          sub = sub.filter(x=>x.totalSoccer===minTS);
+          // パーツ構成次第でユニークに
+          let uniq = [];
+          let seen = [];
+          for (let it of sub) {
+            let sign = [
+              it.partsDrone.join(','),
+              it.partsDrill.join(','),
+              it.partsLightning.join(','),
+              it.partsSoccer.join(','),
+              it.chipDrone,it.chipDrill,it.chipLightning,it.chipSoccer
+            ].join('/');
+            if (!seen.includes(sign)) {
+              uniq.push(it);
+              seen.push(sign);
+            }
+          }
+          groupArr = groupArr.concat(uniq);
+        }
+        // 並び順: max(Target_D,R,L,S)降順→D降順→R降順→L降順→S降順→必要パーツ昇順
+        groupArr.sort((a,b)=>{
+          let am = Math.max(a.targetDrone,a.targetDrill,a.targetLightning,a.targetSoccer),
+              bm = Math.max(b.targetDrone,b.targetDrill,b.targetLightning,b.targetSoccer);
+          if (bm!==am) return bm-am;
+          if (b.targetDrone!==a.targetDrone) return b.targetDrone - a.targetDrone;
+          if (b.targetDrill!==a.targetDrill) return b.targetDrill - a.targetDrill;
+          if (b.targetLightning!==a.targetLightning) return b.targetLightning - a.targetLightning;
+          if (b.targetSoccer!==a.targetSoccer) return b.targetSoccer - a.targetSoccer;
+          if (a.needL0!==b.needL0) return a.needL0 - b.needL0;
+          return 0;
+        });
+        return groupArr;
       }
-      // 並び順: max(Target_D,R,S)降順→D降順→R降順→S降順
-      groupArr.sort((a,b)=>{
-        let am = Math.max(a.targetDrone,a.targetDrill,a.targetSoccer),
-            bm = Math.max(b.targetDrone,b.targetDrill,b.targetSoccer);
-        if (bm!==am) return bm-am;
-        if (b.targetDrone!==a.targetDrone) return b.targetDrone - a.targetDrone;
-        if (b.targetDrill!==a.targetDrill) return b.targetDrill - a.targetDrill;
-        if (b.targetSoccer!==a.targetSoccer) return b.targetSoccer - a.targetSoccer;
-        return 0;
-      });
-      return groupArr;
-    }
 
     function renderResults(results) {
       const container = document.getElementById('results-container');
@@ -574,19 +642,26 @@
       const lang = getBrowserLang();
       const res = resources[lang] || resources['ja'];
       const h = res.headers;
+      const hasNeed = results.some(r => r.needL0 && r.needL0 > 0);
 
       const headers = [
         h.pattern,
         h.drone, h.chip, h.energy, h.target,
         h.drill, h.chip, h.energy, h.target,
+        h.lightning, h.chip, h.energy, h.target,
         h.soccer, h.chip, h.energy, h.target,
         h.rem
       ];
       const thClasses = [
         'col-number','col-drone-icon','col-drone-chip','col-drone-total','col-drone-target',
         'col-drill-icon','col-drill-chip','col-drill-total','col-drill-target',
+        'col-lightning-icon','col-lightning-chip','col-lightning-total','col-lightning-target',
         'col-soccer-icon','col-soccer-chip','col-soccer-total','col-soccer-target','col-rem'
       ];
+      if (hasNeed) {
+        headers.push(h.need);
+        thClasses.push('col-need');
+      }
       for (let i = 0; i < headers.length; i++) {
         const th = document.createElement('th');
         th.innerHTML = headers[i];
@@ -648,6 +723,27 @@
         tdRtarget.className = 'col-drill-target';
         tr.appendChild(tdRtarget);
 
+        // Lightning icons
+        const tdLicon = document.createElement('td');
+        tdLicon.className = 'col-lightning-icon';
+        tdLicon.innerHTML = item.partsLightning.map(p => `<img src="${p}.png" alt="${p}" width="40" height="40">`).join('&nbsp;');
+        tr.appendChild(tdLicon);
+        // Lightning Chip
+        const tdLchip = document.createElement('td');
+        tdLchip.innerHTML = item.chipLightning;
+        tdLchip.className = 'col-lightning-chip';
+        tr.appendChild(tdLchip);
+        // Lightning Total
+        const tdLtotal = document.createElement('td');
+        tdLtotal.innerHTML = item.totalLightning.toFixed(0);
+        tdLtotal.className = 'col-lightning-total';
+        tr.appendChild(tdLtotal);
+        // Lightning Target
+        const tdLtarget = document.createElement('td');
+        tdLtarget.innerHTML = item.targetLightning;
+        tdLtarget.className = 'col-lightning-target';
+        tr.appendChild(tdLtarget);
+
         // Soccer icons
         const tdSicon = document.createElement('td');
         tdSicon.className = 'col-soccer-icon';
@@ -674,6 +770,13 @@
         tdRem.innerHTML = item.chipRemainder;
         tdRem.className = 'col-rem';
         tr.appendChild(tdRem);
+
+        if (hasNeed) {
+          const tdNeed = document.createElement('td');
+          tdNeed.innerHTML = item.needL0 || 0;
+          tdNeed.className = 'col-need';
+          tr.appendChild(tdNeed);
+        }
 
         tbody.appendChild(tr);
       }
