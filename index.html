@@ -433,7 +433,7 @@
               if (used > C_total) continue;
               if (C_total >= 36 && cD < 36 && cR < 36 && cL < 36 && cS < 36) continue;
               let rem = C_total - used;
-              splits.push({ cD, cR, cL, cS, rem, needL0 });
+              splits.push({ cD, cR, cL, cS, rem});
             }
           }
         }
@@ -510,7 +510,6 @@
                   totalSoccer: totalS,
                   targetSoccer: targetS,
                   chipRemainder: rem,
-                  needL0: needL0
                 });
               }
             }
