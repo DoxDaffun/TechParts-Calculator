@@ -188,7 +188,8 @@
       en: {
         title:        'Resonance Optimization Calculator',
         mainTitle:    'Resonance Optimization Calculator',
-        subtitle:     'Enter the number of Tech Parts (Legend or higher) and Resonance Chips you own, then press "Calculate" to see all optimal patterns for Twin Drone / Drill / Soccer / Lightning.<br>*Epic+3 parts may be used as needed.<br>*"Target" means a Resonance Energy that reaches a powerful effect.<br>*Do not include parts currently equipped.<br>*Calculations may take a while. After pressing "Calculate", please wait a moment.',
+        subtitle:     'Enter the number of Tech Parts (Legend or higher) and Resonance Chips you own, then press "Calculate" to see all optimal patterns for Twin Drone / Drill / Soccer / Lightning.<br>*Epic+3 parts may be used as needed.<br>*"Target" means a Resonance Energy that reaches a powerful effect.<br>*Do not include parts currently equipped.<br>*Calculations may take a while. After pressing "Calculate", please wait a moment.
+',
         labelE:       'Eternal',
         labelL0:      'Legend',
         labelL1:      'Legend+1',
@@ -209,12 +210,13 @@
           lightning: '<img src="lightning_icon.png" alt="Lightning" width="40" height="40">',
           soccer:  '<img src="soccer_icon.png" alt="Soccer" width="40" height="40">',
           rem:     'Chip Left',
-        } 
+        }
       },
       zh: {
         title:        '共振优化计算器',
         mainTitle:    '共振优化计算器',
-        subtitle:     '请输入你拥有的传奇及以上*科技零件数量和共振芯片数量，然后点击“计算”按钮，显示双生无人机/钻头/足球/雷电的最优组合一览。<br>*如有需要，可能会使用史诗+3零件。<br>*“目标”是指能够激发强力效果的共振能量。<br>*请不要计入当前已装备的部件。<br>*计算可能需要一些时间。点击“计算”后请稍候。',
+        subtitle:     '请输入你拥有的传奇及以上*科技零件数量和共振芯片数量，然后点击“计算”按钮，显示双生无人机/钻头/足球/雷电的最优组合一览。<br>*如有需要，可能会使用史诗+3零件。<br>*“目标”是指能够激发强力效果的共振能量。<br>*请不要计入当前已装备的部件。<br>*计算可能需要一些时间。点击“计算”后请稍候。
+',
         labelE:       '永恒',
         labelL0:      '传奇',
         labelL1:      '传奇+1',
@@ -235,12 +237,13 @@
           lightning: '<img src="lightning_icon.png" alt="Lightning" width="40" height="40">',
           soccer:  '<img src="soccer_icon.png" alt="Soccer" width="40" height="40">',
           rem:     '剩余芯片',
-        } 
+        }
       },
       ko: {
         title:        '공진 최적화 계산기',
         mainTitle:    '공진 최적화 계산기',
-        subtitle:     '내 파츠 중 레전드 이상의 테크 파츠 개수와 공진 칩 보유 수를 입력하고 "Calculate"를 누르면, 트윈 드론/드릴/사커/번개의 최적 조합을 모두 표시합니다.<br>*필요시 에픽+3 파츠가 사용될 수 있습니다.<br>*"Target"는 강력한 효과가 발동되는 공진 에너지를 의미합니다.<br>*현재 장착 중인 파츠는 제외하고 입력하세요.<br>*계산에 시간이 걸릴 수 있습니다. "Calculate" 버튼을 누른 후 잠시 기다려 주세요.',
+        subtitle:     '내 파츠 중 레전드 이상의 테크 파츠 개수와 공진 칩 보유 수를 입력하고 "Calculate"를 누르면, 트윈 드론/드릴/사커/번개의 최적 조합을 모두 표시합니다.<br>*필요시 에픽+3 파츠가 사용될 수 있습니다.<br>*"Target"는 강력한 효과가 발동되는 공진 에너지를 의미합니다.<br>*현재 장착 중인 파츠는 제외하고 입력하세요.<br>*계산에 시간이 걸릴 수 있습니다. "Calculate" 버튼을 누른 후 잠시 기다려 주세요.
+',
         labelE:       '이터널',
         labelL0:      '레전드',
         labelL1:      '레전드+1',
@@ -261,7 +264,7 @@
           lightning: '<img src="lightning_icon.png" alt="Lightning" width="40" height="40">',
           soccer:  '<img src="soccer_icon.png" alt="Soccer" width="40" height="40">',
           rem:     '남은 칩',
-        } 
+        }
       }
     };
 
@@ -431,9 +434,8 @@
             for (let cS of allowedChips) {
               let used = cD + cR + cL + cS;
               if (used > C_total) continue;
-              if (C_total >= 36 && cD < 36 && cR < 36 && cL < 36 && cS < 36) continue;
               let rem = C_total - used;
-              splits.push({ cD, cR, cL, cS, rem});
+              splits.push({ cD, cR, cL, cS, rem });
             }
           }
         }
@@ -509,7 +511,7 @@
                   chipSoccer: cS,
                   totalSoccer: totalS,
                   targetSoccer: targetS,
-                  chipRemainder: rem,
+                  chipRemainder: rem
                 });
               }
             }
