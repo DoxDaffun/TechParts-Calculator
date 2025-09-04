@@ -148,7 +148,7 @@
   <footer>
     <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'V7V71KOLL8');kofiwidget2.draw();</script> 
     <br><br>
-    <span id="footer-version">Version: v.3.0.1 &nbsp; / &nbsp; Created by Dox_Daffun<br>
+    <span id="footer-version">Version: v.3.1 &nbsp; / &nbsp; Created by Dox_Daffun<br>
     Special thanks to: YAMATO</span><br>
     <span id="footer-discord" style="color:#555;">
       Feedback or bug reports:&nbsp;
@@ -372,8 +372,9 @@
 
     // Utility functions for combo generation
     function getPartArr(inv) {
+      const order = ['E','L4','L3','L2','L1','L0'];
       let arr = [];
-      for (let p of ['E','L0','L1','L2','L3','L4']) {
+      for (let p of order) {
         for (let i=0;i<inv[p];i++) arr.push(p);
       }
       return arr;
@@ -398,7 +399,7 @@
       if (results.length === 0) {
         let fill = [];
         let remain = size;
-        for (let p of ['E','L0','L1','L2','L3','L4']) {
+        for (let p of ['E','L4','L3','L2','L1','L0']) {
           for (let i=0; i<inventory[p] && remain > 0; i++, remain--) {
             fill.push(p);
           }
@@ -406,19 +407,7 @@
         while (fill.length < size) fill.push('Y');
         return [fill];
       }
-      let ylist = [];
-      if (results.length < 1) {
-        let fill = [];
-        let remain = size;
-        for (let p of ['E','L0','L1','L2','L3','L4']) {
-          for (let i=0; i<inventory[p] && remain > 0; i++, remain--) {
-            fill.push(p);
-          }
-        }
-        while (fill.length < size) fill.push('Y');
-        ylist.push(fill);
-      }
-      return results.length ? results : ylist;
+      return results;
     }
     function enumerateChipSplits(C_total) {
       let splits = [];
