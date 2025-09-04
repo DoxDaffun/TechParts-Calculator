@@ -460,7 +460,7 @@
       return baseSum * m;
     }
     function getTotal(key, parts, chip) {
-      const k = parts.slice().sort().join('|');
+      const k = parts.join('|');
       return (lookupTable[k] && lookupTable[k][chip] !== undefined)
         ? lookupTable[k][chip]
         : calculateOnTheFly(parts, chip);
