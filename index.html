@@ -148,7 +148,7 @@
   <footer>
     <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'V7V71KOLL8');kofiwidget2.draw();</script> 
     <br><br>
-    <span id="footer-version">Version: v.3.1 &nbsp; / &nbsp; Created by Dox_Daffun<br>
+    <span id="footer-version">Version: v.3.0.2 &nbsp; / &nbsp; Created by Dox_Daffun<br>
     Special thanks to: YAMATO</span><br>
     <span id="footer-discord" style="color:#555;">
       Feedback or bug reports:&nbsp;
@@ -367,6 +367,9 @@
       const C_total = parseInt(document.getElementById('input-chip').value) || 0;
       // ※ Exhaustive search in all cases（from v.2）
       const results = computeOverOrEqualNine(inv, C_total);
+      // clear caches to avoid memory growth between calculations
+      for (const k in comboCache) delete comboCache[k];
+      for (const k in totalCache) delete totalCache[k];
       renderResults(results);
     });
 
@@ -409,6 +412,16 @@
       }
       return results;
     }
+
+    // cache for combinations from the same inventory state
+    const comboCache = {};
+    function getCombosMemo(inv, size) {
+      const key = ['E','L4','L3','L2','L1','L0'].map(p => inv[p] || 0).join(',');
+      if (!comboCache[key]) {
+        comboCache[key] = enumerateCombosFromInventory(inv, size);
+      }
+      return comboCache[key];
+    }
     function enumerateChipSplits(C_total) {
       let splits = [];
       for (let cD of allowedChips) {
@@ -448,63 +461,79 @@
       const m = multMap[chip] !== undefined ? multMap[chip] : 1.0;
       return baseSum * m;
     }
-    function getTotal(key, parts, chip) {
-      const k = parts.join('|');
-      return (lookupTable[k] && lookupTable[k][chip] !== undefined)
-        ? lookupTable[k][chip]
+    const totalCache = {};
+    function getTotal(parts, chip) {
+      const key = parts.join('|') + '|' + chip;
+      if (totalCache[key] !== undefined) return totalCache[key];
+      const kParts = parts.join('|');
+      const val = (lookupTable[kParts] && lookupTable[kParts][chip] !== undefined)
+        ? lookupTable[kParts][chip]
         : calculateOnTheFly(parts, chip);
+      totalCache[key] = val;
+      return val;
     }
     function computeOverOrEqualNine(inv, C_total) {
-      let results = [];
-      const dCombos = enumerateCombosFromInventory(inv, 3);
-      for (let partsD of dCombos) {
-        let invR = { ...inv };
-        for (let p of partsD) invR[p]--;
-        const rCombos = enumerateCombosFromInventory(invR, 3);
-        for (let partsR of rCombos) {
-          let invL = { ...invR };
-          for (let p of partsR) invL[p]--;
-          const lCombos = enumerateCombosFromInventory(invL, 3);
-          for (let partsL of lCombos) {
-            let invS = { ...invL };
-            for (let p of partsL) invS[p]--;
-            const sCombos = enumerateCombosFromInventory(invS, 3);
-            for (let partsS of sCombos) {
-              for (let { cD, cR, cL, cS, rem } of enumerateChipSplits(C_total)) {
-                const totalD = getTotal('D', partsD, cD);
-                const totalR = getTotal('R', partsR, cR);
-                const totalL = getTotal('L', partsL, cL);
-                const totalS = getTotal('S', partsS, cS);
-                if (totalD < totalR || totalR < totalL || totalL < totalS) continue;
-                const targetD = computeTargetFromTotal(totalD);
-                const targetR = computeTargetFromTotal(totalR);
-                const targetL = computeTargetFromTotal(totalL);
-                const targetS = computeTargetFromTotal(totalS);
-                results.push({
-                  partsDrone: partsD.slice(),
-                  chipDrone: cD,
-                  totalDrone: totalD,
-                  targetDrone: targetD,
-                  partsDrill: partsR.slice(),
-                  chipDrill: cR,
-                  totalDrill: totalR,
-                  targetDrill: targetR,
-                  partsLightning: partsL.slice(),
-                  chipLightning: cL,
-                  totalLightning: totalL,
-                  targetLightning: targetL,
-                  partsSoccer: partsS.slice(),
-                  chipSoccer: cS,
-                  totalSoccer: totalS,
-                  targetSoccer: targetS,
-                  chipRemainder: rem
-                });
-              }
-            }
+      const chipSplits = enumerateChipSplits(C_total);
+      const dpMemo = new Map();
+      const order = ['E','L4','L3','L2','L1','L0'];
+
+      const invKey = (inventory) => order.map(p => inventory[p] || 0).join(',');
+
+      function search(idx, inventory, chips, prevTotal) {
+        const key = idx + '|' + invKey(inventory) + '|' + chips.slice(idx).join(',') + '|' + prevTotal;
+        if (dpMemo.has(key)) return dpMemo.get(key);
+        if (idx === 4) return [[]];
+        const combos = getCombosMemo(inventory, 3);
+        let res = [];
+        for (let parts of combos) {
+          const total = getTotal(parts, chips[idx]);
+          if (total > prevTotal) continue;
+          const nextInv = { ...inventory };
+          for (let p of parts) nextInv[p]--;
+          const tails = search(idx + 1, nextInv, chips, total);
+          for (let t of tails) {
+            res.push([{ parts, chip: chips[idx], total }, ...t]);
           }
         }
+        // prune intermediate results to prevent memory explosion
+        if (res.length > 200) {
+          res.length = 200;
+        }
+        dpMemo.set(key, res);
+        return res;
       }
-      return filterBestResultsPareto4D(results);
+
+      let results = [];
+      for (let { cD, cR, cL, cS, rem } of chipSplits) {
+        const solutions = search(0, { ...inv }, [cD, cR, cL, cS], Infinity);
+        // limit solutions per split to prevent runaway memory
+        const limited = solutions.slice(0, 1000);
+        for (let sol of limited) {
+          const [d, r, l, s] = sol;
+          results.push({
+            partsDrone: d.parts.slice(),
+            chipDrone: d.chip,
+            totalDrone: d.total,
+            targetDrone: computeTargetFromTotal(d.total),
+            partsDrill: r.parts.slice(),
+            chipDrill: r.chip,
+            totalDrill: r.total,
+            targetDrill: computeTargetFromTotal(r.total),
+            partsLightning: l.parts.slice(),
+            chipLightning: l.chip,
+            totalLightning: l.total,
+            targetLightning: computeTargetFromTotal(l.total),
+            partsSoccer: s.parts.slice(),
+            chipSoccer: s.chip,
+            totalSoccer: s.total,
+            targetSoccer: computeTargetFromTotal(s.total),
+            chipRemainder: rem
+          });
+        }
+        // keep only Pareto-optimal results so far
+        results = filterBestResultsPareto4D(results);
+      }
+      return results;
     }
 
     // グローバル4軸Pareto＋細かいタイbreak
