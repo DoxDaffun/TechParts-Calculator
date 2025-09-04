@@ -32,6 +32,24 @@
       font-size: 16px;
       cursor: pointer;
     }
+    #calculate-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+    .spinner {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+      vertical-align: text-bottom;
+      border: 2px solid currentColor;
+      border-top-color: transparent;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
     .results-area { margin-top: 30px; overflow-x: auto; }
     table {
       width: 100%;
@@ -74,6 +92,7 @@
       width: 40px;
       height: 40px;
     }
+    .unlock-note { font-size: 12px; color:#666; line-height:1.2; margin-top:2px; }
     @media (max-width: 600px) {
       .part-item img { width: 30px; height: 30px; }
       .part-item input[type="number"] { width: 40px; }
@@ -148,7 +167,7 @@
   <footer>
     <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'V7V71KOLL8');kofiwidget2.draw();</script> 
     <br><br>
-    <span id="footer-version">Version: v.3.0.2 &nbsp; / &nbsp; Created by Dox_Daffun<br>
+    <span id="footer-version">Version: v.3.1 &nbsp; / &nbsp; Created by Dox_Daffun<br>
     Special thanks to: YAMATO</span><br>
     <span id="footer-discord" style="color:#555;">
       Feedback or bug reports:&nbsp;
@@ -162,7 +181,7 @@
       ja: {
         title:        '共振最適化計算ツール',
         mainTitle:    '共振最適化計算ツール',
-        subtitle:     '「マイパーツ」にあるレジェンド以上のテックパーツの枚数と共振チップの所持数を入力し、「Calculate」を押すと、双生ドローン／ドリル／サッカー／雷の最適組合せを一覧で表示します。<br>※必要に応じてエピック＋３のパーツが使われることがあります。<br>※「Target」とは、特に強力な効果が発動する共振エネルギーを指します。<br>※実際に装着しているパーツを除いた数を入力してください。<br>※計算に時間がかかることがあります。「Calculate」を押したらしばらくお待ちください。',
+        subtitle:     '「マイパーツ」にあるレジェンド以上のテックパーツの枚数と共振チップの所持数を入力し、「Calculate」を押すと、双生ドローン／ドリル／サッカー／雷の最適組合せを一覧で表示します。<br>※必要に応じてエピック＋３のパーツが使われることがあります。<br>※「Target」とは、特に強力な効果が発動する共振エネルギーを指します。<br>※実際に装着しているパーツを除いた数を入力してください。<br>倍率が3.2倍以上の組み合わせが含まれる場合は、素材に必要なパーツ数を表示します。（手持ちのテックパーツを分解しなければならないときがあります）',
         labelE:       'エターナル',
         labelL0:      'レジェンド',
         labelL1:      'レジェ＋１',
@@ -171,6 +190,7 @@
         labelL4:      'レジェ＋４',
         labelChip:    '共振チップ',
         btnCalculate: 'Calculate',
+        btnCalculating: 'Calculating...',
         resultList:   '結果一覧',
         btnSaveImage: 'Save Result',
         headers: {
@@ -183,12 +203,13 @@
           lightning: '<img src="lightning_icon.png" alt="Lightning" width="40" height="40">',
           soccer:  '<img src="soccer_icon.png" alt="Soccer" width="40" height="40">',
           rem:     '余剰チップ',
-        }
+        },
+        unlock: { req: '必要' }
       },
       en: {
         title:        'Resonance Optimization Calculator',
         mainTitle:    'Resonance Optimization Calculator',
-        subtitle:     'Enter the number of Tech Parts (Legend or higher) and Resonance Chips you own, then press "Calculate" to see all optimal patterns for Twin Drone / Drill / Soccer / Lightning.<br>*Epic+3 parts may be used as needed.<br>*"Target" means a Resonance Energy that reaches a powerful effect.<br>*Do not include parts currently equipped.<br>*Calculations may take a while. After pressing "Calculate", please wait a moment.',
+        subtitle:     'Enter the number of Tech Parts (Legend or higher) and Resonance Chips you own, then press "Calculate" to see all optimal patterns for Twin Drone / Drill / Soccer / Lightning.<br>*Epic+3 parts may be used as needed.<br>*"Target" means a Resonance Energy that reaches a powerful effect.<br>*Do not include parts currently equipped.<br>If a combination with a multiplier of 3.2x or higher is included, the required number of materials will be displayed. (In some cases, you may need to salvage your Tech Parts.)',
         labelE:       'Eternal',
         labelL0:      'Legend',
         labelL1:      'Legend+1',
@@ -197,6 +218,7 @@
         labelL4:      'Legend+4',
         labelChip:    'Resonance Chip',
         btnCalculate: 'Calculate',
+        btnCalculating: 'Calculating...',
         resultList:   'Results',
         btnSaveImage: 'Save Result',
         headers: {
@@ -209,12 +231,13 @@
           lightning: '<img src="lightning_icon.png" alt="Lightning" width="40" height="40">',
           soccer:  '<img src="soccer_icon.png" alt="Soccer" width="40" height="40">',
           rem:     'Chip Left',
-        }
+        },
+        unlock: { req: 'Req' }
       },
       zh: {
         title:        '共振优化计算器',
         mainTitle:    '共振优化计算器',
-        subtitle:     '请输入你拥有的传奇及以上*科技零件数量和共振芯片数量，然后点击“计算”按钮，显示双生无人机/钻头/足球/雷电的最优组合一览。<br>*如有需要，可能会使用史诗+3零件。<br>*“目标”是指能够激发强力效果的共振能量。<br>*请不要计入当前已装备的部件。<br>*计算可能需要一些时间。点击“计算”后请稍候。',
+        subtitle:     '请输入你拥有的传奇及以上*科技零件数量和共振芯片数量，然后点击“计算”按钮，显示双生无人机/钻头/足球/雷电的最优组合一览。<br>*如有需要，可能会使用史诗+3零件。<br>*“目标”是指能够激发强力效果的共振能量。<br>*请不要计入当前已装备的部件。<br>如果包含倍率达到3.2倍及以上的组合，将会显示所需的材料数量。（在某些情况下，你可能需要分解科技零件。）',
         labelE:       '永恒',
         labelL0:      '传奇',
         labelL1:      '传奇+1',
@@ -223,6 +246,7 @@
         labelL4:      '传奇+4',
         labelChip:    '共振芯片',
         btnCalculate: '计算',
+        btnCalculating: '计算中...',
         resultList:   '结果列表',
         btnSaveImage: '保存结果',
         headers: {
@@ -235,12 +259,13 @@
           lightning: '<img src="lightning_icon.png" alt="Lightning" width="40" height="40">',
           soccer:  '<img src="soccer_icon.png" alt="Soccer" width="40" height="40">',
           rem:     '剩余芯片',
-        }
+        },
+        unlock: { req: '需求' }
       },
       ko: {
         title:        '공진 최적화 계산기',
         mainTitle:    '공진 최적화 계산기',
-        subtitle:     '내 파츠 중 레전드 이상의 테크 파츠 개수와 공진 칩 보유 수를 입력하고 "Calculate"를 누르면, 트윈 드론/드릴/사커/번개의 최적 조합을 모두 표시합니다.<br>*필요시 에픽+3 파츠가 사용될 수 있습니다.<br>*"Target"는 강력한 효과가 발동되는 공진 에너지를 의미합니다.<br>*현재 장착 중인 파츠는 제외하고 입력하세요.<br>*계산에 시간이 걸릴 수 있습니다. "Calculate" 버튼을 누른 후 잠시 기다려 주세요.',
+        subtitle:     '내 파츠 중 레전드 이상의 테크 파츠 개수와 공진 칩 보유 수를 입력하고 "Calculate"를 누르면, 트윈 드론/드릴/사커/번개의 최적 조합을 모두 표시합니다.<br>*필요시 에픽+3 파츠가 사용될 수 있습니다.<br>*"Target"는 강력한 효과가 발동되는 공진 에너지를 의미합니다.<br>*현재 장착 중인 파츠는 제외하고 입력하세요.<br>배율이 3.2배 이상인 조합이 포함될 경우, 필요한 소재 수가 표시됩니다. (경우에 따라 테크 파츠를 분해해야 할 수 있습니다.)',
         labelE:       '이터널',
         labelL0:      '레전드',
         labelL1:      '레전드+1',
@@ -249,6 +274,7 @@
         labelL4:      '레전드+4',
         labelChip:    '공진 칩',
         btnCalculate: 'Calculate',
+        btnCalculating: 'Calculating...',
         resultList:   '결과 목록',
         btnSaveImage: '결과 저장',
         headers: {
@@ -261,7 +287,8 @@
           lightning: '<img src="lightning_icon.png" alt="Lightning" width="40" height="40">',
           soccer:  '<img src="soccer_icon.png" alt="Soccer" width="40" height="40">',
           rem:     '남은 칩',
-        }
+        },
+        unlock: { req: 'Req' }
       }
     };
 
@@ -330,6 +357,17 @@
     const partValues = { E:1000, L0:300, L1:400, L2:550, L3:700, L4:850, Y:200 };
     const targets = [900,1200,1650,2100,2550,3000,4500,6000,7500,9000,10500,12000,13500,15000];
     const allowedChips = [0,1,2,4,6,9,12,16,20,25,30,36,42,48,54,60,66,72,78,84,90];
+    const unitValue = { L0:1, L1:2, L2:3, L3:4, L4:5, E:7, Y:0 };
+    const unitReqByChip = {
+      0:0, 1:0, 2:0, 4:0, 6:0, 9:0, 12:0, 16:0, 20:0, 25:0, 30:0,
+      36:1, 42:2, 48:3, 54:4, 60:5, 66:6, 72:7, 78:8, 84:9, 90:10
+    };
+    function canUnlockMultiplier(parts, chip) {
+      const req = unitReqByChip[chip] ?? 0;
+      const supply = parts.reduce((s,p)=> s + (unitValue[p]||0), 0);
+      if (req === 0) return { ok: true, reqU: 0, supplyU: supply };
+      return { ok: supply >= req, reqU: req, supplyU: supply };
+    }
     let lookupTable = {};
 
     // CSV Loading
@@ -356,21 +394,29 @@
     
 
     document.getElementById('calculate-btn').addEventListener('click', () => {
-      const inv = {
-        E:  parseInt(document.getElementById('input-E').value)  || 0,
-        L0: parseInt(document.getElementById('input-L0').value) || 0,
-        L1: parseInt(document.getElementById('input-L1').value) || 0,
-        L2: parseInt(document.getElementById('input-L2').value) || 0,
-        L3: parseInt(document.getElementById('input-L3').value) || 0,
-        L4: parseInt(document.getElementById('input-L4').value) || 0
-      };
-      const C_total = parseInt(document.getElementById('input-chip').value) || 0;
-      // ※ Exhaustive search in all cases（from v.2）
-      const results = computeOverOrEqualNine(inv, C_total);
-      // clear caches to avoid memory growth between calculations
-      for (const k in comboCache) delete comboCache[k];
-      for (const k in totalCache) delete totalCache[k];
-      renderResults(results);
+      const btn = document.getElementById('calculate-btn');
+      const lang = getBrowserLang();
+      btn.disabled = true;
+      btn.innerHTML = `<span class="spinner"></span>${resources[lang].btnCalculating}`;
+      setTimeout(() => {
+        const inv = {
+          E:  parseInt(document.getElementById('input-E').value)  || 0,
+          L0: parseInt(document.getElementById('input-L0').value) || 0,
+          L1: parseInt(document.getElementById('input-L1').value) || 0,
+          L2: parseInt(document.getElementById('input-L2').value) || 0,
+          L3: parseInt(document.getElementById('input-L3').value) || 0,
+          L4: parseInt(document.getElementById('input-L4').value) || 0
+        };
+        const C_total = parseInt(document.getElementById('input-chip').value) || 0;
+        // ※ Exhaustive search in all cases（from v.2）
+        const results = computeOverOrEqualNine(inv, C_total);
+        // clear caches to avoid memory growth between calculations
+        for (const k in comboCache) delete comboCache[k];
+        for (const k in totalCache) delete totalCache[k];
+        renderResults(results);
+        btn.disabled = false;
+        btn.innerHTML = resources[lang].btnCalculate;
+      }, 10);
     });
 
     // Utility functions for combo generation
@@ -486,13 +532,15 @@
         const combos = getCombosMemo(inventory, 3);
         let res = [];
         for (let parts of combos) {
+          const gate = canUnlockMultiplier(parts, chips[idx]);
+          if (!gate.ok) continue;
           const total = getTotal(parts, chips[idx]);
           if (total > prevTotal) continue;
           const nextInv = { ...inventory };
           for (let p of parts) nextInv[p]--;
           const tails = search(idx + 1, nextInv, chips, total);
           for (let t of tails) {
-            res.push([{ parts, chip: chips[idx], total }, ...t]);
+            res.push([{ parts, chip: chips[idx], total, gate }, ...t]);
           }
         }
         // prune intermediate results to prevent memory explosion
@@ -527,7 +575,11 @@
             chipSoccer: s.chip,
             totalSoccer: s.total,
             targetSoccer: computeTargetFromTotal(s.total),
-            chipRemainder: rem
+            chipRemainder: rem,
+            unlockD: d.gate,
+            unlockR: r.gate,
+            unlockL: l.gate,
+            unlockS: s.gate
           });
         }
         // keep only Pareto-optimal results so far
@@ -621,6 +673,8 @@
       const lang = getBrowserLang();
       const res = resources[lang] || resources['ja'];
       const h = res.headers;
+      const i18nReq = res.unlock ? res.unlock.req : 'Req';
+      const legendLabel = res.labelL0;
 
       const headers = [
         h.pattern,
@@ -662,7 +716,8 @@
         tr.appendChild(tdDicon);
         // Drone Chip
         const tdDchip = document.createElement('td');
-        tdDchip.innerHTML = item.chipDrone;
+        const noteD = item.unlockD.reqU > 0 ? `<div class="unlock-note">${i18nReq} ${legendLabel} ${item.unlockD.reqU}</div>` : '';
+        tdDchip.innerHTML = `${item.chipDrone}${noteD}`;
         tdDchip.className = 'col-drone-chip';
         tr.appendChild(tdDchip);
         // Drone Total
@@ -683,7 +738,8 @@
         tr.appendChild(tdRicon);
         // Drill Chip
         const tdRchip = document.createElement('td');
-        tdRchip.innerHTML = item.chipDrill;
+        const noteR = item.unlockR.reqU > 0 ? `<div class="unlock-note">${i18nReq} ${legendLabel} ${item.unlockR.reqU}</div>` : '';
+        tdRchip.innerHTML = `${item.chipDrill}${noteR}`;
         tdRchip.className = 'col-drill-chip';
         tr.appendChild(tdRchip);
         // Drill Total
@@ -704,7 +760,8 @@
         tr.appendChild(tdLicon);
         // Lightning Chip
         const tdLchip = document.createElement('td');
-        tdLchip.innerHTML = item.chipLightning;
+        const noteL = item.unlockL.reqU > 0 ? `<div class="unlock-note">${i18nReq} ${legendLabel} ${item.unlockL.reqU}</div>` : '';
+        tdLchip.innerHTML = `${item.chipLightning}${noteL}`;
         tdLchip.className = 'col-lightning-chip';
         tr.appendChild(tdLchip);
         // Lightning Total
@@ -725,7 +782,8 @@
         tr.appendChild(tdSicon);
         // Soccer Chip
         const tdSchip = document.createElement('td');
-        tdSchip.innerHTML = item.chipSoccer;
+        const noteS = item.unlockS.reqU > 0 ? `<div class="unlock-note">${i18nReq} ${legendLabel} ${item.unlockS.reqU}</div>` : '';
+        tdSchip.innerHTML = `${item.chipSoccer}${noteS}`;
         tdSchip.className = 'col-soccer-chip';
         tr.appendChild(tdSchip);
         // Soccer Total
