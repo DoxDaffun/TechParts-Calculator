@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -420,36 +421,31 @@
     });
 
     // Utility functions for combo generation
-    function getPartArr(inv) {
-      const order = ['E','L4','L3','L2','L1','L0'];
-      let arr = [];
-      for (let p of order) {
-        for (let i=0;i<inv[p];i++) arr.push(p);
-      }
-      return arr;
-    }
+    const partOrder = ['E','L4','L3','L2','L1','L0'];
+
     function enumerateCombosFromInventory(inventory, size) {
-      const items = getPartArr(inventory);
       const results = [];
-      function backtrack(start, combo) {
-        if (combo.length === size) {
-          results.push(combo.slice());
-          return;
-        }
-        for (let i = start; i < items.length; i++) {
-          if (i > start && items[i] === items[i-1]) continue;
-          combo.push(items[i]);
-          backtrack(i + 1, combo);
-          combo.pop();
+      const types = partOrder;
+      const n = types.length;
+      for (let i = 0; i < n; i++) {
+        for (let j = i; j < n; j++) {
+          for (let k = j; k < n; k++) {
+            const combo = [types[i], types[j], types[k]];
+            const counts = {};
+            for (const p of combo) counts[p] = (counts[p] || 0) + 1;
+            let ok = true;
+            for (const p in counts) {
+              if ((inventory[p] || 0) < counts[p]) { ok = false; break; }
+            }
+            if (ok) results.push(combo);
+          }
         }
       }
-      backtrack(0, []);
-      // Add Y supplement if inventory is insufficient
       if (results.length === 0) {
         let fill = [];
         let remain = size;
-        for (let p of ['E','L4','L3','L2','L1','L0']) {
-          for (let i=0; i<inventory[p] && remain > 0; i++, remain--) {
+        for (const p of types) {
+          for (let i = 0; i < inventory[p] && remain > 0; i++, remain--) {
             fill.push(p);
           }
         }
@@ -462,30 +458,30 @@
     // cache for combinations from the same inventory state
     const comboCache = {};
     function getCombosMemo(inv, size) {
-      const key = ['E','L4','L3','L2','L1','L0'].map(p => inv[p] || 0).join(',');
+      const key = partOrder.map(p => inv[p] || 0).join(',');
       if (!comboCache[key]) {
         comboCache[key] = enumerateCombosFromInventory(inv, size);
       }
       return comboCache[key];
     }
-    function enumerateChipSplits(C_total) {
-      let splits = [];
-      for (let cD of allowedChips) {
-        if (cD > C_total) continue;
-        for (let cR of allowedChips) {
+    // generate chip splits lazily to avoid large intermediate arrays
+    function* enumerateChipSplits(C_total) {
+      const chips = allowedChips.filter(c => c <= C_total);
+      for (let cD of chips) {
+        for (let cR of chips) {
           if (cD + cR > C_total) continue;
-          for (let cL of allowedChips) {
+          for (let cL of chips) {
             if (cD + cR + cL > C_total) continue;
-            for (let cS of allowedChips) {
-              let used = cD + cR + cL + cS;
+            for (let cS of chips) {
+              const used = cD + cR + cL + cS;
               if (used > C_total) continue;
-              let rem = C_total - used;
-              splits.push({ cD, cR, cL, cS, rem });
+              const rem = C_total - used;
+              if (rem < 0) continue;
+              yield { cD, cR, cL, cS, rem };
             }
           }
         }
       }
-      return splits;
     }
     function computeTargetFromTotal(total) {
       let t = 0;
@@ -519,13 +515,11 @@
       return val;
     }
     function computeOverOrEqualNine(inv, C_total) {
-      const chipSplits = enumerateChipSplits(C_total);
-      const dpMemo = new Map();
-      const order = ['E','L4','L3','L2','L1','L0'];
+      const order = partOrder;
 
       const invKey = (inventory) => order.map(p => inventory[p] || 0).join(',');
 
-      function search(idx, inventory, chips, prevTotal) {
+      function search(idx, inventory, chips, prevTotal, dpMemo) {
         const key = idx + '|' + invKey(inventory) + '|' + chips.slice(idx).join(',') + '|' + prevTotal;
         if (dpMemo.has(key)) return dpMemo.get(key);
         if (idx === 4) return [[]];
@@ -538,12 +532,11 @@
           if (total > prevTotal) continue;
           const nextInv = { ...inventory };
           for (let p of parts) nextInv[p]--;
-          const tails = search(idx + 1, nextInv, chips, total);
+          const tails = search(idx + 1, nextInv, chips, total, dpMemo);
           for (let t of tails) {
             res.push([{ parts, chip: chips[idx], total, gate }, ...t]);
           }
         }
-        // prune intermediate results to prevent memory explosion
         if (res.length > 200) {
           res.length = 200;
         }
@@ -552,9 +545,9 @@
       }
 
       let results = [];
-      for (let { cD, cR, cL, cS, rem } of chipSplits) {
-        const solutions = search(0, { ...inv }, [cD, cR, cL, cS], Infinity);
-        // limit solutions per split to prevent runaway memory
+      for (let { cD, cR, cL, cS, rem } of enumerateChipSplits(C_total)) {
+        const dpMemo = new Map();
+        const solutions = search(0, { ...inv }, [cD, cR, cL, cS], Infinity, dpMemo);
         const limited = solutions.slice(0, 1000);
         for (let sol of limited) {
           const [d, r, l, s] = sol;
@@ -582,7 +575,6 @@
             unlockS: s.gate
           });
         }
-        // keep only Pareto-optimal results so far
         results = filterBestResultsPareto4D(results);
       }
       return results;
