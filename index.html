@@ -168,7 +168,7 @@
   <footer>
     <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'V7V71KOLL8');kofiwidget2.draw();</script> 
     <br><br>
-    <span id="footer-version">Version: v.3.1.1 &nbsp; / &nbsp; Created by Dox_Daffun<br>
+    <span id="footer-version">Version: v.3.1.2 &nbsp; / &nbsp; Created by Dox_Daffun<br>
     Special thanks to: YAMATO</span><br>
     <span id="footer-discord" style="color:#555;">
       Feedback or bug reports:&nbsp;
@@ -466,7 +466,23 @@
     }
     // generate chip splits lazily to avoid large intermediate arrays
     function* enumerateChipSplits(C_total) {
-      const chips = allowedChips.filter(c => c <= C_total);
+      const FEW_CHIP_COUNT = 20;   // このチップ数以下は全探索
+      const MANY_CHIP_COUNT = 150; // このチップ数以上は範囲を狭める
+
+      let lowerLimit = 0;
+      let upperLimit = C_total;
+      if (C_total > FEW_CHIP_COUNT && C_total < MANY_CHIP_COUNT) {
+        lowerLimit = C_total * 0.1;  // 例: 緩く制限
+        upperLimit = C_total * 0.7;  // 例: 緩く制限
+      } else if (C_total >= MANY_CHIP_COUNT) {
+        lowerLimit = C_total * 0.2;  // 例: より強く制限
+        upperLimit = C_total * 0.5;  // 例: より強く制限
+      }
+
+      const chips = allowedChips.filter(
+        c => c <= C_total && c >= lowerLimit && c <= upperLimit
+      );
+      
       for (let cD of chips) {
         for (let cR of chips) {
           if (cD + cR > C_total) continue;
