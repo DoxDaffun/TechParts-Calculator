@@ -169,7 +169,7 @@
     <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'V7V71KOLL8');kofiwidget2.draw();</script> 
     <br><br>
     <span id="footer-version">Version: v.3.1.2 &nbsp; / &nbsp; Created by Dox_Daffun<br>
-    Special thanks to: YAMATO</span><br>
+    Special thanks to: Logi(@sonicmans) and YAMATO</span><br>
     <span id="footer-discord" style="color:#555;">
       Feedback or bug reports:&nbsp;
       <b>Discord: <a href="https://discord.com/" target="_blank">dox_daffun</a></b>
@@ -466,34 +466,47 @@
     }
     // generate chip splits lazily to avoid large intermediate arrays
     function* enumerateChipSplits(C_total) {
-      const FEW_CHIP_COUNT = 20;   // このチップ数以下は全探索
-      const MANY_CHIP_COUNT = 150; // このチップ数以上は範囲を狭める
+      const baseRates = [
+        [0.30, 0.40], // ドリル
+        [0.15, 0.25], // 雷
+        [0.09, 0.25]  // サッカー
+      ];
+      const FEW_CHIP_LIMIT = 20, MANY_CHIP_LIMIT = 220;
+      const pruning = Math.max(0, Math.min(1, (C_total - FEW_CHIP_LIMIT) / (MANY_CHIP_LIMIT - FEW_CHIP_LIMIT)));
 
-      let lowerLimit = 0;
-      let upperLimit = C_total;
-      if (C_total > FEW_CHIP_COUNT && C_total < MANY_CHIP_COUNT) {
-        lowerLimit = C_total * 0.1;  // 例: 緩く制限
-        upperLimit = C_total * 0.7;  // 例: 緩く制限
-      } else if (C_total >= MANY_CHIP_COUNT) {
-        lowerLimit = C_total * 0.2;  // 例: より強く制限
-        upperLimit = C_total * 0.5;  // 例: より強く制限
-      }
+      const minC = Math.floor(C_total * (0.01 + 0.12 * pruning));
+      const maxC = Math.min(90, Math.floor(C_total * (0.97 - 0.42 * pruning)));
 
-      const chips = allowedChips.filter(
-        c => c <= C_total && c >= lowerLimit && c <= upperLimit
-      );
-      
-      for (let cD of chips) {
-        for (let cR of chips) {
-          if (cD + cR > C_total) continue;
-          for (let cL of chips) {
-            if (cD + cR + cL > C_total) continue;
-            for (let cS of chips) {
-              const used = cD + cR + cL + cS;
-              if (used > C_total) continue;
-              const rem = C_total - used;
-              if (rem < 0) continue;
-              yield { cD, cR, cL, cS, rem };
+      const rates = baseRates.map(([start, width]) => start + width * pruning);
+      const maxRem = Math.floor(70 - 49 * pruning);
+      const maxCount = Math.floor(30000 - 15000 * pruning);
+      const maxDiff = Math.floor(55 - 35 * pruning);
+
+      const pool = allowedChips.filter(c => c >= minC && c <= maxC).reverse();
+      let count = 0;
+
+      for (let d of pool) {
+        for (let r of pool) {
+          if (r > d) continue;
+          if (r < d * rates[0]) break;
+
+          for (let l of pool) {
+            if (l > r) continue;
+            if (l < d * rates[1]) break;
+
+            for (let s of pool) {
+              if (s > l) continue;
+              if (s < d * rates[2]) break;
+
+              const sum = d + r + l + s;
+              if (sum > C_total) break;
+
+              const rem = C_total - sum;
+              if (rem > maxRem) continue;
+              if (d - s > maxDiff) continue;
+
+              yield { cD: d, cR: r, cL: l, cS: s, rem: rem };
+              if (++count >= maxCount) return;
             }
           }
         }
@@ -535,26 +548,25 @@
 
       const invKey = (inventory) => order.map(p => inventory[p] || 0).join(',');
 
-      function search(idx, inventory, chips, prevTotal, dpMemo) {
-        const key = idx + '|' + invKey(inventory) + '|' + chips.slice(idx).join(',') + '|' + prevTotal;
+      function search(idx, inventory, chips, dpMemo) {
+        const key = idx + '|' + invKey(inventory) + '|' + chips.slice(idx).join(',');
         if (dpMemo.has(key)) return dpMemo.get(key);
         if (idx === 4) return [[]];
         const combos = getCombosMemo(inventory, 3);
         let res = [];
+        const MAX_RESULTS = 300;
         for (let parts of combos) {
+          if (res.length >= MAX_RESULTS) break;
           const gate = canUnlockMultiplier(parts, chips[idx]);
           if (!gate.ok) continue;
           const total = getTotal(parts, chips[idx]);
-          if (total > prevTotal) continue;
           const nextInv = { ...inventory };
-          for (let p of parts) nextInv[p]--;
-          const tails = search(idx + 1, nextInv, chips, total, dpMemo);
+          for (const p of parts) nextInv[p]--;
+          const tails = search(idx + 1, nextInv, chips, dpMemo);
           for (let t of tails) {
+            if (res.length >= MAX_RESULTS) break;
             res.push([{ parts, chip: chips[idx], total, gate }, ...t]);
           }
-        }
-        if (res.length > 200) {
-          res.length = 200;
         }
         dpMemo.set(key, res);
         return res;
@@ -563,8 +575,8 @@
       let results = [];
       for (let { cD, cR, cL, cS, rem } of enumerateChipSplits(C_total)) {
         const dpMemo = new Map();
-        const solutions = search(0, { ...inv }, [cD, cR, cL, cS], Infinity, dpMemo);
-        const limited = solutions.slice(0, 1000);
+        const solutions = search(0, { ...inv }, [cD, cR, cL, cS], dpMemo);
+        const limited = solutions.slice(0, 1500);
         for (let sol of limited) {
           const [d, r, l, s] = sol;
           results.push({
@@ -598,75 +610,75 @@
 
     // グローバル4軸Pareto＋細かいタイbreak
       function filterBestResultsPareto4D(candidates) {
-        if (!candidates || candidates.length === 0) return [];
-        // Pareto front抽出（4軸）
-        let isDominated = Array(candidates.length).fill(false);
-        for (let i=0; i<candidates.length; i++) {
-          for (let j=0; j<candidates.length; j++) {
-            if (i===j) continue;
-            const a = candidates[i], b = candidates[j];
-            if (
-              (b.targetDrone > a.targetDrone || b.targetDrill > a.targetDrill || b.targetLightning > a.targetLightning || b.targetSoccer > a.targetSoccer) &&
-              (b.targetDrone >= a.targetDrone && b.targetDrill >= a.targetDrill && b.targetLightning >= a.targetLightning && b.targetSoccer >= a.targetSoccer)
-            ) {
-              isDominated[i] = true;
-              break;
-            }
+      if (!candidates || candidates.length === 0) return [];
+      // Pareto front抽出（4軸）
+      let isDominated = Array(candidates.length).fill(false);
+      for (let i = 0; i < candidates.length; i++) {
+        for (let j = 0; j < candidates.length; j++) {
+          if (i === j) continue;
+          const a = candidates[i], b = candidates[j];
+          if (
+            (b.targetDrone > a.targetDrone || b.targetDrill > a.targetDrill || b.targetLightning > a.targetLightning || b.targetSoccer > a.targetSoccer) &&
+            (b.targetDrone >= a.targetDrone && b.targetDrill >= a.targetDrill && b.targetLightning >= a.targetLightning && b.targetSoccer >= a.targetSoccer)
+          ) {
+            isDominated[i] = true;
+            break;
           }
         }
-      let paretoSet = candidates.filter((_,i)=>!isDominated[i]);
-        // (Target_D,Target_R,Target_L,Target_S)ごとに
-        let groupMap = {};
-        for (let item of paretoSet) {
-          const k = [item.targetDrone,item.targetDrill,item.targetLightning,item.targetSoccer].join('-');
-          if (!groupMap[k]) groupMap[k]=[];
-          groupMap[k].push(item);
-        }
-        // 余りchip→Total_D→Total_R→Total_L→Total_S最小化、パーツ違いは全残し
-        let groupArr = [];
-        for (let k in groupMap) {
-          let sub = groupMap[k];
-          let minRem = Math.min(...sub.map(x=>x.chipRemainder));
-          sub = sub.filter(x=>x.chipRemainder===minRem);
-          let minTD = Math.min(...sub.map(x=>x.totalDrone));
-          sub = sub.filter(x=>x.totalDrone===minTD);
-          let minTR = Math.min(...sub.map(x=>x.totalDrill));
-          sub = sub.filter(x=>x.totalDrill===minTR);
-          let minTL = Math.min(...sub.map(x=>x.totalLightning));
-          sub = sub.filter(x=>x.totalLightning===minTL);
-          let minTS = Math.min(...sub.map(x=>x.totalSoccer));
-          sub = sub.filter(x=>x.totalSoccer===minTS);
-          // パーツ構成次第でユニークに
-          let uniq = [];
-          let seen = [];
-          for (let it of sub) {
-            let sign = [
-              it.partsDrone.join(','),
-              it.partsDrill.join(','),
-              it.partsLightning.join(','),
-              it.partsSoccer.join(','),
-              it.chipDrone,it.chipDrill,it.chipLightning,it.chipSoccer
-            ].join('/');
-            if (!seen.includes(sign)) {
-              uniq.push(it);
-              seen.push(sign);
-            }
-          }
-          groupArr = groupArr.concat(uniq);
-        }
-        // 並び順: max(Target_D,R,L,S)降順→D降順→R降順→L降順→S降順
-        groupArr.sort((a,b)=>{
-          let am = Math.max(a.targetDrone,a.targetDrill,a.targetLightning,a.targetSoccer),
-              bm = Math.max(b.targetDrone,b.targetDrill,b.targetLightning,b.targetSoccer);
-          if (bm!==am) return bm-am;
-          if (b.targetDrone!==a.targetDrone) return b.targetDrone - a.targetDrone;
-          if (b.targetDrill!==a.targetDrill) return b.targetDrill - a.targetDrill;
-          if (b.targetLightning!==a.targetLightning) return b.targetLightning - a.targetLightning;
-          if (b.targetSoccer!==a.targetSoccer) return b.targetSoccer - a.targetSoccer;
-          return 0;
-        });
-        return groupArr;
       }
+      let paretoSet = candidates.filter((_, i) => !isDominated[i]);
+      // (Target_D,Target_R,Target_L,Target_S)ごとに
+      let groupMap = {};
+      for (let item of paretoSet) {
+        const k = [item.targetDrone, item.targetDrill, item.targetLightning, item.targetSoccer].join('-');
+        if (!groupMap[k]) groupMap[k] = [];
+        groupMap[k].push(item);
+      }
+      // 余りchip→Total_D→Total_R→Total_L→Total_S最小化、パーツ違いは全残し
+      let groupArr = [];
+      for (let k in groupMap) {
+        let sub = groupMap[k];
+        let minRem = Math.min(...sub.map(x => x.chipRemainder));
+        sub = sub.filter(x => x.chipRemainder === minRem);
+        let minTD = Math.min(...sub.map(x => x.totalDrone));
+        sub = sub.filter(x => x.totalDrone === minTD);
+        let minTR = Math.min(...sub.map(x => x.totalDrill));
+        sub = sub.filter(x => x.totalDrill === minTR);
+        let minTL = Math.min(...sub.map(x => x.totalLightning));
+        sub = sub.filter(x => x.totalLightning === minTL);
+        let minTS = Math.min(...sub.map(x => x.totalSoccer));
+        sub = sub.filter(x => x.totalSoccer === minTS);
+        // パーツ構成次第でユニークに
+        let uniq = [];
+        let seen = [];
+        for (let it of sub) {
+          let sign = [
+            it.partsDrone.join(','),
+            it.partsDrill.join(','),
+            it.partsLightning.join(','),
+            it.partsSoccer.join(','),
+            it.chipDrone, it.chipDrill, it.chipLightning, it.chipSoccer
+          ].join('/');
+          if (!seen.includes(sign)) {
+            uniq.push(it);
+            seen.push(sign);
+          }
+        }
+        groupArr = groupArr.concat(uniq);
+      }
+      // 並び順: max(Target_D,R,L,S)降順→D降順→R降順→L降順→S降順
+      groupArr.sort((a, b) => {
+        let am = Math.max(a.targetDrone, a.targetDrill, a.targetLightning, a.targetSoccer),
+          bm = Math.max(b.targetDrone, b.targetDrill, b.targetLightning, b.targetSoccer);
+        if (bm !== am) return bm - am;
+        if (b.targetDrone !== a.targetDrone) return b.targetDrone - a.targetDrone;
+        if (b.targetDrill !== a.targetDrill) return b.targetDrill - a.targetDrill;
+        if (b.targetLightning !== a.targetLightning) return b.targetLightning - a.targetLightning;
+        if (b.targetSoccer !== a.targetSoccer) return b.targetSoccer - a.targetSoccer;
+        return 0;
+      });
+      return groupArr;
+    }
 
     function renderResults(results) {
       const container = document.getElementById('results-container');
@@ -696,7 +708,8 @@
         'col-number','col-drone-icon','col-drone-chip','col-drone-total','col-drone-target',
         'col-drill-icon','col-drill-chip','col-drill-total','col-drill-target',
         'col-lightning-icon','col-lightning-chip','col-lightning-total','col-lightning-target',
-        'col-soccer-icon','col-soccer-chip','col-soccer-total','col-soccer-target','col-rem'
+        'col-soccer-icon','col-soccer-chip','col-soccer-total','col-soccer-target',
+        'col-rem'
       ];
       for (let i = 0; i < headers.length; i++) {
         const th = document.createElement('th');
