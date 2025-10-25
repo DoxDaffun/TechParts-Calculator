@@ -72,24 +72,24 @@
       white-space: nowrap;
     }
     .col-number { border-right: 2px solid #666; }
-    .col-drone-icon { border-right: 1px solid #999; }
-    .col-drone-chip { border-right: 1px solid #999; }
-    .col-drone-total { border-right: 1px solid #999; }
-    .col-drone-target { border-right: 2px solid #666; }
-    .col-drill-icon { border-right: 1px solid #999; }
-    .col-drill-chip { border-right: 1px solid #999; }
-    .col-drill-total { border-right: 1px solid #999; }
-    .col-drill-target { border-right: 2px solid #666; }
-    .col-lightning-icon { border-right: 1px solid #999; }
-    .col-lightning-chip { border-right: 1px solid #999; }
-    .col-lightning-total { border-right: 1px solid #999; }
-    .col-lightning-target { border-right: 2px solid #666; }
-    .col-soccer-icon { border-right: 1px solid #999; }
-    .col-soccer-chip { border-right: 1px solid #999; }
-    .col-soccer-total { border-right: 1px solid #999; }
-    .col-soccer-target { border-right: 2px solid #666; }
+    .col-EDS-icon { border-right: 1px solid #999; }
+    .col-EDS-chip { border-right: 1px solid #999; }
+    .col-EDS-total { border-right: 1px solid #999; }
+    .col-EDS-target { border-right: 2px solid #666; }
+    .col-AM-icon { border-right: 1px solid #999; }
+    .col-AM-chip { border-right: 1px solid #999; }
+    .col-AM-total { border-right: 1px solid #999; }
+    .col-AM-target { border-right: 2px solid #666; }
+    .col-PD-icon { border-right: 1px solid #999; }
+    .col-PD-chip { border-right: 1px solid #999; }
+    .col-PD-total { border-right: 1px solid #999; }
+    .col-PD-target { border-right: 2px solid #666; }
+    .col-QN-icon { border-right: 1px solid #999; }
+    .col-QN-chip { border-right: 1px solid #999; }
+    .col-QN-total { border-right: 1px solid #999; }
+    .col-QN-target { border-right: 2px solid #666; }
     .col-rem { }
-    .col-drone-icon img, .col-drill-icon img, .col-lightning-icon img, .col-soccer-icon img {
+    .col-EDS-icon img, .col-AM-icon img, .col-PD-icon img, .col-QN-icon img {
       width: 40px;
       height: 40px;
     }
@@ -101,7 +101,7 @@
       #calculate-btn { font-size: 14px; padding: 6px 12px; }
       table { font-size: 12px; }
       thead th, tbody td { padding: 3px 4px; }
-      .col-drone-icon img, .col-drill-icon img, .col-lightning-icon img, .col-soccer-icon img { width: 28px; height: 28px; }
+      .col-EDS-icon img, .col-AM-icon img, .col-PD-icon img, .col-QN-icon img { width: 28px; height: 28px; }
       .target-list { display:inline-block; white-space:normal; max-width:100vw; }
     }
     .target-list { display:inline-block; white-space:normal; max-width:580px; }
@@ -196,13 +196,13 @@
         btnSaveImage: 'Save Result',
         headers: {
           pattern: 'Pattern',
-          drone:   '<img src="drone_icon.png" alt="Drone" width="40" height="40">',
+          EDS:   '<img src="EDS_icon.png" alt="EDS" width="40" height="40">',
           chip:    '必要チップ',
           energy:  '共振エネルギー',
           target:  'Target',
-          drill:   '<img src="drill_icon.png" alt="Drill" width="40" height="40">',
-          lightning: '<img src="lightning_icon.png" alt="Lightning" width="40" height="40">',
-          soccer:  '<img src="soccer_icon.png" alt="Soccer" width="40" height="40">',
+          AM:   '<img src="AM_icon.png" alt="AM" width="40" height="40">',
+          PD: '<img src="PD_icon.png" alt="PD" width="40" height="40">',
+          QN:  '<img src="QN_icon.png" alt="QN" width="40" height="40">',
           rem:     '余剰チップ',
         },
         unlock: { req: '必要' }
@@ -210,7 +210,7 @@
       en: {
         title:        'Resonance Optimization Calculator',
         mainTitle:    'Resonance Optimization Calculator',
-        subtitle:     'Enter the number of Tech Parts (Legend or higher) and Resonance Chips you own, then press "Calculate" to see all optimal patterns for Twin Drone / Drill / Soccer / Lightning.<br>*Epic+3 parts may be used as needed.<br>*"Target" means a Resonance Energy that reaches a powerful effect.<br>*Do not include parts currently equipped.<br>*If a combination with a multiplier of 3.2x or higher is included, the required number of materials will be displayed. (In some cases, you may need to salvage your Tech Parts.)',
+        subtitle:     'Enter the number of Tech Parts (Legend or higher) and Resonance Chips you own, then press "Calculate" to see all optimal patterns for Twin EDS / AM / QN / PD.<br>*Epic+3 parts may be used as needed.<br>*"Target" means a Resonance Energy that reaches a powerful effect.<br>*Do not include parts currently equipped.<br>*If a combination with a multiplier of 3.2x or higher is included, the required number of materials will be displayed. (In some cases, you may need to salvage your Tech Parts.)',
         labelE:       'Eternal',
         labelL0:      'Legend',
         labelL1:      'Legend+1',
@@ -224,13 +224,13 @@
         btnSaveImage: 'Save Result',
         headers: {
           pattern: 'Pattern',
-          drone:   '<img src="drone_icon.png" alt="Drone" width="40" height="40">',
+          EDS:   '<img src="EDS_icon.png" alt="EDS" width="40" height="40">',
           chip:    'Chip Needed',
           energy:  'Resonance Energy',
           target:  'Target',
-          drill:   '<img src="drill_icon.png" alt="Drill" width="40" height="40">',
-          lightning: '<img src="lightning_icon.png" alt="Lightning" width="40" height="40">',
-          soccer:  '<img src="soccer_icon.png" alt="Soccer" width="40" height="40">',
+          AM:   '<img src="AM_icon.png" alt="AM" width="40" height="40">',
+          PD: '<img src="PD_icon.png" alt="PD" width="40" height="40">',
+          QN:  '<img src="QN_icon.png" alt="QN" width="40" height="40">',
           rem:     'Chip Left',
         },
         unlock: { req: 'Req' }
@@ -252,13 +252,13 @@
         btnSaveImage: '保存结果',
         headers: {
           pattern: '组合',
-          drone:   '<img src="drone_icon.png" alt="Drone" width="40" height="40">',
+          EDS:   '<img src="EDS_icon.png" alt="EDS" width="40" height="40">',
           chip:    '所需芯片',
           energy:  '共振能量',
           target:  '目标',
-          drill:   '<img src="drill_icon.png" alt="Drill" width="40" height="40">',
-          lightning: '<img src="lightning_icon.png" alt="Lightning" width="40" height="40">',
-          soccer:  '<img src="soccer_icon.png" alt="Soccer" width="40" height="40">',
+          AM:   '<img src="AM_icon.png" alt="AM" width="40" height="40">',
+          PD: '<img src="PD_icon.png" alt="PD" width="40" height="40">',
+          QN:  '<img src="QN_icon.png" alt="QN" width="40" height="40">',
           rem:     '剩余芯片',
         },
         unlock: { req: '需求' }
@@ -280,13 +280,13 @@
         btnSaveImage: '결과 저장',
         headers: {
           pattern: 'Pattern',
-          drone:   '<img src="drone_icon.png" alt="Drone" width="40" height="40">',
+          EDS:   '<img src="EDS_icon.png" alt="EDS" width="40" height="40">',
           chip:    '필요 칩',
           energy:  '공진 에너지',
           target:  'Target',
-          drill:   '<img src="drill_icon.png" alt="Drill" width="40" height="40">',
-          lightning: '<img src="lightning_icon.png" alt="Lightning" width="40" height="40">',
-          soccer:  '<img src="soccer_icon.png" alt="Soccer" width="40" height="40">',
+          AM:   '<img src="AM_icon.png" alt="AM" width="40" height="40">',
+          PD: '<img src="PD_icon.png" alt="PD" width="40" height="40">',
+          QN:  '<img src="QN_icon.png" alt="QN" width="40" height="40">',
           rem:     '남은 칩',
         },
         unlock: { req: 'Req' }
@@ -580,22 +580,22 @@
         for (let sol of limited) {
           const [d, r, l, s] = sol;
           results.push({
-            partsDrone: d.parts.slice(),
-            chipDrone: d.chip,
-            totalDrone: d.total,
-            targetDrone: computeTargetFromTotal(d.total),
-            partsDrill: r.parts.slice(),
-            chipDrill: r.chip,
-            totalDrill: r.total,
-            targetDrill: computeTargetFromTotal(r.total),
-            partsLightning: l.parts.slice(),
-            chipLightning: l.chip,
-            totalLightning: l.total,
-            targetLightning: computeTargetFromTotal(l.total),
-            partsSoccer: s.parts.slice(),
-            chipSoccer: s.chip,
-            totalSoccer: s.total,
-            targetSoccer: computeTargetFromTotal(s.total),
+            partsEDS: d.parts.slice(),
+            chipEDS: d.chip,
+            totalEDS: d.total,
+            targetEDS: computeTargetFromTotal(d.total),
+            partsAM: r.parts.slice(),
+            chipAM: r.chip,
+            totalAM: r.total,
+            targetAM: computeTargetFromTotal(r.total),
+            partsPD: l.parts.slice(),
+            chipPD: l.chip,
+            totalPD: l.total,
+            targetPD: computeTargetFromTotal(l.total),
+            partsQN: s.parts.slice(),
+            chipQN: s.chip,
+            totalQN: s.total,
+            targetQN: computeTargetFromTotal(s.total),
             chipRemainder: rem,
             unlockD: d.gate,
             unlockR: r.gate,
@@ -618,8 +618,8 @@
           if (i === j) continue;
           const a = candidates[i], b = candidates[j];
           if (
-            (b.targetDrone > a.targetDrone || b.targetDrill > a.targetDrill || b.targetLightning > a.targetLightning || b.targetSoccer > a.targetSoccer) &&
-            (b.targetDrone >= a.targetDrone && b.targetDrill >= a.targetDrill && b.targetLightning >= a.targetLightning && b.targetSoccer >= a.targetSoccer)
+            (b.targetEDS > a.targetEDS || b.targetAM > a.targetAM || b.targetPD > a.targetPD || b.targetQN > a.targetQN) &&
+            (b.targetEDS >= a.targetEDS && b.targetAM >= a.targetAM && b.targetPD >= a.targetPD && b.targetQN >= a.targetQN)
           ) {
             isDominated[i] = true;
             break;
@@ -630,7 +630,7 @@
       // (Target_D,Target_R,Target_L,Target_S)ごとに
       let groupMap = {};
       for (let item of paretoSet) {
-        const k = [item.targetDrone, item.targetDrill, item.targetLightning, item.targetSoccer].join('-');
+        const k = [item.targetEDS, item.targetAM, item.targetPD, item.targetQN].join('-');
         if (!groupMap[k]) groupMap[k] = [];
         groupMap[k].push(item);
       }
@@ -640,24 +640,24 @@
         let sub = groupMap[k];
         let minRem = Math.min(...sub.map(x => x.chipRemainder));
         sub = sub.filter(x => x.chipRemainder === minRem);
-        let minTD = Math.min(...sub.map(x => x.totalDrone));
-        sub = sub.filter(x => x.totalDrone === minTD);
-        let minTR = Math.min(...sub.map(x => x.totalDrill));
-        sub = sub.filter(x => x.totalDrill === minTR);
-        let minTL = Math.min(...sub.map(x => x.totalLightning));
-        sub = sub.filter(x => x.totalLightning === minTL);
-        let minTS = Math.min(...sub.map(x => x.totalSoccer));
-        sub = sub.filter(x => x.totalSoccer === minTS);
+        let minTD = Math.min(...sub.map(x => x.totalEDS));
+        sub = sub.filter(x => x.totalEDS === minTD);
+        let minTR = Math.min(...sub.map(x => x.totalAM));
+        sub = sub.filter(x => x.totalAM === minTR);
+        let minTL = Math.min(...sub.map(x => x.totalPD));
+        sub = sub.filter(x => x.totalPD === minTL);
+        let minTS = Math.min(...sub.map(x => x.totalQN));
+        sub = sub.filter(x => x.totalQN === minTS);
         // パーツ構成次第でユニークに
         let uniq = [];
         let seen = [];
         for (let it of sub) {
           let sign = [
-            it.partsDrone.join(','),
-            it.partsDrill.join(','),
-            it.partsLightning.join(','),
-            it.partsSoccer.join(','),
-            it.chipDrone, it.chipDrill, it.chipLightning, it.chipSoccer
+            it.partsEDS.join(','),
+            it.partsAM.join(','),
+            it.partsPD.join(','),
+            it.partsQN.join(','),
+            it.chipEDS, it.chipAM, it.chipPD, it.chipQN
           ].join('/');
           if (!seen.includes(sign)) {
             uniq.push(it);
@@ -668,13 +668,13 @@
       }
       // 並び順: max(Target_D,R,L,S)降順→D降順→R降順→L降順→S降順
       groupArr.sort((a, b) => {
-        let am = Math.max(a.targetDrone, a.targetDrill, a.targetLightning, a.targetSoccer),
-          bm = Math.max(b.targetDrone, b.targetDrill, b.targetLightning, b.targetSoccer);
+        let am = Math.max(a.targetEDS, a.targetAM, a.targetPD, a.targetQN),
+          bm = Math.max(b.targetEDS, b.targetAM, b.targetPD, b.targetQN);
         if (bm !== am) return bm - am;
-        if (b.targetDrone !== a.targetDrone) return b.targetDrone - a.targetDrone;
-        if (b.targetDrill !== a.targetDrill) return b.targetDrill - a.targetDrill;
-        if (b.targetLightning !== a.targetLightning) return b.targetLightning - a.targetLightning;
-        if (b.targetSoccer !== a.targetSoccer) return b.targetSoccer - a.targetSoccer;
+        if (b.targetEDS !== a.targetEDS) return b.targetEDS - a.targetEDS;
+        if (b.targetAM !== a.targetAM) return b.targetAM - a.targetAM;
+        if (b.targetPD !== a.targetPD) return b.targetPD - a.targetPD;
+        if (b.targetQN !== a.targetQN) return b.targetQN - a.targetQN;
         return 0;
       });
       return groupArr;
@@ -698,17 +698,17 @@
 
       const headers = [
         h.pattern,
-        h.drone, h.chip, h.energy, h.target,
-        h.drill, h.chip, h.energy, h.target,
-        h.lightning, h.chip, h.energy, h.target,
-        h.soccer, h.chip, h.energy, h.target,
+        h.EDS, h.chip, h.energy, h.target,
+        h.AM, h.chip, h.energy, h.target,
+        h.PD, h.chip, h.energy, h.target,
+        h.QN, h.chip, h.energy, h.target,
         h.rem
       ];
       const thClasses = [
-        'col-number','col-drone-icon','col-drone-chip','col-drone-total','col-drone-target',
-        'col-drill-icon','col-drill-chip','col-drill-total','col-drill-target',
-        'col-lightning-icon','col-lightning-chip','col-lightning-total','col-lightning-target',
-        'col-soccer-icon','col-soccer-chip','col-soccer-total','col-soccer-target',
+        'col-number','col-EDS-icon','col-EDS-chip','col-EDS-total','col-EDS-target',
+        'col-AM-icon','col-AM-chip','col-AM-total','col-AM-target',
+        'col-PD-icon','col-PD-chip','col-PD-total','col-PD-target',
+        'col-QN-icon','col-QN-chip','col-QN-total','col-QN-target',
         'col-rem'
       ];
       for (let i = 0; i < headers.length; i++) {
@@ -730,92 +730,92 @@
         tdNum.innerHTML = alpha[idx] || (idx+1);
         tdNum.className = 'col-number';
         tr.appendChild(tdNum);
-        // Drone icons
+        // EDS icons
         const tdDicon = document.createElement('td');
-        tdDicon.className = 'col-drone-icon';
-        tdDicon.innerHTML = item.partsDrone.map(p => `<img src="${p}.png" alt="${p}" width="40" height="40">`).join('&nbsp;');
+        tdDicon.className = 'col-EDS-icon';
+        tdDicon.innerHTML = item.partsEDS.map(p => `<img src="${p}.png" alt="${p}" width="40" height="40">`).join('&nbsp;');
         tr.appendChild(tdDicon);
-        // Drone Chip
+        // EDS Chip
         const tdDchip = document.createElement('td');
         const noteD = item.unlockD.reqU > 0 ? `<div class="unlock-note">${i18nReq} ${legendLabel} ${item.unlockD.reqU}</div>` : '';
-        tdDchip.innerHTML = `${item.chipDrone}${noteD}`;
-        tdDchip.className = 'col-drone-chip';
+        tdDchip.innerHTML = `${item.chipEDS}${noteD}`;
+        tdDchip.className = 'col-EDS-chip';
         tr.appendChild(tdDchip);
-        // Drone Total
+        // EDS Total
         const tdDtotal = document.createElement('td');
-        tdDtotal.innerHTML = item.totalDrone.toFixed(0);
-        tdDtotal.className = 'col-drone-total';
+        tdDtotal.innerHTML = item.totalEDS.toFixed(0);
+        tdDtotal.className = 'col-EDS-total';
         tr.appendChild(tdDtotal);
-        // Drone Target
+        // EDS Target
         const tdDtarget = document.createElement('td');
-        tdDtarget.innerHTML = item.targetDrone;
-        tdDtarget.className = 'col-drone-target';
+        tdDtarget.innerHTML = item.targetEDS;
+        tdDtarget.className = 'col-EDS-target';
         tr.appendChild(tdDtarget);
 
-        // Drill icons
+        // AM icons
         const tdRicon = document.createElement('td');
-        tdRicon.className = 'col-drill-icon';
-        tdRicon.innerHTML = item.partsDrill.map(p => `<img src="${p}.png" alt="${p}" width="40" height="40">`).join('&nbsp;');
+        tdRicon.className = 'col-AM-icon';
+        tdRicon.innerHTML = item.partsAM.map(p => `<img src="${p}.png" alt="${p}" width="40" height="40">`).join('&nbsp;');
         tr.appendChild(tdRicon);
-        // Drill Chip
+        // AM Chip
         const tdRchip = document.createElement('td');
         const noteR = item.unlockR.reqU > 0 ? `<div class="unlock-note">${i18nReq} ${legendLabel} ${item.unlockR.reqU}</div>` : '';
-        tdRchip.innerHTML = `${item.chipDrill}${noteR}`;
-        tdRchip.className = 'col-drill-chip';
+        tdRchip.innerHTML = `${item.chipAM}${noteR}`;
+        tdRchip.className = 'col-AM-chip';
         tr.appendChild(tdRchip);
-        // Drill Total
+        // AM Total
         const tdRtotal = document.createElement('td');
-        tdRtotal.innerHTML = item.totalDrill.toFixed(0);
-        tdRtotal.className = 'col-drill-total';
+        tdRtotal.innerHTML = item.totalAM.toFixed(0);
+        tdRtotal.className = 'col-AM-total';
         tr.appendChild(tdRtotal);
-        // Drill Target
+        // AM Target
         const tdRtarget = document.createElement('td');
-        tdRtarget.innerHTML = item.targetDrill;
-        tdRtarget.className = 'col-drill-target';
+        tdRtarget.innerHTML = item.targetAM;
+        tdRtarget.className = 'col-AM-target';
         tr.appendChild(tdRtarget);
 
-        // Lightning icons
+        // PD icons
         const tdLicon = document.createElement('td');
-        tdLicon.className = 'col-lightning-icon';
-        tdLicon.innerHTML = item.partsLightning.map(p => `<img src="${p}.png" alt="${p}" width="40" height="40">`).join('&nbsp;');
+        tdLicon.className = 'col-PD-icon';
+        tdLicon.innerHTML = item.partsPD.map(p => `<img src="${p}.png" alt="${p}" width="40" height="40">`).join('&nbsp;');
         tr.appendChild(tdLicon);
-        // Lightning Chip
+        // PD Chip
         const tdLchip = document.createElement('td');
         const noteL = item.unlockL.reqU > 0 ? `<div class="unlock-note">${i18nReq} ${legendLabel} ${item.unlockL.reqU}</div>` : '';
-        tdLchip.innerHTML = `${item.chipLightning}${noteL}`;
-        tdLchip.className = 'col-lightning-chip';
+        tdLchip.innerHTML = `${item.chipPD}${noteL}`;
+        tdLchip.className = 'col-PD-chip';
         tr.appendChild(tdLchip);
-        // Lightning Total
+        // PD Total
         const tdLtotal = document.createElement('td');
-        tdLtotal.innerHTML = item.totalLightning.toFixed(0);
-        tdLtotal.className = 'col-lightning-total';
+        tdLtotal.innerHTML = item.totalPD.toFixed(0);
+        tdLtotal.className = 'col-PD-total';
         tr.appendChild(tdLtotal);
-        // Lightning Target
+        // PD Target
         const tdLtarget = document.createElement('td');
-        tdLtarget.innerHTML = item.targetLightning;
-        tdLtarget.className = 'col-lightning-target';
+        tdLtarget.innerHTML = item.targetPD;
+        tdLtarget.className = 'col-PD-target';
         tr.appendChild(tdLtarget);
 
-        // Soccer icons
+        // QN icons
         const tdSicon = document.createElement('td');
-        tdSicon.className = 'col-soccer-icon';
-        tdSicon.innerHTML = item.partsSoccer.map(p => `<img src="${p}.png" alt="${p}" width="40" height="40">`).join('&nbsp;');
+        tdSicon.className = 'col-QN-icon';
+        tdSicon.innerHTML = item.partsQN.map(p => `<img src="${p}.png" alt="${p}" width="40" height="40">`).join('&nbsp;');
         tr.appendChild(tdSicon);
-        // Soccer Chip
+        // QN Chip
         const tdSchip = document.createElement('td');
         const noteS = item.unlockS.reqU > 0 ? `<div class="unlock-note">${i18nReq} ${legendLabel} ${item.unlockS.reqU}</div>` : '';
-        tdSchip.innerHTML = `${item.chipSoccer}${noteS}`;
-        tdSchip.className = 'col-soccer-chip';
+        tdSchip.innerHTML = `${item.chipQN}${noteS}`;
+        tdSchip.className = 'col-QN-chip';
         tr.appendChild(tdSchip);
-        // Soccer Total
+        // QN Total
         const tdStotal = document.createElement('td');
-        tdStotal.innerHTML = item.totalSoccer.toFixed(0);
-        tdStotal.className = 'col-soccer-total';
+        tdStotal.innerHTML = item.totalQN.toFixed(0);
+        tdStotal.className = 'col-QN-total';
         tr.appendChild(tdStotal);
-        // Soccer Target
+        // QN Target
         const tdStarget = document.createElement('td');
-        tdStarget.innerHTML = item.targetSoccer;
-        tdStarget.className = 'col-soccer-target';
+        tdStarget.innerHTML = item.targetQN;
+        tdStarget.className = 'col-QN-target';
         tr.appendChild(tdStarget);
 
         // Rem. Chip
