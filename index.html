@@ -87,9 +87,13 @@
     .col-QN-icon { border-right: 1px solid #999; }
     .col-QN-chip { border-right: 1px solid #999; }
     .col-QN-total { border-right: 1px solid #999; }
-    .col-QN-target { border-right: 2px solid #666; }
+    .col-QN-target { border-right: 1px solid #999; }
+    .col-ER-icon { border-right: 1px solid #999; }
+    .col-ER-chip { border-right: 1px solid #999; }
+    .col-ER-total { border-right: 1px solid #999; }
+    .col-ER-target { border-right: 2px solid #666; }
     .col-rem { }
-    .col-EDS-icon img, .col-AM-icon img, .col-PD-icon img, .col-QN-icon img {
+    .col-EDS-icon img, .col-AM-icon img, .col-PD-icon img, .col-QN-icon img, .col-ER-icon img {
       width: 40px;
       height: 40px;
     }
@@ -101,7 +105,7 @@
       #calculate-btn { font-size: 14px; padding: 6px 12px; }
       table { font-size: 12px; }
       thead th, tbody td { padding: 3px 4px; }
-      .col-EDS-icon img, .col-AM-icon img, .col-PD-icon img, .col-QN-icon img { width: 28px; height: 28px; }
+      .col-EDS-icon img, .col-AM-icon img, .col-PD-icon img, .col-QN-icon img, .col-ER-icon img { width: 28px; height: 28px; }
       .target-list { display:inline-block; white-space:normal; max-width:100vw; }
     }
     .target-list { display:inline-block; white-space:normal; max-width:580px; }
@@ -168,11 +172,12 @@
   <footer>
     <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'V7V71KOLL8');kofiwidget2.draw();</script> 
     <br><br>
-    <span id="footer-version">Version: v.3.1.2 &nbsp; / &nbsp; Created by Dox_Daffun<br>
+    <span id="footer-version">Version: v.4.1.0 &nbsp; / &nbsp; Created by Dox_Daffun<br>
     Special thanks to: Logi(@sonicmans) and YAMATO</span><br>
     <span id="footer-discord" style="color:#555;">
       Feedback or bug reports:&nbsp;
-      <b>Discord: <a href="https://discord.com/" target="_blank">dox_daffun</a></b>
+      <b>Discord: <a href="https://discord.com/" target="_blank">dox_daffun</a></b><br>
+      If you’d like to use this code in your own project or tool, please let me know. Thank you!
     </span>
   </footer>
 
@@ -182,7 +187,7 @@
       ja: {
         title:        '共振最適化計算ツール',
         mainTitle:    '共振最適化計算ツール',
-        subtitle:     '「マイパーツ」にあるレジェンド以上のテックパーツの枚数と共振チップの所持数を入力し、「Calculate」を押すと、双生パーツの最適組合せを一覧で表示します。<br>※必要に応じてエピック＋３のパーツが使われることがあります。<br>※「Target」とは、特に強力な効果が発動する共振エネルギーを指します。<br>※実際に装着しているパーツを除いた数を入力してください。<br>※倍率が3.2倍以上の組み合わせが含まれる場合は、素材に必要なパーツ数を表示します。（手持ちのテックパーツを分解しなければならないときがあります）',
+        subtitle:     '「マイパーツ」にあるレジェンド以上のテックパーツの枚数と共振チップの所持数を入力し、「Calculate」を押すと、双生パーツの最適組合せを一覧で表示します。<br>※必要に応じてエピック＋３のパーツが使われることがあります。<br>※「Target」とは、特に強力な効果が発動する共振エネルギーを指します。<br>※実際に装着しているパーツを除いた数を入力してください。<br>※倍率が3.2倍以上の組み合わせが含まれる場合は、素材に必要なパーツ数を表示します。（手持ちのテックパーツを分解しなければならないときがあります）<br><b>レジェンド1~4のパーツは必要に応じて分解・再合成する必要があります。</b>',
         labelE:       'エターナル',
         labelL0:      'レジェンド',
         labelL1:      'レジェ＋１',
@@ -203,6 +208,7 @@
           AM:   '<img src="AM_icon.png" alt="AM" width="40" height="40">',
           PD: '<img src="PD_icon.png" alt="PD" width="40" height="40">',
           QN:  '<img src="QN_icon.png" alt="QN" width="40" height="40">',
+          ER:  '<img src="ER_icon.png" alt="ER" width="40" height="40">',
           rem:     '余剰チップ',
         },
         unlock: { req: '必要' }
@@ -210,7 +216,7 @@
       en: {
         title:        'Resonance Optimization Calculator',
         mainTitle:    'Resonance Optimization Calculator',
-        subtitle:     'Enter the number of Tech Parts (Legend or higher) and Resonance Chips you own, then press "Calculate" to see all optimal patterns for Twin Parts.<br>*Epic+3 parts may be used as needed.<br>*"Target" means a Resonance Energy that reaches a powerful effect.<br>*Do not include parts currently equipped.<br>*If a combination with a multiplier of 3.2x or higher is included, the required number of materials will be displayed. (In some cases, you may need to salvage your Tech Parts.)',
+        subtitle:     'Enter the number of Tech Parts (Legend or higher) and Resonance Chips you own, then press "Calculate" to see all optimal patterns for Twin Parts.<br>*Epic+3 parts may be used as needed.<br>*"Target" means a Resonance Energy that reaches a powerful effect.<br>*Do not include parts currently equipped.<br>*If a combination with a multiplier of 3.2x or higher is included, the required number of materials will be displayed. (In some cases, you may need to salvage your Tech Parts.)<br><b>Legend+1~4 parts may need to be downgraded and re-merged as necessary.</b>',
         labelE:       'Eternal',
         labelL0:      'Legend',
         labelL1:      'Legend+1',
@@ -231,6 +237,7 @@
           AM:   '<img src="AM_icon.png" alt="AM" width="40" height="40">',
           PD: '<img src="PD_icon.png" alt="PD" width="40" height="40">',
           QN:  '<img src="QN_icon.png" alt="QN" width="40" height="40">',
+          ER:  '<img src="ER_icon.png" alt="ER" width="40" height="40">',
           rem:     'Chip Left',
         },
         unlock: { req: 'Req' }
@@ -238,7 +245,7 @@
       zh: {
         title:        '共振优化计算器',
         mainTitle:    '共振优化计算器',
-        subtitle:     '请输入你拥有的传奇及以上*科技零件数量和共振芯片数量，然后点击“计算”按钮，显示双生件的最优组合一览。<br>*如有需要，可能会使用史诗+3零件。<br>*“目标”是指能够激发强力效果的共振能量。<br>*请不要计入当前已装备的部件。<br>*如果包含倍率达到3.2倍及以上的组合，将会显示所需的材料数量。（在某些情况下，你可能需要分解科技零件。）',
+        subtitle:     '请输入你拥有的传奇及以上*科技零件数量和共振芯片数量，然后点击“计算”按钮，显示双生件的最优组合一览。<br>*如有需要，可能会使用史诗+3零件。<br>*“目标”是指能够激发强力效果的共振能量。<br>*请不要计入当前已装备的部件。<br>*如果包含倍率达到3.2倍及以上的组合，将会显示所需的材料数量。（在某些情况下，你可能需要分解科技零件。）<br><b>传奇+1~4部件可能需要视情况进行分解与再合成。</b>',
         labelE:       '永恒',
         labelL0:      '传奇',
         labelL1:      '传奇+1',
@@ -259,6 +266,7 @@
           AM:   '<img src="AM_icon.png" alt="AM" width="40" height="40">',
           PD: '<img src="PD_icon.png" alt="PD" width="40" height="40">',
           QN:  '<img src="QN_icon.png" alt="QN" width="40" height="40">',
+          ER:  '<img src="ER_icon.png" alt="ER" width="40" height="40">',
           rem:     '剩余芯片',
         },
         unlock: { req: '需求' }
@@ -266,7 +274,7 @@
       ko: {
         title:        '공진 최적화 계산기',
         mainTitle:    '공진 최적화 계산기',
-        subtitle:     '내 파츠 중 레전드 이상의 테크 파츠 개수와 공진 칩 보유 수를 입력하고 "Calculate"를 누르면, 트윈 파츠 최적 조합을 모두 표시합니다.<br>*필요시 에픽+3 파츠가 사용될 수 있습니다.<br>*"Target"는 강력한 효과가 발동되는 공진 에너지를 의미합니다.<br>*현재 장착 중인 파츠는 제외하고 입력하세요.<br>*배율이 3.2배 이상인 조합이 포함될 경우, 필요한 소재 수가 표시됩니다. (경우에 따라 테크 파츠를 분해해야 할 수 있습니다.)',
+        subtitle:     '내 파츠 중 레전드 이상의 테크 파츠 개수와 공진 칩 보유 수를 입력하고 "Calculate"를 누르면, 트윈 파츠 최적 조합을 모두 표시합니다.<br>*필요시 에픽+3 파츠가 사용될 수 있습니다.<br>*"Target"는 강력한 효과가 발동되는 공진 에너지를 의미합니다.<br>*현재 장착 중인 파츠는 제외하고 입력하세요.<br>*배율이 3.2배 이상인 조합이 포함될 경우, 필요한 소재 수가 표시됩니다. (경우에 따라 테크 파츠를 분해해야 할 수 있습니다.)<br><b>레전드 1~4 파츠는 필요에 따라 분해 및 재조합이 필요합니다.</b>',
         labelE:       '이터널',
         labelL0:      '레전드',
         labelL1:      '레전드+1',
@@ -287,6 +295,7 @@
           AM:   '<img src="AM_icon.png" alt="AM" width="40" height="40">',
           PD: '<img src="PD_icon.png" alt="PD" width="40" height="40">',
           QN:  '<img src="QN_icon.png" alt="QN" width="40" height="40">',
+          ER:  '<img src="ER_icon.png" alt="ER" width="40" height="40">',
           rem:     '남은 칩',
         },
         unlock: { req: 'Req' }
@@ -527,7 +536,7 @@
 
     function countUsedParts(pattern) {
       let count = 0;
-      ['EDS', 'AM', 'PD', 'QN'].forEach(slot => {
+      ['EDS', 'AM', 'PD', 'QN', 'ER'].forEach(slot => {
         const parts = pattern[`parts${slot}`] || [];
         parts.forEach(part => {
           if (part !== 'E') count++;
@@ -542,17 +551,19 @@
         existing.targetAM >= newTargets.AM &&
         existing.targetPD >= newTargets.PD &&
         existing.targetQN >= newTargets.QN &&
+        existing.targetER >= newTargets.ER &&
         (
           existing.targetEDS > newTargets.EDS ||
           existing.targetAM > newTargets.AM ||
           existing.targetPD > newTargets.PD ||
-          existing.targetQN > newTargets.QN
+          existing.targetQN > newTargets.QN ||
+          existing.targetER > newTargets.ER
         )
       );
     }
 
     function buildTargetKey(targets) {
-      return `${targets.EDS}_${targets.AM}_${targets.PD}_${targets.QN}`;
+      return `${targets.EDS}_${targets.AM}_${targets.PD}_${targets.QN}_${targets.ER}`;
     }
 
     function buildTargetKeyFromCombo(combo) {
@@ -560,7 +571,8 @@
         EDS: combo.targetEDS,
         AM: combo.targetAM,
         PD: combo.targetPD,
-        QN: combo.targetQN
+        QN: combo.targetQN,
+        ER: combo.targetER
       });
     }
 
@@ -569,13 +581,15 @@
         a.targetEDS >= b.targetEDS &&
         a.targetAM >= b.targetAM &&
         a.targetPD >= b.targetPD &&
-        a.targetQN >= b.targetQN;
+        a.targetQN >= b.targetQN &&
+        a.targetER >= b.targetER;
       if (!betterOrEqual) return false;
       return (
         a.targetEDS > b.targetEDS ||
         a.targetAM > b.targetAM ||
         a.targetPD > b.targetPD ||
-        a.targetQN > b.targetQN
+        a.targetQN > b.targetQN ||
+        a.targetER > b.targetER
       );
     }
 
@@ -583,7 +597,7 @@
       const seenTargets = new Map();
       const keyQueue = [];
       const results = [];
-      // タイブレーク優先：分解回数 → 余り → EDS → AM → PD → QN
+      // タイブレーク優先：分解回数 → 余り → EDS → AM → PD → QN → ER
       function better(a, b) {
         if (a.splitCount !== b.splitCount) return a.splitCount < b.splitCount;
         if (a.chipRemainder !== b.chipRemainder) return a.chipRemainder < b.chipRemainder;
@@ -591,6 +605,7 @@
         if (a.targetAM  !== b.targetAM ) return a.targetAM  > b.targetAM;
         if (a.targetPD  !== b.targetPD ) return a.targetPD  > b.targetPD;
         if (a.targetQN  !== b.targetQN ) return a.targetQN  > b.targetQN;
+        if (a.targetER  !== b.targetER ) return a.targetER  > b.targetER;
         return false;
       }
 
@@ -631,20 +646,22 @@
       }
 
       function consider(combo) {
-        // ① EDS ≥ AM ≥ PD ≥ QN は上流で判定済みだが、念のため弾く
+        // ① EDS ≥ AM ≥ PD ≥ QN ≥ ER は上流で判定済みだが、念のため弾く
         if (!(combo.targetEDS >= combo.targetAM &&
               combo.targetAM  >= combo.targetPD &&
-              combo.targetPD  >= combo.targetQN)) return false;
+              combo.targetPD  >= combo.targetQN &&
+              combo.targetQN  >= combo.targetER)) return false;
 
         const targets = {
           EDS: combo.targetEDS,
           AM: combo.targetAM,
           PD: combo.targetPD,
-          QN: combo.targetQN
+          QN: combo.targetQN,
+          ER: combo.targetER
         };
         const targetKey = buildTargetKey(targets);
 
-        // ② 同一Target組み合わせは代表1件のみ（分解回数→余り→EDS→AM→PD→QN の優先で置換）
+        // ② 同一Target組み合わせは代表1件のみ（分解回数→余り→EDS→AM→PD→QN→ER の優先で置換）
         if (seenTargets.has(targetKey)) {
           const existing = seenTargets.get(targetKey);
           if (!better(combo, existing)) return false;     // 既存の方が優先
@@ -689,11 +706,12 @@
 
     function sortByTargetPriority(results) {
       return results.sort((a, b) => {
-        // 1) EDS→AM→PD→QN の降順
+        // 1) EDS→AM→PD→QN→ER の降順
         if (b.targetEDS !== a.targetEDS) return b.targetEDS - a.targetEDS;
         if (b.targetAM  !== a.targetAM ) return b.targetAM  - a.targetAM;
         if (b.targetPD  !== a.targetPD ) return b.targetPD  - a.targetPD;
         if (b.targetQN  !== a.targetQN ) return b.targetQN  - a.targetQN;
+        if (b.targetER  !== a.targetER ) return b.targetER  - a.targetER;
         // 2) 完全同点のときのみ、分解回数→余り で安定化
         if (a.splitCount !== b.splitCount) return a.splitCount - b.splitCount;
         if (a.chipRemainder !== b.chipRemainder) return a.chipRemainder - b.chipRemainder;
@@ -715,7 +733,8 @@
           combo.targetEDS <= lastKept.targetEDS &&
           combo.targetAM <= lastKept.targetAM &&
           combo.targetPD <= lastKept.targetPD &&
-          combo.targetQN <= lastKept.targetQN
+          combo.targetQN <= lastKept.targetQN &&
+          combo.targetER <= lastKept.targetER
         ) {
           filtered.push(combo);
           lastKept = combo;
@@ -829,7 +848,8 @@
       const baseRates = [
         [0.30, 0.40], // ドリル
         [0.15, 0.25], // 雷
-        [0.09, 0.25]  // サッカー
+        [0.09, 0.25], // サッカー
+        [0.05, 0.20]  // レーザー
       ];
       const FEW_CHIP_LIMIT = 20, MANY_CHIP_LIMIT = 220;
       const pruning = Math.max(0, Math.min(1, (C_total - FEW_CHIP_LIMIT) / (MANY_CHIP_LIMIT - FEW_CHIP_LIMIT)));
@@ -858,15 +878,19 @@
               if (s > l) continue;
               if (s < d * rates[2]) break;
 
-              const sum = d + r + l + s;
-              if (sum > C_total) break;
+              for (let e of pool) {
+                if (e > s) continue;
+                if (e < d * rates[3]) break;
+                const sum = d + r + l + s + e;
+                if (sum > C_total) break;
 
-              const rem = C_total - sum;
-              if (rem > maxRem) continue;
-              if (d - s > maxDiff) continue;
+                const rem = C_total - sum;
+                if (rem > maxRem) continue;
+                if (d - e > maxDiff) continue;
 
-              yield { cD: d, cR: r, cL: l, cS: s, rem: rem };
-              if (++count >= maxCount) return;
+                yield { cD: d, cR: r, cL: l, cS: s, cER: e, rem: rem };
+                if (++count >= maxCount) return;
+              }
             }
           }
         }
@@ -945,7 +969,7 @@
       function search(idx, inventory, chips, dpMemo) {
         const key = idx + '|' + invKey(inventory) + '|' + chips.slice(idx).join(',');
         if (dpMemo.has(key)) return dpMemo.get(key);
-        if (idx === 4) return [[]];
+        if (idx === chips.length) return [[]];
         const combos = getCombosMemo(inventory, 3);
         let res = [];
         const MAX_RESULTS = 300;
@@ -971,21 +995,22 @@
         return res;
       }
 
-      for (let { cD, cR, cL, cS, rem } of enumerateChipSplits(C_total)) {
+      for (let { cD, cR, cL, cS, cER, rem } of enumerateChipSplits(C_total)) {
         const dpMemo = new Map();
-        const solutions = search(0, { ...inv }, [cD, cR, cL, cS], dpMemo);
+        const solutions = search(0, { ...inv }, [cD, cR, cL, cS, cER], dpMemo);
         const limited = solutions.slice(0, 1500);
         for (let sol of limited) {
-          const [d, r, l, s] = sol;
+          const [d, r, l, s, e] = sol;
           // 目標値を算出
           const tEDS = computeTargetFromTotal(d.total);
           const tAM  = computeTargetFromTotal(r.total);
           const tPD  = computeTargetFromTotal(l.total);
           const tQN  = computeTargetFromTotal(s.total);
-          // 順序条件：EDS ≥ AM ≥ PD ≥ QN
-          if (!(tEDS >= tAM && tAM >= tPD && tPD >= tQN)) continue;
+          const tER  = computeTargetFromTotal(e.total);
+          // 順序条件：EDS ≥ AM ≥ PD ≥ QN ≥ ER
+          if (!(tEDS >= tAM && tAM >= tPD && tPD >= tQN && tQN >= tER)) continue;
           // 分解回数（元の手持ち inv を基準）
-          const splitCount = calcSplitCount(inv, [d,r,l,s]);
+          const splitCount = calcSplitCount(inv, [d,r,l,s,e]);
           const combo = {
             partsEDS: d.parts.slice(),
             chipEDS: d.chip,
@@ -1003,11 +1028,16 @@
             chipQN: s.chip,
             totalQN: s.total,
             targetQN: tQN,
+            partsER: e.parts.slice(),
+            chipER: e.chip,
+            totalER: e.total,
+            targetER: tER,
             chipRemainder: rem,
             unlockD: d.gate,
             unlockR: r.gate,
             unlockL: l.gate,
             unlockS: s.gate,
+            unlockE: e.gate,
             splitCount
           };
           if (aggregator && typeof aggregator.consider === 'function') {
@@ -1039,6 +1069,7 @@
         h.AM, h.chip, h.energy, h.target,
         h.PD, h.chip, h.energy, h.target,
         h.QN, h.chip, h.energy, h.target,
+        h.ER, h.chip, h.energy, h.target,
         h.rem
       ];
       const thClasses = [
@@ -1046,6 +1077,7 @@
         'col-AM-icon','col-AM-chip','col-AM-total','col-AM-target',
         'col-PD-icon','col-PD-chip','col-PD-total','col-PD-target',
         'col-QN-icon','col-QN-chip','col-QN-total','col-QN-target',
+        'col-ER-icon','col-ER-chip','col-ER-total','col-ER-target',
         'col-rem'
       ];
       for (let i = 0; i < headers.length; i++) {
@@ -1154,6 +1186,28 @@
         tdStarget.className = 'col-QN-target';
         tr.appendChild(tdStarget);
 
+        // ER icons
+        const tdEicon = document.createElement('td');
+        tdEicon.className = 'col-ER-icon';
+        tdEicon.innerHTML = item.partsER.map(p => `<img src="${p}.png" alt="${p}" width="40" height="40">`).join('&nbsp;');
+        tr.appendChild(tdEicon);
+        // ER Chip
+        const tdEchip = document.createElement('td');
+        const noteE = item.unlockE.reqU > 0 ? `<div class="unlock-note">${i18nReq} ${legendLabel} ${item.unlockE.reqU}</div>` : '';
+        tdEchip.innerHTML = `${item.chipER}${noteE}`;
+        tdEchip.className = 'col-ER-chip';
+        tr.appendChild(tdEchip);
+        // ER Total
+        const tdEtotal = document.createElement('td');
+        tdEtotal.innerHTML = item.totalER.toFixed(0);
+        tdEtotal.className = 'col-ER-total';
+        tr.appendChild(tdEtotal);
+        // ER Target
+        const tdEtarget = document.createElement('td');
+        tdEtarget.innerHTML = item.targetER;
+        tdEtarget.className = 'col-ER-target';
+        tr.appendChild(tdEtarget);
+        
         // Rem. Chip
         const tdRem = document.createElement('td');
         tdRem.innerHTML = item.chipRemainder;
