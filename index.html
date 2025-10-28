@@ -115,6 +115,13 @@
       color: #555;
       font-size: 14px;
     }
+    .typed-parts-section { margin-bottom: 20px; }
+    .typed-parts-table { overflow-x: auto; margin-top: 10px; }
+    .typed-parts-table table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    .typed-parts-table th { background: #f0f0f0; padding: 8px 4px; border: 1px solid #ccc; text-align: center; }
+    .typed-parts-table td { padding: 4px; border: 1px solid #ccc; text-align: center; }
+    .typed-parts-table td.part-name { text-align: left; font-weight: bold; }
+    .typed-parts-table input[type="number"] { width: 50px; padding: 4px; text-align: center; }
   </style>
 </head>
 <body>
@@ -123,39 +130,66 @@
   <p id="subtitle"></p>
 
   <div class="input-container">
-    <div class="parts-input">
-      <div class="part-item">
-        <img src="E.png" alt="E" />
-        <div><label id="label-e"></label></div>
-        <input type="number" id="input-E" value="0" min="0">
-      </div>
-      <div class="part-item">
-        <img src="L0.png" alt="L0" />
-        <div><label id="label-l0"></label></div>
-        <input type="number" id="input-L0" value="0" min="0">
-      </div>
-      <div class="part-item">
-        <img src="L1.png" alt="L1" />
-        <div><label id="label-l1"></label></div>
-        <input type="number" id="input-L1" value="0" min="0">
-      </div>
-      <div class="part-item">
-        <img src="L2.png" alt="L2" />
-        <div><label id="label-l2"></label></div>
-        <input type="number" id="input-L2" value="0" min="0">
-      </div>
-      <div class="part-item">
-        <img src="L3.png" alt="L3" />
-        <div><label id="label-l3"></label></div>
-        <input type="number" id="input-L3" value="0" min="0">
-      </div>
-      <div class="part-item">
-        <img src="L4.png" alt="L4" />
-        <div><label id="label-l4"></label></div>
-        <input type="number" id="input-L4" value="0" min="0">
+    <!-- モード選択 -->
+    <div class="mode-selection" style="text-align: center; margin-bottom: 20px; padding: 15px; background: #f8f8f8; border-radius: 5px;">
+      <h3 id="mode-title"></h3>
+      <p id="mode-desc" style="font-size: 14px; color: #666; margin-bottom: 15px;"></p>
+      <label style="margin-right: 20px; cursor: pointer;">
+        <input type="radio" name="calc-mode" value="precise" checked>
+        <span id="mode-precise-label"></span>
+      </label>
+      <label style="cursor: pointer;">
+        <input type="radio" name="calc-mode" value="fast">
+        <span id="mode-fast-label"></span>
+      </label>
+    </div>
+
+    <!-- 精密モード: 12種類のパーツ入力 -->
+    <div class="precise-mode-section">
+      <h3 id="typed-parts-title"></h3>
+      <p id="typed-parts-desc" style="font-size: 14px; color: #666;"></p>
+      <div id="typed-parts-table"></div>
+    </div>
+
+    <!-- 高速モード: 種類なしパーツ入力 -->
+    <div class="fast-mode-section" style="display: none;">
+      <h3 id="generic-parts-title"></h3>
+      <p id="generic-parts-desc" style="font-size: 14px; color: #666;"></p>
+      <div class="parts-input">
+        <div class="part-item">
+          <img src="E.png" alt="E" />
+          <div><label id="label-e"></label></div>
+          <input type="number" id="input-E" value="0" min="0">
+        </div>
+        <div class="part-item">
+          <img src="L0.png" alt="L0" />
+          <div><label id="label-l0"></label></div>
+          <input type="number" id="input-L0" value="0" min="0">
+        </div>
+        <div class="part-item">
+          <img src="L1.png" alt="L1" />
+          <div><label id="label-l1"></label></div>
+          <input type="number" id="input-L1" value="0" min="0">
+        </div>
+        <div class="part-item">
+          <img src="L2.png" alt="L2" />
+          <div><label id="label-l2"></label></div>
+          <input type="number" id="input-L2" value="0" min="0">
+        </div>
+        <div class="part-item">
+          <img src="L3.png" alt="L3" />
+          <div><label id="label-l3"></label></div>
+          <input type="number" id="input-L3" value="0" min="0">
+        </div>
+        <div class="part-item">
+          <img src="L4.png" alt="L4" />
+          <div><label id="label-l4"></label></div>
+          <input type="number" id="input-L4" value="0" min="0">
+        </div>
       </div>
     </div>
-    <div class="chip-input" style="margin-top:12px;">
+
+    <div class="chip-input" style="margin-top:20px;">
       <img src="chip_icon.png" alt="Chip" />
       <label id="label-chip"></label>
       <input type="number" id="input-chip" min="0" max="330" value="0" />
@@ -172,7 +206,7 @@
   <footer>
     <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'V7V71KOLL8');kofiwidget2.draw();</script> 
     <br><br>
-    <span id="footer-version">Version: v.4.1.0 &nbsp; / &nbsp; Created by Dox_Daffun<br>
+    <span id="footer-version">Version: v.4.2.0 &nbsp; / &nbsp; Created by Dox_Daffun<br>
     Special thanks to: Logi(@sonicmans) and YAMATO</span><br>
     <span id="footer-discord" style="color:#555;">
       Feedback or bug reports:&nbsp;
@@ -187,7 +221,15 @@
       ja: {
         title:        '共振最適化計算ツール',
         mainTitle:    '共振最適化計算ツール',
-        subtitle:     '「マイパーツ」にあるレジェンド以上のテックパーツの枚数と共振チップの所持数を入力し、「Calculate」を押すと、双生パーツの最適組合せを一覧で表示します。<br>※必要に応じてエピック＋３のパーツが使われることがあります。<br>※「Target」とは、特に強力な効果が発動する共振エネルギーを指します。<br>※実際に装着しているパーツを除いた数を入力してください。<br>※倍率が3.2倍以上の組み合わせが含まれる場合は、素材に必要なパーツ数を表示します。（手持ちのテックパーツを分解しなければならないときがあります）<br><b>レジェンド1~4のパーツは必要に応じて分解・再合成する必要があります。</b>',
+        subtitle:     '「マイパーツ」にあるレジェンド以上のテックパーツを入力し、「Calculate」を押すと、双生パーツの最適組合せを一覧で表示します。<br>※実際に装着しているパーツを除いた数を入力してください。',
+        modeTitle: '計算モード選択',
+        modeDesc: 'パーツ数が12個以下の場合は「精密モード」、13個以上の場合は「高速モード」を推奨します。',
+        modePreciseLabel: '精密モード（種類別・分解再合成あり・推奨12個以下）',
+        modeFastLabel: '高速モード（種類なし・分解再合成なし・推奨13個以上）',
+        typedPartsTitle: 'パーツ種類別入力',
+        typedPartsDesc: '所持している各パーツの種類とランクを選択してください。同じ種類のパーツのみが分解・再合成されます。',
+        genericPartsTitle: '種類なしパーツ入力',
+        genericPartsDesc: '各ランクの総数を入力してください。分解・再合成は行われません。',
         labelE:       'エターナル',
         labelL0:      'レジェンド',
         labelL1:      'レジェ＋１',
@@ -199,6 +241,20 @@
         btnCalculating: 'Calculating...',
         resultList:   '結果一覧',
         btnSaveImage: 'Save Result',
+        partTypes: {
+          Molotov: '火炎瓶',
+          Laser: 'レーザー',
+          Drone: 'ドローン',
+          Soccer: 'サッカー',
+          Lightning: '雷',
+          Drill: 'ドリル',
+          Durian: 'ドリアン',
+          Boomerang: 'ブーメラン',
+          Brick: 'レンガ',
+          Guardian: 'ガーディアン',
+          ForceField: 'フォースフィールド',
+          Rocket: 'ロケット'
+        },
         headers: {
           pattern: 'Pattern',
           EDS:   '<img src="EDS_icon.png" alt="EDS" width="40" height="40">',
@@ -216,7 +272,15 @@
       en: {
         title:        'Resonance Optimization Calculator',
         mainTitle:    'Resonance Optimization Calculator',
-        subtitle:     'Enter the number of Tech Parts (Legend or higher) and Resonance Chips you own, then press "Calculate" to see all optimal patterns for Twin Parts.<br>*Epic+3 parts may be used as needed.<br>*"Target" means a Resonance Energy that reaches a powerful effect.<br>*Do not include parts currently equipped.<br>*If a combination with a multiplier of 3.2x or higher is included, the required number of materials will be displayed. (In some cases, you may need to salvage your Tech Parts.)<br><b>Legend+1~4 parts may need to be downgraded and re-merged as necessary.</b>',
+        subtitle:     'Enter your Tech Parts and press "Calculate" to see optimal Twin Part combinations.<br>*Do not include parts currently equipped.',
+        modeTitle: 'Calculation Mode',
+        modeDesc: 'Precise Mode is recommended for 12 or fewer parts. Fast Mode is recommended for 13 or more parts.',
+        modePreciseLabel: 'Precise Mode (By type, with salvage/remerge, ≤12 parts)',
+        modeFastLabel: 'Fast Mode (Generic, no salvage/remerge, ≥13 parts)',
+        typedPartsTitle: 'Parts by Type',
+        typedPartsDesc: 'Select the type and rank of each part you own. Only parts of the same type can be salvaged and re-merged.',
+        genericPartsTitle: 'Generic Parts',
+        genericPartsDesc: 'Enter total count for each rank. No salvage or re-merge will be performed.',
         labelE:       'Eternal',
         labelL0:      'Legend',
         labelL1:      'Legend+1',
@@ -228,6 +292,20 @@
         btnCalculating: 'Calculating...',
         resultList:   'Results',
         btnSaveImage: 'Save Result',
+        partTypes: {
+          Molotov: 'Molotov',
+          Laser: 'Laser',
+          Drone: 'Drone',
+          Soccer: 'Soccer',
+          Lightning: 'Lightning',
+          Drill: 'Drill',
+          Durian: 'Durian',
+          Boomerang: 'Boomerang',
+          Brick: 'Brick',
+          Guardian: 'Guardian',
+          ForceField: 'Force Field',
+          Rocket: 'Rocket'
+        },
         headers: {
           pattern: 'Pattern',
           EDS:   '<img src="EDS_icon.png" alt="EDS" width="40" height="40">',
@@ -245,7 +323,15 @@
       zh: {
         title:        '共振优化计算器',
         mainTitle:    '共振优化计算器',
-        subtitle:     '请输入你拥有的传奇及以上*科技零件数量和共振芯片数量，然后点击“计算”按钮，显示双生件的最优组合一览。<br>*如有需要，可能会使用史诗+3零件。<br>*“目标”是指能够激发强力效果的共振能量。<br>*请不要计入当前已装备的部件。<br>*如果包含倍率达到3.2倍及以上的组合，将会显示所需的材料数量。（在某些情况下，你可能需要分解科技零件。）<br><b>传奇+1~4部件可能需要视情况进行分解与再合成。</b>',
+        subtitle:     '输入你拥有的科技零件，然后点击"计算"显示最优双生件组合。<br>*请不要计入当前已装备的部件。',
+        modeTitle: '计算模式',
+        modeDesc: '零件数量12个或以下时推荐"精确模式"，13个或以上时推荐"快速模式"。',
+        modePreciseLabel: '精确模式（按类型、可分解再合成、推荐≤12个）',
+        modeFastLabel: '快速模式（通用、不分解再合成、推荐≥13个）',
+        typedPartsTitle: '按类型输入零件',
+        typedPartsDesc: '选择你拥有的每个零件的类型和等级。只有相同类型的零件才能分解和再合成。',
+        genericPartsTitle: '通用零件',
+        genericPartsDesc: '输入每个等级的总数。不进行分解或再合成。',
         labelE:       '永恒',
         labelL0:      '传奇',
         labelL1:      '传奇+1',
@@ -257,6 +343,20 @@
         btnCalculating: '计算中...',
         resultList:   '结果列表',
         btnSaveImage: '保存结果',
+        partTypes: {
+          Molotov: '燃烧瓶',
+          Laser: '激光',
+          Drone: '无人机',
+          Soccer: '足球',
+          Lightning: '闪电',
+          Drill: '钻头',
+          Durian: '榴莲',
+          Boomerang: '回旋镖',
+          Brick: '砖块',
+          Guardian: '守护者',
+          ForceField: '力场',
+          Rocket: '火箭'
+        },
         headers: {
           pattern: '组合',
           EDS:   '<img src="EDS_icon.png" alt="EDS" width="40" height="40">',
@@ -274,7 +374,15 @@
       ko: {
         title:        '공진 최적화 계산기',
         mainTitle:    '공진 최적화 계산기',
-        subtitle:     '내 파츠 중 레전드 이상의 테크 파츠 개수와 공진 칩 보유 수를 입력하고 "Calculate"를 누르면, 트윈 파츠 최적 조합을 모두 표시합니다.<br>*필요시 에픽+3 파츠가 사용될 수 있습니다.<br>*"Target"는 강력한 효과가 발동되는 공진 에너지를 의미합니다.<br>*현재 장착 중인 파츠는 제외하고 입력하세요.<br>*배율이 3.2배 이상인 조합이 포함될 경우, 필요한 소재 수가 표시됩니다. (경우에 따라 테크 파츠를 분해해야 할 수 있습니다.)<br><b>레전드 1~4 파츠는 필요에 따라 분해 및 재조합이 필요합니다.</b>',
+        subtitle:     '보유한 테크 파츠를 입력하고 "Calculate"를 누르면 최적 트윈 파츠 조합을 표시합니다.<br>*현재 장착 중인 파츠는 제외하고 입력하세요.',
+        modeTitle: '계산 모드',
+        modeDesc: '파츠 수가 12개 이하일 때는 "정밀 모드", 13개 이상일 때는 "고속 모드"를 권장합니다.',
+        modePreciseLabel: '정밀 모드（유형별, 분해/재조합 가능, 권장≤12개）',
+        modeFastLabel: '고속 모드（일반, 분해/재조합 없음, 권장≥13개）',
+        typedPartsTitle: '유형별 파츠 입력',
+        typedPartsDesc: '보유한 각 파츠의 유형과 등급을 선택하세요. 같은 유형의 파츠만 분해 및 재조합할 수 있습니다.',
+        genericPartsTitle: '일반 파츠',
+        genericPartsDesc: '각 등급의 총 개수를 입력하세요. 분해 및 재조합은 수행되지 않습니다.',
         labelE:       '이터널',
         labelL0:      '레전드',
         labelL1:      '레전드+1',
@@ -286,6 +394,20 @@
         btnCalculating: 'Calculating...',
         resultList:   '결과 목록',
         btnSaveImage: '결과 저장',
+        partTypes: {
+          Molotov: '화염병',
+          Laser: '레이저',
+          Drone: '드론',
+          Soccer: '축구공',
+          Lightning: '번개',
+          Drill: '드릴',
+          Durian: '두리안',
+          Boomerang: '부메랑',
+          Brick: '벽돌',
+          Guardian: '가디언',
+          ForceField: '포스필드',
+          Rocket: '로켓'
+        },
         headers: {
           pattern: 'Pattern',
           EDS:   '<img src="EDS_icon.png" alt="EDS" width="40" height="40">',
@@ -302,7 +424,15 @@
       }
     };
 
-    // --- 2. ブラウザ言語自動判別 ---
+    // --- 2. パーツタイプ定義 ---
+    const partTypes = [
+      'Molotov', 'Laser', 'Drone', 'Soccer',
+      'Lightning', 'Drill', 'Durian', 'Boomerang',
+      'Brick', 'Guardian', 'ForceField', 'Rocket'
+    ];
+    const rankOrder = ['E', 'L0', 'L1', 'L2', 'L3', 'L4'];
+
+    // --- 3. ブラウザ言語自動判別 ---
     function getBrowserLang() {
       const lang = navigator.language || navigator.userLanguage || 'en';
       if (lang.startsWith('ja')) return 'ja';
@@ -311,13 +441,48 @@
       return 'en'; // デフォルトは英語
     }
 
-    // --- 3. 多言語テキストを画面に反映 ---
+    // --- 4. UI生成関数 ---
+    function generateTypedPartsTable() {
+      const lang = getBrowserLang();
+      const res = resources[lang];
+      const tableContainer = document.getElementById('typed-parts-table');
+
+      let html = '<table><thead><tr>';
+      html += '<th>Part Type</th>';
+      for (const rank of rankOrder) {
+        html += `<th>${res['label' + rank.replace('+', '')]}</th>`;
+      }
+      html += '</tr></thead><tbody>';
+
+      for (const partType of partTypes) {
+        html += '<tr>';
+        html += `<td class="part-name">${res.partTypes[partType]}</td>`;
+        for (const rank of rankOrder) {
+          const inputId = `typed-${partType}-${rank}`;
+          html += `<td><input type="number" id="${inputId}" min="0" value="0" /></td>`;
+        }
+        html += '</tr>';
+      }
+
+      html += '</tbody></table>';
+      tableContainer.innerHTML = html;
+    }
+
+    // --- 5. 多言語テキストを画面に反映 ---
     function updateTextsByLang() {
       const lang = getBrowserLang();
       const res = resources[lang];
       document.title                          = res.title;
       document.getElementById('main-title').innerHTML      = res.mainTitle;
       document.getElementById('subtitle').innerHTML        = res.subtitle;
+      document.getElementById('mode-title').innerHTML      = res.modeTitle;
+      document.getElementById('mode-desc').innerHTML       = res.modeDesc;
+      document.getElementById('mode-precise-label').innerHTML = res.modePreciseLabel;
+      document.getElementById('mode-fast-label').innerHTML = res.modeFastLabel;
+      document.getElementById('typed-parts-title').innerHTML = res.typedPartsTitle;
+      document.getElementById('typed-parts-desc').innerHTML = res.typedPartsDesc;
+      document.getElementById('generic-parts-title').innerHTML = res.genericPartsTitle;
+      document.getElementById('generic-parts-desc').innerHTML = res.genericPartsDesc;
       document.getElementById('label-e').innerHTML         = res.labelE;
       document.getElementById('label-l0').innerHTML        = res.labelL0;
       document.getElementById('label-l1').innerHTML        = res.labelL1;
@@ -328,11 +493,63 @@
       document.getElementById('calculate-btn').innerHTML   = res.btnCalculate;
       document.getElementById('result-list').innerHTML     = res.resultList;
       document.getElementById('save-image-btn').innerHTML = res.btnSaveImage;
+
+      // Regenerate typed parts table with correct language
+      generateTypedPartsTable();
+    }
+
+    // --- 5.5. モード切り替え関数 ---
+    function switchMode(mode) {
+      const preciseSection = document.querySelector('.precise-mode-section');
+      const fastSection = document.querySelector('.fast-mode-section');
+
+      if (mode === 'precise') {
+        preciseSection.style.display = 'block';
+        fastSection.style.display = 'none';
+      } else {
+        preciseSection.style.display = 'none';
+        fastSection.style.display = 'block';
+      }
+    }
+
+    // --- 6. データ収集関数 ---
+    function collectInventory() {
+      const typedParts = [];
+
+      // Collect typed parts from the table
+      for (const partType of partTypes) {
+        for (const rank of rankOrder) {
+          const inputId = `typed-${partType}-${rank}`;
+          const element = document.getElementById(inputId);
+          if (element) {
+            const count = parseInt(element.value) || 0;
+            if (count > 0) {
+              typedParts.push({
+                type: partType,
+                rank: rank,
+                count: count
+              });
+            }
+          }
+        }
+      }
+
+      return { typed: typedParts };
+    }
+
+    // --- 7. ユニークパーツID生成関数 ---
+    function createUniquePartId(type, rank) {
+      return `${type}_${rank}`;
+    }
+
+    // --- 8. ユニークパーツの基本ランクを取得 ---
+    function getBaseRank(uniqueId) {
+      const parts = uniqueId.split('_');
+      return parts[1]; // e.g., "Molotov_E" -> "E"
     }
 
     let lookupReadyPromise = null;
-    // --- 4. ページロード時に適用 ---
-    const inputIDs = ['input-E','input-L0','input-L1','input-L2','input-L3','input-L4','input-chip'];
+    // --- 8. ページロード時に適用 ---
     window.addEventListener('DOMContentLoaded', function() {
       updateTextsByLang();
       if (!lookupReadyPromise) {
@@ -343,13 +560,43 @@
             lookupCache = {};
           });
       }
-      // 復元
-      inputIDs.forEach(id=>{
-        const val = localStorage.getItem('calc_input_'+id);
-        if(val !== null) document.getElementById(id).value = val;
-        document.getElementById(id).addEventListener('input',e=>{
-          localStorage.setItem('calc_input_'+id, e.target.value);
+
+      // モード切り替えのイベントリスナー
+      const modeRadios = document.querySelectorAll('input[name="calc-mode"]');
+      modeRadios.forEach(radio => {
+        radio.addEventListener('change', (e) => {
+          switchMode(e.target.value);
+          localStorage.setItem('calc_mode', e.target.value);
         });
+      });
+
+      // モードの復元
+      const savedMode = localStorage.getItem('calc_mode') || 'precise';
+      const savedModeRadio = document.querySelector(`input[name="calc-mode"][value="${savedMode}"]`);
+      if (savedModeRadio) {
+        savedModeRadio.checked = true;
+        switchMode(savedMode);
+      }
+
+      // チップ入力の復元
+      const chipInput = document.getElementById('input-chip');
+      const savedChip = localStorage.getItem('calc_input_chip');
+      if (savedChip !== null) chipInput.value = savedChip;
+      chipInput.addEventListener('input', e => {
+        localStorage.setItem('calc_input_chip', e.target.value);
+      });
+
+      // 高速モード用入力の復元
+      const genericInputIds = ['input-E','input-L0','input-L1','input-L2','input-L3','input-L4'];
+      genericInputIds.forEach(id => {
+        const elem = document.getElementById(id);
+        if (elem) {
+          const val = localStorage.getItem('calc_input_' + id);
+          if (val !== null) elem.value = val;
+          elem.addEventListener('input', e => {
+            localStorage.setItem('calc_input_' + id, e.target.value);
+          });
+        }
       });
 
       // 結果を画像として保存
@@ -385,7 +632,14 @@
     const rankOrderAsc = ['L0','L1','L2','L3','L4'];
     function canUnlockMultiplier(parts, chip) {
       const req = unitReqByChip[chip] ?? 0;
-      const supply = parts.reduce((s,p)=> s + (unitValue[p]||0), 0);
+      const supply = parts.reduce((s, p) => {
+        // Handle unique part IDs (e.g., "Molotov_E" -> "E")
+        let rank = p;
+        if (p.includes('_')) {
+          rank = getBaseRank(p);
+        }
+        return s + (unitValue[rank] || 0);
+      }, 0);
       if (req === 0) return { ok: true, reqU: 0, supplyU: supply };
       return { ok: supply >= req, reqU: req, supplyU: supply };
     }
@@ -418,10 +672,16 @@
       let eCount = 0;
       let l0Total = 0;
       for (const part of parts) {
-        if (part === 'E') {
+        // Handle unique part IDs (e.g., "Molotov_E" -> "E")
+        let rank = part;
+        if (part.includes('_')) {
+          rank = getBaseRank(part);
+        }
+
+        if (rank === 'E') {
           eCount++;
-        } else if (l0ConversionValues[part] !== undefined) {
-          l0Total += l0ConversionValues[part];
+        } else if (l0ConversionValues[rank] !== undefined) {
+          l0Total += l0ConversionValues[rank];
         }
       }
       return { E: eCount, L0: l0Total };
@@ -512,6 +772,77 @@
         results.push(originalPattern);
       }
       return results;
+    }
+
+    // --- Typed Parts用のRecomposition Patterns生成（バランス調整版） ---
+    function generateRecompositionPatternsForTypedParts(inventory) {
+      // Group typed parts by type (only non-zero counts)
+      const byType = {};
+      for (const part of inventory.typed) {
+        if (!byType[part.type]) {
+          byType[part.type] = {};
+        }
+        byType[part.type][part.rank] = part.count;
+      }
+
+      const typeNames = Object.keys(byType);
+
+      // If no typed parts, return empty pattern
+      if (typeNames.length === 0) {
+        return [{}];
+      }
+
+      // Generate recomposition patterns for each type (balanced)
+      const patternsByType = {};
+      for (const type in byType) {
+        const partsOfType = byType[type];
+        const converted = convertToL0Equivalent(partsOfType);
+        const constraints = { maxRank: converted.maxRank, maxCounts: converted.maxCounts };
+
+        // Generate patterns - keep more for better accuracy
+        let recompPatterns = generateRecompositionPatterns(converted.L0Total, constraints);
+
+        // Balanced reduction: keep enough patterns for diversity
+        // Prioritize: original pattern + variations with high-rank parts
+        const MAX_PATTERNS_PER_TYPE = 20;  // Increased for better coverage
+        patternsByType[type] = recompPatterns.slice(0, MAX_PATTERNS_PER_TYPE);
+      }
+
+      // Balance between performance and accuracy
+      const MAX_TOTAL_PATTERNS = 200;  // Increased for better coverage
+
+      // Generate combinations iteratively with early stopping
+      const unifiedPatterns = [];
+
+      function generateCombinations(typeIndex, currentUnified) {
+        if (unifiedPatterns.length >= MAX_TOTAL_PATTERNS) return;
+
+        if (typeIndex >= typeNames.length) {
+          unifiedPatterns.push({ ...currentUnified });
+          return;
+        }
+
+        const type = typeNames[typeIndex];
+        const patterns = patternsByType[type];
+
+        for (const pattern of patterns) {
+          if (unifiedPatterns.length >= MAX_TOTAL_PATTERNS) break;
+
+          const newUnified = { ...currentUnified };
+          for (const rank in pattern) {
+            if (pattern[rank] > 0) {
+              const uniqueId = createUniquePartId(type, rank);
+              newUnified[uniqueId] = pattern[rank];
+            }
+          }
+
+          generateCombinations(typeIndex + 1, newUnified);
+        }
+      }
+
+      generateCombinations(0, {});
+
+      return unifiedPatterns.length > 0 ? unifiedPatterns : [{}];
     }
 
     function findMatchingPatterns(availableParts) {
@@ -762,32 +1093,46 @@
         } catch (error) {
           console.error('Lookup table loading failed', error);
         }
-        const inv = {
-          E:  parseInt(document.getElementById('input-E').value)  || 0,
-          L0: parseInt(document.getElementById('input-L0').value) || 0,
-          L1: parseInt(document.getElementById('input-L1').value) || 0,
-          L2: parseInt(document.getElementById('input-L2').value) || 0,
-          L3: parseInt(document.getElementById('input-L3').value) || 0,
-          L4: parseInt(document.getElementById('input-L4').value) || 0
-        };
+
+        // 現在のモードを取得
+        const currentMode = document.querySelector('input[name="calc-mode"]:checked').value;
         const C_total = parseInt(document.getElementById('input-chip').value) || 0;
-        const converted = convertToL0Equivalent(inv);
-        const constraints = { maxRank: converted.maxRank, maxCounts: converted.maxCounts };
-        const recompositionPatterns = generateRecompositionPatterns(converted.L0Total, constraints);
-        const availableForMatching = { E: converted.E, L0Total: converted.L0Total };
-        const matchingKeySet = new Set(findMatchingPatterns(availableForMatching));
-        const patternList = recompositionPatterns.length > 0 ? recompositionPatterns : [constraints.maxCounts];
-        const seenPatterns = new Set();
+
         const aggregator = createResultAggregator();
-        for (const pattern of patternList) {
-          const signature = rankOrderAsc.map(rank => `${rank}:${pattern[rank] || 0}`).join('|');
-          if (seenPatterns.has(signature)) continue;
-          seenPatterns.add(signature);
-          const variantInventory = { E: converted.E };
-          for (const rank of rankOrderAsc) {
-            variantInventory[rank] = pattern[rank] || 0;
+
+        if (currentMode === 'precise') {
+          // 精密モード: 種類別パーツで分解・再合成あり
+          const inventory = collectInventory();
+          const unifiedPatterns = generateRecompositionPatternsForTypedParts(inventory);
+          const matchingKeySet = new Set();
+          const seenPatterns = new Set();
+
+          for (const pattern of unifiedPatterns) {
+            const parts = Object.keys(pattern).sort();
+            const signature = parts.map(p => `${p}:${pattern[p]}`).join('|');
+            if (seenPatterns.has(signature)) continue;
+            seenPatterns.add(signature);
+
+            computeOverOrEqualNine(pattern, C_total, matchingKeySet, aggregator);
           }
-          computeOverOrEqualNine(variantInventory, C_total, matchingKeySet, aggregator);
+        } else {
+          // 高速モード: 種類なしパーツで分解・再合成なし
+          const inv = {
+            E:  parseInt(document.getElementById('input-E').value)  || 0,
+            L0: parseInt(document.getElementById('input-L0').value) || 0,
+            L1: parseInt(document.getElementById('input-L1').value) || 0,
+            L2: parseInt(document.getElementById('input-L2').value) || 0,
+            L3: parseInt(document.getElementById('input-L3').value) || 0,
+            L4: parseInt(document.getElementById('input-L4').value) || 0
+          };
+
+          // 分解・再合成なし: 入力されたまま使用
+          const converted = convertToL0Equivalent(inv);
+          const availableForMatching = { E: converted.E, L0Total: converted.L0Total };
+          const matchingKeySet = new Set(findMatchingPatterns(availableForMatching));
+
+          // そのまま使用（再合成パターン生成なし）
+          computeOverOrEqualNine(inv, C_total, matchingKeySet, aggregator);
         }
         const results = sortByTargetPriority(aggregator.getResults());
         // clear caches to avoid memory growth between calculations
@@ -802,42 +1147,78 @@
     // Utility functions for combo generation
     const partOrder = ['E','L4','L3','L2','L1','L0','Y'];
 
+    // --- 10. ユニークパーツ用の組み合わせ列挙関数（最適化版） ---
     function enumerateCombosFromInventory(inventory, size) {
+      // Get all available unique part types from inventory
+      const availableParts = [];
+      for (const uniqueId in inventory) {
+        if (inventory[uniqueId] > 0) {
+          availableParts.push(uniqueId);
+        }
+      }
+
+      // Sort parts by priority (E > L4 > L3 > L2 > L1 > L0)
+      // This ensures high-rank parts are tried first
+      availableParts.sort((a, b) => {
+        const rankA = getBaseRank(a);
+        const rankB = getBaseRank(b);
+        const priorityOrder = ['E', 'L4', 'L3', 'L2', 'L1', 'L0', 'Y'];
+        const idxA = priorityOrder.indexOf(rankA);
+        const idxB = priorityOrder.indexOf(rankB);
+        if (idxA !== idxB) return idxA - idxB;
+        return a.localeCompare(b);
+      });
+
+      // Add 'Y' (dummy/empty part)
+      availableParts.push('Y');
+
       const results = [];
-      const types = partOrder;
-      const n = types.length;
-      for (let i = 0; i < n; i++) {
-        for (let j = i; j < n; j++) {
-          for (let k = j; k < n; k++) {
-            const combo = [types[i], types[j], types[k]];
+      const n = availableParts.length;
+      const MAX_COMBOS = 2000; // Increased limit for better coverage
+
+      // Generate combinations with high-rank parts prioritized
+      // Use stratified sampling: ensure we try high-rank combinations first
+      for (let i = 0; i < n && results.length < MAX_COMBOS; i++) {
+        for (let j = i; j < n && results.length < MAX_COMBOS; j++) {
+          for (let k = j; k < n && results.length < MAX_COMBOS; k++) {
+            const combo = [availableParts[i], availableParts[j], availableParts[k]];
             const counts = {};
             for (const p of combo) counts[p] = (counts[p] || 0) + 1;
+
             let ok = true;
             for (const p in counts) {
-              if (p !== 'Y' && (inventory[p] || 0) < counts[p]) { ok = false; break; }
+              if (p !== 'Y' && (inventory[p] || 0) < counts[p]) {
+                ok = false;
+                break;
+              }
             }
             if (ok) results.push(combo);
           }
         }
       }
+
       if (results.length === 0) {
         let fill = [];
         let remain = size;
-        for (const p of types) {
-          for (let i = 0; i < inventory[p] && remain > 0; i++, remain--) {
+        for (const p of availableParts) {
+          const available = inventory[p] || 0;
+          for (let i = 0; i < available && remain > 0; i++, remain--) {
             fill.push(p);
           }
         }
         while (fill.length < size) fill.push('Y');
         return [fill];
       }
+
       return results;
     }
 
     // cache for combinations from the same inventory state
     const comboCache = {};
     function getCombosMemo(inv, size) {
-      const key = partOrder.map(p => inv[p] || 0).join(',');
+      // Generate key from all available parts in inventory
+      const parts = Object.keys(inv).sort();
+      const key = parts.map(p => `${p}:${inv[p]}`).join(',');
       if (!comboCache[key]) {
         comboCache[key] = enumerateCombosFromInventory(inv, size);
       }
@@ -905,7 +1286,14 @@
     }
     function calculateOnTheFly(comboParts, chip) {
       let baseSum = 0;
-      for (let p of comboParts) baseSum += partValues[p];
+      for (let p of comboParts) {
+        // Handle unique part IDs (e.g., "Molotov_E" -> "E")
+        let rank = p;
+        if (p.includes('_')) {
+          rank = getBaseRank(p);
+        }
+        baseSum += partValues[rank] || 0;
+      }
       const multMap = {
         0:1.0, 1:1.2, 2:1.4, 4:1.6, 6:1.8,
         9:2.0,12:2.2,16:2.4,20:2.6,25:2.8,
@@ -946,22 +1334,36 @@
 
     // 分解回数＝必要パーツが手持ちより不足した個数の合計（E/Yは除外）
     function calcSplitCount(invOriginal, solItems) {
-      const used = { L4:0, L3:0, L2:0, L1:0, L0:0, E:0, Y:0 };
-      for (const d of solItems) for (const p of d.parts) used[p] = (used[p]||0) + 1;
-      let split = 0;
-      const tiers = ['L4','L3','L2','L1','L0'];
-      for (const t of tiers) {
-        const have = invOriginal[t] || 0;
-        const need = used[t] || 0;
-        if (need > have) split += (need - have);
+      const used = {};
+      for (const d of solItems) {
+        for (const p of d.parts) {
+          used[p] = (used[p] || 0) + 1;
+        }
       }
+
+      let split = 0;
+      // For each unique part ID used, check if we have enough
+      for (const uniqueId in used) {
+        if (uniqueId === 'Y') continue; // Skip dummy parts
+
+        const rank = uniqueId.includes('_') ? getBaseRank(uniqueId) : uniqueId;
+        if (rank === 'E') continue; // Skip E parts
+
+        const have = invOriginal[uniqueId] || 0;
+        const need = used[uniqueId] || 0;
+        if (need > have) {
+          split += (need - have);
+        }
+      }
+
       return split;
     }
 
     function computeOverOrEqualNine(inv, C_total, matchingPatterns, aggregator) {
-      const order = partOrder;
-
-      const invKey = (inventory) => order.map(p => inventory[p] || 0).join(',');
+      const invKey = (inventory) => {
+        const parts = Object.keys(inventory).sort();
+        return parts.map(p => `${p}:${inventory[p]}`).join(',');
+      };
       const patternSet = matchingPatterns instanceof Set
         ? matchingPatterns
         : (Array.isArray(matchingPatterns) ? new Set(matchingPatterns) : null);
@@ -972,7 +1374,7 @@
         if (idx === chips.length) return [[]];
         const combos = getCombosMemo(inventory, 3);
         let res = [];
-        const MAX_RESULTS = 300;
+        const MAX_RESULTS = 400;  // Increased for better coverage
         for (let parts of combos) {
           const sortedKey = parts.slice().sort().join('|');
           if (patternSet && patternSet.size > 0) {
@@ -998,7 +1400,7 @@
       for (let { cD, cR, cL, cS, cER, rem } of enumerateChipSplits(C_total)) {
         const dpMemo = new Map();
         const solutions = search(0, { ...inv }, [cD, cR, cL, cS, cER], dpMemo);
-        const limited = solutions.slice(0, 1500);
+        const limited = solutions.slice(0, 1000);  // Increased for better coverage
         for (let sol of limited) {
           const [d, r, l, s, e] = sol;
           // 目標値を算出
@@ -1101,7 +1503,10 @@
         // EDS icons
         const tdDicon = document.createElement('td');
         tdDicon.className = 'col-EDS-icon';
-        tdDicon.innerHTML = item.partsEDS.map(p => `<img src="${p}.png" alt="${p}" width="40" height="40">`).join('&nbsp;');
+        tdDicon.innerHTML = item.partsEDS.map(p => {
+          const displayRank = p.includes('_') ? getBaseRank(p) : p;
+          return `<img src="${displayRank}.png" alt="${p}" width="40" height="40">`;
+        }).join('&nbsp;');
         tr.appendChild(tdDicon);
         // EDS Chip
         const tdDchip = document.createElement('td');
@@ -1123,7 +1528,10 @@
         // AM icons
         const tdRicon = document.createElement('td');
         tdRicon.className = 'col-AM-icon';
-        tdRicon.innerHTML = item.partsAM.map(p => `<img src="${p}.png" alt="${p}" width="40" height="40">`).join('&nbsp;');
+        tdRicon.innerHTML = item.partsAM.map(p => {
+          const displayRank = p.includes('_') ? getBaseRank(p) : p;
+          return `<img src="${displayRank}.png" alt="${p}" width="40" height="40">`;
+        }).join('&nbsp;');
         tr.appendChild(tdRicon);
         // AM Chip
         const tdRchip = document.createElement('td');
@@ -1145,7 +1553,10 @@
         // PD icons
         const tdLicon = document.createElement('td');
         tdLicon.className = 'col-PD-icon';
-        tdLicon.innerHTML = item.partsPD.map(p => `<img src="${p}.png" alt="${p}" width="40" height="40">`).join('&nbsp;');
+        tdLicon.innerHTML = item.partsPD.map(p => {
+          const displayRank = p.includes('_') ? getBaseRank(p) : p;
+          return `<img src="${displayRank}.png" alt="${p}" width="40" height="40">`;
+        }).join('&nbsp;');
         tr.appendChild(tdLicon);
         // PD Chip
         const tdLchip = document.createElement('td');
@@ -1167,7 +1578,10 @@
         // QN icons
         const tdSicon = document.createElement('td');
         tdSicon.className = 'col-QN-icon';
-        tdSicon.innerHTML = item.partsQN.map(p => `<img src="${p}.png" alt="${p}" width="40" height="40">`).join('&nbsp;');
+        tdSicon.innerHTML = item.partsQN.map(p => {
+          const displayRank = p.includes('_') ? getBaseRank(p) : p;
+          return `<img src="${displayRank}.png" alt="${p}" width="40" height="40">`;
+        }).join('&nbsp;');
         tr.appendChild(tdSicon);
         // QN Chip
         const tdSchip = document.createElement('td');
@@ -1189,7 +1603,10 @@
         // ER icons
         const tdEicon = document.createElement('td');
         tdEicon.className = 'col-ER-icon';
-        tdEicon.innerHTML = item.partsER.map(p => `<img src="${p}.png" alt="${p}" width="40" height="40">`).join('&nbsp;');
+        tdEicon.innerHTML = item.partsER.map(p => {
+          const displayRank = p.includes('_') ? getBaseRank(p) : p;
+          return `<img src="${displayRank}.png" alt="${p}" width="40" height="40">`;
+        }).join('&nbsp;');
         tr.appendChild(tdEicon);
         // ER Chip
         const tdEchip = document.createElement('td');
