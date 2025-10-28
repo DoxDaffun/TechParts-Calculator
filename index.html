@@ -321,10 +321,19 @@
       document.getElementById('save-image-btn').innerHTML = res.btnSaveImage;
     }
 
+    let lookupReadyPromise = null;
     // --- 4. ページロード時に適用 ---
     const inputIDs = ['input-E','input-L0','input-L1','input-L2','input-L3','input-L4','input-chip'];
     window.addEventListener('DOMContentLoaded', function() {
       updateTextsByLang();
+      if (!lookupReadyPromise) {
+        lookupReadyPromise = loadLookupTable()
+          .then(() => initializeLookupCache())
+          .catch(err => {
+            console.error('Failed to initialize lookup cache', err);
+            lookupCache = {};
+          });
+      }
       // 復元
       inputIDs.forEach(id=>{
         const val = localStorage.getItem('calc_input_'+id);
@@ -363,6 +372,8 @@
       0:0, 1:0, 2:0, 4:0, 6:0, 9:0, 12:0, 16:0, 20:0, 25:0, 30:0,
       36:1, 42:2, 48:3, 54:4, 60:5, 66:6, 72:7, 78:8, 84:9, 90:10
     };
+    const l0ConversionValues = { L0:1, L1:2, L2:3, L3:4, L4:5 };
+    const rankOrderAsc = ['L0','L1','L2','L3','L4'];
     function canUnlockMultiplier(parts, chip) {
       const req = unitReqByChip[chip] ?? 0;
       const supply = parts.reduce((s,p)=> s + (unitValue[p]||0), 0);
@@ -370,6 +381,7 @@
       return { ok: supply >= req, reqU: req, supplyU: supply };
     }
     let lookupTable = {};
+    let lookupCache = {};
 
     // CSV Loading
     async function loadLookupTable() {
@@ -393,13 +405,344 @@
       }
     }
     
+    function calculatePatternL0Equivalent(parts) {
+      let eCount = 0;
+      let l0Total = 0;
+      for (const part of parts) {
+        if (part === 'E') {
+          eCount++;
+        } else if (l0ConversionValues[part] !== undefined) {
+          l0Total += l0ConversionValues[part];
+        }
+      }
+      return { E: eCount, L0: l0Total };
+    }
+
+    function initializeLookupCache() {
+      lookupCache = {};
+      for (const key of Object.keys(lookupTable)) {
+        const patternParts = key.split('|');
+        const { E, L0 } = calculatePatternL0Equivalent(patternParts);
+        const cacheKey = `E${E}_L0${L0}`;
+        if (!lookupCache[cacheKey]) lookupCache[cacheKey] = [];
+        lookupCache[cacheKey].push(key);
+      }
+    }
+
+    function convertToL0Equivalent(parts) {
+      let totalL0 = 0;
+      const counts = { L0: parts.L0 || 0, L1: parts.L1 || 0, L2: parts.L2 || 0, L3: parts.L3 || 0, L4: parts.L4 || 0 };
+      for (const rank of rankOrderAsc) {
+        totalL0 += (counts[rank] || 0) * (l0ConversionValues[rank] || 0);
+      }
+      let maxRank = 'L0';
+      for (let i = rankOrderAsc.length - 1; i >= 0; i--) {
+        const rank = rankOrderAsc[i];
+        if ((counts[rank] || 0) > 0) {
+          maxRank = rank;
+          break;
+        }
+      }
+      return {
+        E: parts.E || 0,
+        L0Total: totalL0,
+        maxRank,
+        maxCounts: counts
+      };
+    }
+
+    function generateRecompositionPatterns(l0Total, constraints) {
+      const MAX_RECOMPOSITION_PATTERNS = 1000;
+      const activeRanks = rankOrderAsc.slice(0, rankOrderAsc.indexOf(constraints.maxRank || 'L0') + 1);
+      const highRanks = activeRanks.slice().reverse().filter(rank => rank !== 'L0');
+      const results = [];
+      const seen = new Set();
+
+      function dfs(idx, remaining, current) {
+        if (results.length >= MAX_RECOMPOSITION_PATTERNS) return;
+        if (idx === highRanks.length) {
+          if (remaining < 0) return;
+          const pattern = {};
+          for (const rank of activeRanks) {
+            pattern[rank] = current[rank] || 0;
+          }
+          pattern.L0 = remaining;
+          const signature = activeRanks.map(rank => `${rank}:${pattern[rank]}`).join('|');
+          if (!seen.has(signature)) {
+            seen.add(signature);
+            results.push(pattern);
+          }
+          return;
+        }
+        const rank = highRanks[idx];
+        const value = l0ConversionValues[rank] || 0;
+        const maxFromTotal = value === 0 ? 0 : Math.floor(remaining / value);
+        let limit = maxFromTotal;
+        if (rank === constraints.maxRank) {
+          limit = Math.min(limit, constraints.maxCounts[rank] || 0);
+        }
+        for (let count = 0; count <= limit; count++) {
+          current[rank] = count;
+          dfs(idx + 1, remaining - count * value, current);
+          if (results.length >= MAX_RECOMPOSITION_PATTERNS) break;
+        }
+        delete current[rank];
+      }
+
+      if (l0Total < 0) return [];
+      dfs(0, l0Total, {});
+
+      const originalSignature = activeRanks.map(rank => `${rank}:${constraints.maxCounts[rank] || 0}`).join('|');
+      const originalTotal = activeRanks.reduce((sum, rank) => sum + (constraints.maxCounts[rank] || 0) * (l0ConversionValues[rank] || 0), 0);
+      if (!seen.has(originalSignature) && originalTotal === l0Total) {
+        if (results.length >= MAX_RECOMPOSITION_PATTERNS) results.pop();
+        const originalPattern = {};
+        for (const rank of activeRanks) {
+          originalPattern[rank] = constraints.maxCounts[rank] || 0;
+        }
+        results.push(originalPattern);
+      }
+      return results;
+    }
+
+    function findMatchingPatterns(availableParts) {
+      if (!availableParts) return [];
+      const matches = new Set();
+      const maxE = availableParts.E || 0;
+      const maxL0 = availableParts.L0Total || 0;
+      for (let e = 0; e <= maxE; e++) {
+        for (let l0 = 0; l0 <= maxL0; l0++) {
+          const cacheKey = `E${e}_L0${l0}`;
+          if (lookupCache[cacheKey]) {
+            for (const patternKey of lookupCache[cacheKey]) {
+              matches.add(patternKey);
+            }
+          }
+        }
+      }
+      return Array.from(matches);
+    }
+
+    const TARGET_KEY_LIMIT = 1000;
+
+    function countUsedParts(pattern) {
+      let count = 0;
+      ['EDS', 'AM', 'PD', 'QN'].forEach(slot => {
+        const parts = pattern[`parts${slot}`] || [];
+        parts.forEach(part => {
+          if (part !== 'E') count++;
+        });
+      });
+      return count;
+    }
+
+    function shouldSkipTargets(newTargets, existingResults) {
+      return existingResults.some(existing =>
+        existing.targetEDS >= newTargets.EDS &&
+        existing.targetAM >= newTargets.AM &&
+        existing.targetPD >= newTargets.PD &&
+        existing.targetQN >= newTargets.QN &&
+        (
+          existing.targetEDS > newTargets.EDS ||
+          existing.targetAM > newTargets.AM ||
+          existing.targetPD > newTargets.PD ||
+          existing.targetQN > newTargets.QN
+        )
+      );
+    }
+
+    function buildTargetKey(targets) {
+      return `${targets.EDS}_${targets.AM}_${targets.PD}_${targets.QN}`;
+    }
+
+    function buildTargetKeyFromCombo(combo) {
+      return buildTargetKey({
+        EDS: combo.targetEDS,
+        AM: combo.targetAM,
+        PD: combo.targetPD,
+        QN: combo.targetQN
+      });
+    }
+
+    function dominates(a, b) {
+      const betterOrEqual =
+        a.targetEDS >= b.targetEDS &&
+        a.targetAM >= b.targetAM &&
+        a.targetPD >= b.targetPD &&
+        a.targetQN >= b.targetQN;
+      if (!betterOrEqual) return false;
+      return (
+        a.targetEDS > b.targetEDS ||
+        a.targetAM > b.targetAM ||
+        a.targetPD > b.targetPD ||
+        a.targetQN > b.targetQN
+      );
+    }
+
+    function createResultAggregator() {
+      const seenTargets = new Map();
+      const keyQueue = [];
+      const results = [];
+      // タイブレーク優先：分解回数 → 余り → EDS → AM → PD → QN
+      function better(a, b) {
+        if (a.splitCount !== b.splitCount) return a.splitCount < b.splitCount;
+        if (a.chipRemainder !== b.chipRemainder) return a.chipRemainder < b.chipRemainder;
+        if (a.targetEDS !== b.targetEDS) return a.targetEDS > b.targetEDS;
+        if (a.targetAM  !== b.targetAM ) return a.targetAM  > b.targetAM;
+        if (a.targetPD  !== b.targetPD ) return a.targetPD  > b.targetPD;
+        if (a.targetQN  !== b.targetQN ) return a.targetQN  > b.targetQN;
+        return false;
+      }
+
+      function removeKeyFromQueue(key) {
+        for (let i = keyQueue.length - 1; i >= 0; i--) {
+          if (keyQueue[i] === key) keyQueue.splice(i, 1);
+        }
+      }
+
+      function removeEntryByKey(key) {
+        const existing = seenTargets.get(key);
+        if (!existing) return;
+        const idx = results.indexOf(existing);
+        if (idx !== -1) results.splice(idx, 1);
+        seenTargets.delete(key);
+        removeKeyFromQueue(key);
+      }
+
+      function pruneIfNecessary() {
+        while (seenTargets.size > TARGET_KEY_LIMIT) {
+          const oldestKey = keyQueue.shift();
+          if (!oldestKey) break;
+          removeEntryByKey(oldestKey);
+        }
+      }
+
+      function pruneDominatedBy(combo) {
+        for (let i = results.length - 1; i >= 0; i--) {
+          const candidate = results[i];
+          if (candidate === combo) continue;
+          if (dominates(combo, candidate)) {
+            const key = buildTargetKeyFromCombo(candidate);
+            results.splice(i, 1);
+            seenTargets.delete(key);
+            removeKeyFromQueue(key);
+          }
+        }
+      }
+
+      function consider(combo) {
+        // ① EDS ≥ AM ≥ PD ≥ QN は上流で判定済みだが、念のため弾く
+        if (!(combo.targetEDS >= combo.targetAM &&
+              combo.targetAM  >= combo.targetPD &&
+              combo.targetPD  >= combo.targetQN)) return false;
+
+        const targets = {
+          EDS: combo.targetEDS,
+          AM: combo.targetAM,
+          PD: combo.targetPD,
+          QN: combo.targetQN
+        };
+        const targetKey = buildTargetKey(targets);
+
+        // ② 同一Target組み合わせは代表1件のみ（分解回数→余り→EDS→AM→PD→QN の優先で置換）
+        if (seenTargets.has(targetKey)) {
+          const existing = seenTargets.get(targetKey);
+          if (!better(combo, existing)) return false;     // 既存の方が優先
+          const idx = results.indexOf(existing);
+          if (idx !== -1) results[idx] = combo; else results.push(combo);
+          seenTargets.set(targetKey, combo);
+          removeKeyFromQueue(targetKey);
+          keyQueue.push(targetKey);
+          pruneIfNecessary();
+          return true;
+        }
+
+        // ③ 明らかに劣っている（既存のいずれかに完全支配される）なら捨てる
+        for (const cand of results) {
+          if (dominates(cand, combo)) return false;
+        }
+
+        // 受理して、逆に既存の劣後（支配される）を削除
+        results.push(combo);
+        seenTargets.set(targetKey, combo);
+        keyQueue.push(targetKey);
+        for (let i = results.length - 2; i >= 0; i--) {
+          const cand = results[i];
+          if (dominates(combo, cand)) {
+            const k = buildTargetKeyFromCombo(cand);
+            results.splice(i, 1);
+            if (seenTargets.get(k) === cand) {
+              seenTargets.delete(k);
+              removeKeyFromQueue(k);
+            }
+          }
+        }
+        pruneIfNecessary();
+        return true;
+      }
+
+      return {
+        consider,
+        getResults: () => results.slice()
+      };
+    }
+
+    function sortByTargetPriority(results) {
+      return results.sort((a, b) => {
+        // 1) EDS→AM→PD→QN の降順
+        if (b.targetEDS !== a.targetEDS) return b.targetEDS - a.targetEDS;
+        if (b.targetAM  !== a.targetAM ) return b.targetAM  - a.targetAM;
+        if (b.targetPD  !== a.targetPD ) return b.targetPD  - a.targetPD;
+        if (b.targetQN  !== a.targetQN ) return b.targetQN  - a.targetQN;
+        // 2) 完全同点のときのみ、分解回数→余り で安定化
+        if (a.splitCount !== b.splitCount) return a.splitCount - b.splitCount;
+        if (a.chipRemainder !== b.chipRemainder) return a.chipRemainder - b.chipRemainder;
+        return 0;
+      });
+    }
+
+    function filterPriorityConsistent(results) {
+      if (!results || results.length === 0) return [];
+      const filtered = [];
+      let lastKept = null;
+      for (const combo of results) {
+        if (!lastKept) {
+          filtered.push(combo);
+          lastKept = combo;
+          continue;
+        }
+        if (
+          combo.targetEDS <= lastKept.targetEDS &&
+          combo.targetAM <= lastKept.targetAM &&
+          combo.targetPD <= lastKept.targetPD &&
+          combo.targetQN <= lastKept.targetQN
+        ) {
+          filtered.push(combo);
+          lastKept = combo;
+        }
+      }
+      return filtered;
+    }
 
     document.getElementById('calculate-btn').addEventListener('click', () => {
       const btn = document.getElementById('calculate-btn');
       const lang = getBrowserLang();
       btn.disabled = true;
       btn.innerHTML = `<span class="spinner"></span>${resources[lang].btnCalculating}`;
-      setTimeout(() => {
+      setTimeout(async () => {
+        if (!lookupReadyPromise) {
+          lookupReadyPromise = loadLookupTable()
+            .then(() => initializeLookupCache())
+            .catch(err => {
+              console.error('Failed to initialize lookup cache', err);
+              lookupCache = {};
+            });
+        }
+        try {
+          await lookupReadyPromise;
+        } catch (error) {
+          console.error('Lookup table loading failed', error);
+        }
         const inv = {
           E:  parseInt(document.getElementById('input-E').value)  || 0,
           L0: parseInt(document.getElementById('input-L0').value) || 0,
@@ -409,8 +752,25 @@
           L4: parseInt(document.getElementById('input-L4').value) || 0
         };
         const C_total = parseInt(document.getElementById('input-chip').value) || 0;
-        // ※ Exhaustive search in all cases（from v.2）
-        const results = computeOverOrEqualNine(inv, C_total);
+        const converted = convertToL0Equivalent(inv);
+        const constraints = { maxRank: converted.maxRank, maxCounts: converted.maxCounts };
+        const recompositionPatterns = generateRecompositionPatterns(converted.L0Total, constraints);
+        const availableForMatching = { E: converted.E, L0Total: converted.L0Total };
+        const matchingKeySet = new Set(findMatchingPatterns(availableForMatching));
+        const patternList = recompositionPatterns.length > 0 ? recompositionPatterns : [constraints.maxCounts];
+        const seenPatterns = new Set();
+        const aggregator = createResultAggregator();
+        for (const pattern of patternList) {
+          const signature = rankOrderAsc.map(rank => `${rank}:${pattern[rank] || 0}`).join('|');
+          if (seenPatterns.has(signature)) continue;
+          seenPatterns.add(signature);
+          const variantInventory = { E: converted.E };
+          for (const rank of rankOrderAsc) {
+            variantInventory[rank] = pattern[rank] || 0;
+          }
+          computeOverOrEqualNine(variantInventory, C_total, matchingKeySet, aggregator);
+        }
+        const results = sortByTargetPriority(aggregator.getResults());
         // clear caches to avoid memory growth between calculations
         for (const k in comboCache) delete comboCache[k];
         for (const k in totalCache) delete totalCache[k];
@@ -421,7 +781,7 @@
     });
 
     // Utility functions for combo generation
-    const partOrder = ['E','L4','L3','L2','L1','L0'];
+    const partOrder = ['E','L4','L3','L2','L1','L0','Y'];
 
     function enumerateCombosFromInventory(inventory, size) {
       const results = [];
@@ -435,7 +795,7 @@
             for (const p of combo) counts[p] = (counts[p] || 0) + 1;
             let ok = true;
             for (const p in counts) {
-              if ((inventory[p] || 0) < counts[p]) { ok = false; break; }
+              if (p !== 'Y' && (inventory[p] || 0) < counts[p]) { ok = false; break; }
             }
             if (ok) results.push(combo);
           }
@@ -534,19 +894,53 @@
     }
     const totalCache = {};
     function getTotal(parts, chip) {
-      const key = parts.join('|') + '|' + chip;
-      if (totalCache[key] !== undefined) return totalCache[key];
-      const kParts = parts.join('|');
-      const val = (lookupTable[kParts] && lookupTable[kParts][chip] !== undefined)
-        ? lookupTable[kParts][chip]
-        : calculateOnTheFly(parts, chip);
-      totalCache[key] = val;
+      const sortedKey = parts.slice().sort().join('|');
+      const cacheKey = `${sortedKey}|${chip}`;
+      if (totalCache[cacheKey] !== undefined) return totalCache[cacheKey];
+      let val;
+      const { E, L0 } = calculatePatternL0Equivalent(parts);
+      const lookupCandidates = lookupCache[`E${E}_L0${L0}`] || [];
+      for (const candidateKey of lookupCandidates) {
+        if (candidateKey === sortedKey) {
+          const entry = lookupTable[candidateKey];
+          if (entry && entry[chip] !== undefined) {
+            val = entry[chip];
+            break;
+          }
+        }
+      }
+      if (val === undefined) {
+        if (lookupTable[sortedKey] && lookupTable[sortedKey][chip] !== undefined) {
+          val = lookupTable[sortedKey][chip];
+        } else {
+          val = calculateOnTheFly(parts, chip);
+        }
+      }
+      totalCache[cacheKey] = val;
       return val;
     }
-    function computeOverOrEqualNine(inv, C_total) {
+
+    // 分解回数＝必要パーツが手持ちより不足した個数の合計（E/Yは除外）
+    function calcSplitCount(invOriginal, solItems) {
+      const used = { L4:0, L3:0, L2:0, L1:0, L0:0, E:0, Y:0 };
+      for (const d of solItems) for (const p of d.parts) used[p] = (used[p]||0) + 1;
+      let split = 0;
+      const tiers = ['L4','L3','L2','L1','L0'];
+      for (const t of tiers) {
+        const have = invOriginal[t] || 0;
+        const need = used[t] || 0;
+        if (need > have) split += (need - have);
+      }
+      return split;
+    }
+
+    function computeOverOrEqualNine(inv, C_total, matchingPatterns, aggregator) {
       const order = partOrder;
 
       const invKey = (inventory) => order.map(p => inventory[p] || 0).join(',');
+      const patternSet = matchingPatterns instanceof Set
+        ? matchingPatterns
+        : (Array.isArray(matchingPatterns) ? new Set(matchingPatterns) : null);
 
       function search(idx, inventory, chips, dpMemo) {
         const key = idx + '|' + invKey(inventory) + '|' + chips.slice(idx).join(',');
@@ -556,6 +950,11 @@
         let res = [];
         const MAX_RESULTS = 300;
         for (let parts of combos) {
+          const sortedKey = parts.slice().sort().join('|');
+          if (patternSet && patternSet.size > 0) {
+            const hasLookupEntry = !!lookupTable[sortedKey];
+            if (hasLookupEntry && !patternSet.has(sortedKey)) continue;
+          }
           if (res.length >= MAX_RESULTS) break;
           const gate = canUnlockMultiplier(parts, chips[idx]);
           if (!gate.ok) continue;
@@ -572,112 +971,50 @@
         return res;
       }
 
-      let results = [];
       for (let { cD, cR, cL, cS, rem } of enumerateChipSplits(C_total)) {
         const dpMemo = new Map();
         const solutions = search(0, { ...inv }, [cD, cR, cL, cS], dpMemo);
         const limited = solutions.slice(0, 1500);
         for (let sol of limited) {
           const [d, r, l, s] = sol;
-          results.push({
+          // 目標値を算出
+          const tEDS = computeTargetFromTotal(d.total);
+          const tAM  = computeTargetFromTotal(r.total);
+          const tPD  = computeTargetFromTotal(l.total);
+          const tQN  = computeTargetFromTotal(s.total);
+          // 順序条件：EDS ≥ AM ≥ PD ≥ QN
+          if (!(tEDS >= tAM && tAM >= tPD && tPD >= tQN)) continue;
+          // 分解回数（元の手持ち inv を基準）
+          const splitCount = calcSplitCount(inv, [d,r,l,s]);
+          const combo = {
             partsEDS: d.parts.slice(),
             chipEDS: d.chip,
             totalEDS: d.total,
-            targetEDS: computeTargetFromTotal(d.total),
+            targetEDS: tEDS,
             partsAM: r.parts.slice(),
             chipAM: r.chip,
             totalAM: r.total,
-            targetAM: computeTargetFromTotal(r.total),
+            targetAM: tAM,
             partsPD: l.parts.slice(),
             chipPD: l.chip,
             totalPD: l.total,
-            targetPD: computeTargetFromTotal(l.total),
+            targetPD: tPD,
             partsQN: s.parts.slice(),
             chipQN: s.chip,
             totalQN: s.total,
-            targetQN: computeTargetFromTotal(s.total),
+            targetQN: tQN,
             chipRemainder: rem,
             unlockD: d.gate,
             unlockR: r.gate,
             unlockL: l.gate,
-            unlockS: s.gate
-          });
-        }
-        results = filterBestResultsPareto4D(results);
-      }
-      return results;
-    }
-
-    // グローバル4軸Pareto＋細かいタイbreak
-      function filterBestResultsPareto4D(candidates) {
-      if (!candidates || candidates.length === 0) return [];
-      // Pareto front抽出（4軸）
-      let isDominated = Array(candidates.length).fill(false);
-      for (let i = 0; i < candidates.length; i++) {
-        for (let j = 0; j < candidates.length; j++) {
-          if (i === j) continue;
-          const a = candidates[i], b = candidates[j];
-          if (
-            (b.targetEDS > a.targetEDS || b.targetAM > a.targetAM || b.targetPD > a.targetPD || b.targetQN > a.targetQN) &&
-            (b.targetEDS >= a.targetEDS && b.targetAM >= a.targetAM && b.targetPD >= a.targetPD && b.targetQN >= a.targetQN)
-          ) {
-            isDominated[i] = true;
-            break;
+            unlockS: s.gate,
+            splitCount
+          };
+          if (aggregator && typeof aggregator.consider === 'function') {
+            aggregator.consider(combo);
           }
         }
       }
-      let paretoSet = candidates.filter((_, i) => !isDominated[i]);
-      // (Target_D,Target_R,Target_L,Target_S)ごとに
-      let groupMap = {};
-      for (let item of paretoSet) {
-        const k = [item.targetEDS, item.targetAM, item.targetPD, item.targetQN].join('-');
-        if (!groupMap[k]) groupMap[k] = [];
-        groupMap[k].push(item);
-      }
-      // 余りchip→Total_D→Total_R→Total_L→Total_S最小化、パーツ違いは全残し
-      let groupArr = [];
-      for (let k in groupMap) {
-        let sub = groupMap[k];
-        let minRem = Math.min(...sub.map(x => x.chipRemainder));
-        sub = sub.filter(x => x.chipRemainder === minRem);
-        let minTD = Math.min(...sub.map(x => x.totalEDS));
-        sub = sub.filter(x => x.totalEDS === minTD);
-        let minTR = Math.min(...sub.map(x => x.totalAM));
-        sub = sub.filter(x => x.totalAM === minTR);
-        let minTL = Math.min(...sub.map(x => x.totalPD));
-        sub = sub.filter(x => x.totalPD === minTL);
-        let minTS = Math.min(...sub.map(x => x.totalQN));
-        sub = sub.filter(x => x.totalQN === minTS);
-        // パーツ構成次第でユニークに
-        let uniq = [];
-        let seen = [];
-        for (let it of sub) {
-          let sign = [
-            it.partsEDS.join(','),
-            it.partsAM.join(','),
-            it.partsPD.join(','),
-            it.partsQN.join(','),
-            it.chipEDS, it.chipAM, it.chipPD, it.chipQN
-          ].join('/');
-          if (!seen.includes(sign)) {
-            uniq.push(it);
-            seen.push(sign);
-          }
-        }
-        groupArr = groupArr.concat(uniq);
-      }
-      // 並び順: max(Target_D,R,L,S)降順→D降順→R降順→L降順→S降順
-      groupArr.sort((a, b) => {
-        let am = Math.max(a.targetEDS, a.targetAM, a.targetPD, a.targetQN),
-          bm = Math.max(b.targetEDS, b.targetAM, b.targetPD, b.targetQN);
-        if (bm !== am) return bm - am;
-        if (b.targetEDS !== a.targetEDS) return b.targetEDS - a.targetEDS;
-        if (b.targetAM !== a.targetAM) return b.targetAM - a.targetAM;
-        if (b.targetPD !== a.targetPD) return b.targetPD - a.targetPD;
-        if (b.targetQN !== a.targetQN) return b.targetQN - a.targetQN;
-        return 0;
-      });
-      return groupArr;
     }
 
     function renderResults(results) {
