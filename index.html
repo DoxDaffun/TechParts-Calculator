@@ -671,12 +671,12 @@
 
         // Balanced reduction: keep enough patterns for diversity
         // Prioritize: original pattern + variations with high-rank parts
-        const MAX_PATTERNS_PER_TYPE = 12;  // Increased from 3 to 12
+        const MAX_PATTERNS_PER_TYPE = 20;  // Increased for better coverage
         patternsByType[type] = recompPatterns.slice(0, MAX_PATTERNS_PER_TYPE);
       }
 
       // Balance between performance and accuracy
-      const MAX_TOTAL_PATTERNS = 100;  // Increased from 30 to 100
+      const MAX_TOTAL_PATTERNS = 200;  // Increased for better coverage
 
       // Generate combinations iteratively with early stopping
       const unifiedPatterns = [];
@@ -997,7 +997,7 @@
     // Utility functions for combo generation
     const partOrder = ['E','L4','L3','L2','L1','L0','Y'];
 
-    // --- 10. ユニークパーツ用の組み合わせ列挙関数 ---
+    // --- 10. ユニークパーツ用の組み合わせ列挙関数（最適化版） ---
     function enumerateCombosFromInventory(inventory, size) {
       // Get all available unique part types from inventory
       const availableParts = [];
@@ -1008,6 +1008,7 @@
       }
 
       // Sort parts by priority (E > L4 > L3 > L2 > L1 > L0)
+      // This ensures high-rank parts are tried first
       availableParts.sort((a, b) => {
         const rankA = getBaseRank(a);
         const rankB = getBaseRank(b);
@@ -1023,10 +1024,13 @@
 
       const results = [];
       const n = availableParts.length;
+      const MAX_COMBOS = 2000; // Increased limit for better coverage
 
-      for (let i = 0; i < n; i++) {
-        for (let j = i; j < n; j++) {
-          for (let k = j; k < n; k++) {
+      // Generate combinations with high-rank parts prioritized
+      // Use stratified sampling: ensure we try high-rank combinations first
+      for (let i = 0; i < n && results.length < MAX_COMBOS; i++) {
+        for (let j = i; j < n && results.length < MAX_COMBOS; j++) {
+          for (let k = j; k < n && results.length < MAX_COMBOS; k++) {
             const combo = [availableParts[i], availableParts[j], availableParts[k]];
             const counts = {};
             for (const p of combo) counts[p] = (counts[p] || 0) + 1;
@@ -1220,7 +1224,7 @@
         if (idx === chips.length) return [[]];
         const combos = getCombosMemo(inventory, 3);
         let res = [];
-        const MAX_RESULTS = 200;  // Balanced: 100 → 200
+        const MAX_RESULTS = 400;  // Increased for better coverage
         for (let parts of combos) {
           const sortedKey = parts.slice().sort().join('|');
           if (patternSet && patternSet.size > 0) {
@@ -1246,7 +1250,7 @@
       for (let { cD, cR, cL, cS, cER, rem } of enumerateChipSplits(C_total)) {
         const dpMemo = new Map();
         const solutions = search(0, { ...inv }, [cD, cR, cL, cS, cER], dpMemo);
-        const limited = solutions.slice(0, 600);  // Balanced: 200 → 600
+        const limited = solutions.slice(0, 1000);  // Increased for better coverage
         for (let sol of limited) {
           const [d, r, l, s, e] = sol;
           // 目標値を算出
