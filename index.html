@@ -641,7 +641,7 @@
       return results;
     }
 
-    // --- Typed Parts用のRecomposition Patterns生成（最適化版） ---
+    // --- Typed Parts用のRecomposition Patterns生成（バランス調整版） ---
     function generateRecompositionPatternsForTypedParts(inventory) {
       // Group typed parts by type (only non-zero counts)
       const byType = {};
@@ -659,28 +659,28 @@
         return [{}];
       }
 
-      // Generate recomposition patterns for each type (heavily optimized)
+      // Generate recomposition patterns for each type (balanced)
       const patternsByType = {};
       for (const type in byType) {
         const partsOfType = byType[type];
         const converted = convertToL0Equivalent(partsOfType);
         const constraints = { maxRank: converted.maxRank, maxCounts: converted.maxCounts };
 
-        // Generate limited patterns - prioritize original and simple recompositions
+        // Generate patterns - keep more for better accuracy
         let recompPatterns = generateRecompositionPatterns(converted.L0Total, constraints);
 
-        // Aggressive reduction: only keep first few patterns (original + few alternatives)
-        const MAX_PATTERNS_PER_TYPE = 3;  // Reduced from 50 to 3
+        // Balanced reduction: keep enough patterns for diversity
+        // Prioritize: original pattern + variations with high-rank parts
+        const MAX_PATTERNS_PER_TYPE = 12;  // Increased from 3 to 12
         patternsByType[type] = recompPatterns.slice(0, MAX_PATTERNS_PER_TYPE);
       }
 
-      // Limit total combinations to prevent exponential explosion
-      const MAX_TOTAL_PATTERNS = 30;  // Reduced from 500 to 30
+      // Balance between performance and accuracy
+      const MAX_TOTAL_PATTERNS = 100;  // Increased from 30 to 100
 
       // Generate combinations iteratively with early stopping
       const unifiedPatterns = [];
 
-      // Start with a base pattern using first pattern of each type
       function generateCombinations(typeIndex, currentUnified) {
         if (unifiedPatterns.length >= MAX_TOTAL_PATTERNS) return;
 
@@ -1220,7 +1220,7 @@
         if (idx === chips.length) return [[]];
         const combos = getCombosMemo(inventory, 3);
         let res = [];
-        const MAX_RESULTS = 100;  // Reduced from 300 to 100
+        const MAX_RESULTS = 200;  // Balanced: 100 → 200
         for (let parts of combos) {
           const sortedKey = parts.slice().sort().join('|');
           if (patternSet && patternSet.size > 0) {
@@ -1246,7 +1246,7 @@
       for (let { cD, cR, cL, cS, cER, rem } of enumerateChipSplits(C_total)) {
         const dpMemo = new Map();
         const solutions = search(0, { ...inv }, [cD, cR, cL, cS, cER], dpMemo);
-        const limited = solutions.slice(0, 200);  // Reduced from 1500 to 200
+        const limited = solutions.slice(0, 600);  // Balanced: 200 → 600
         for (let sol of limited) {
           const [d, r, l, s, e] = sol;
           // 目標値を算出
