@@ -502,99 +502,7 @@
       return `${type}_${rank}`;
     }
 
-    // --- 8. Typed Parts用のRecomposition Patterns生成 ---
-    function generateRecompositionPatternsForTypedParts(inventory) {
-      // Group typed parts by type
-      const byType = {};
-      for (const part of inventory.typed) {
-        if (!byType[part.type]) {
-          byType[part.type] = {};
-        }
-        byType[part.type][part.rank] = part.count;
-      }
-
-      // Generate recomposition patterns for each type
-      const patternsByType = {};
-      for (const type in byType) {
-        const partsOfType = byType[type];
-        const converted = convertToL0Equivalent(partsOfType);
-        const constraints = { maxRank: converted.maxRank, maxCounts: converted.maxCounts };
-        const recompPatterns = generateRecompositionPatterns(converted.L0Total, constraints);
-
-        // Limit patterns per type to avoid explosion
-        const MAX_PATTERNS_PER_TYPE = 50;
-        patternsByType[type] = recompPatterns.slice(0, MAX_PATTERNS_PER_TYPE);
-      }
-
-      // Compute cartesian product of all type patterns
-      const typeNames = Object.keys(patternsByType);
-      if (typeNames.length === 0) {
-        // No typed parts, return single empty pattern
-        return [{}];
-      }
-
-      function cartesianProduct(arrays) {
-        if (arrays.length === 0) return [[]];
-        const [first, ...rest] = arrays;
-        const restProduct = cartesianProduct(rest);
-        const result = [];
-        for (const item of first) {
-          for (const restItem of restProduct) {
-            result.push([item, ...restItem]);
-          }
-        }
-        return result;
-      }
-
-      const patternArrays = typeNames.map(type =>
-        patternsByType[type].map(pattern => ({ type, pattern }))
-      );
-
-      const MAX_TOTAL_PATTERNS = 500;
-      const combinations = cartesianProduct(patternArrays).slice(0, MAX_TOTAL_PATTERNS);
-
-      // Convert to unified inventory format with unique IDs
-      const unifiedPatterns = [];
-      for (const combo of combinations) {
-        const unified = {};
-
-        // Add typed parts with unique IDs
-        for (const { type, pattern } of combo) {
-          for (const rank in pattern) {
-            if (pattern[rank] > 0) {
-              const uniqueId = createUniquePartId(type, rank);
-              unified[uniqueId] = pattern[rank];
-            }
-          }
-        }
-
-        // Add untyped parts (no recomposition)
-        for (const rank of rankOrder) {
-          if (inventory.untyped[rank] > 0) {
-            const uniqueId = createUniquePartId('Generic', rank);
-            unified[uniqueId] = inventory.untyped[rank];
-          }
-        }
-
-        unifiedPatterns.push(unified);
-      }
-
-      // If no typed parts, still need to add untyped
-      if (typeNames.length === 0) {
-        const unified = {};
-        for (const rank of rankOrder) {
-          if (inventory.untyped[rank] > 0) {
-            const uniqueId = createUniquePartId('Generic', rank);
-            unified[uniqueId] = inventory.untyped[rank];
-          }
-        }
-        return [unified];
-      }
-
-      return unifiedPatterns;
-    }
-
-    // --- 9. ユニークパーツの基本ランクを取得 ---
+    // --- 8. ユニークパーツの基本ランクを取得 ---
     function getBaseRank(uniqueId) {
       const parts = uniqueId.split('_');
       return parts[1]; // e.g., "Molotov_E" -> "E"
@@ -795,6 +703,98 @@
         results.push(originalPattern);
       }
       return results;
+    }
+
+    // --- Typed Parts用のRecomposition Patterns生成 ---
+    function generateRecompositionPatternsForTypedParts(inventory) {
+      // Group typed parts by type
+      const byType = {};
+      for (const part of inventory.typed) {
+        if (!byType[part.type]) {
+          byType[part.type] = {};
+        }
+        byType[part.type][part.rank] = part.count;
+      }
+
+      // Generate recomposition patterns for each type
+      const patternsByType = {};
+      for (const type in byType) {
+        const partsOfType = byType[type];
+        const converted = convertToL0Equivalent(partsOfType);
+        const constraints = { maxRank: converted.maxRank, maxCounts: converted.maxCounts };
+        const recompPatterns = generateRecompositionPatterns(converted.L0Total, constraints);
+
+        // Limit patterns per type to avoid explosion
+        const MAX_PATTERNS_PER_TYPE = 50;
+        patternsByType[type] = recompPatterns.slice(0, MAX_PATTERNS_PER_TYPE);
+      }
+
+      // Compute cartesian product of all type patterns
+      const typeNames = Object.keys(patternsByType);
+      if (typeNames.length === 0) {
+        // No typed parts, return single empty pattern
+        return [{}];
+      }
+
+      function cartesianProduct(arrays) {
+        if (arrays.length === 0) return [[]];
+        const [first, ...rest] = arrays;
+        const restProduct = cartesianProduct(rest);
+        const result = [];
+        for (const item of first) {
+          for (const restItem of restProduct) {
+            result.push([item, ...restItem]);
+          }
+        }
+        return result;
+      }
+
+      const patternArrays = typeNames.map(type =>
+        patternsByType[type].map(pattern => ({ type, pattern }))
+      );
+
+      const MAX_TOTAL_PATTERNS = 500;
+      const combinations = cartesianProduct(patternArrays).slice(0, MAX_TOTAL_PATTERNS);
+
+      // Convert to unified inventory format with unique IDs
+      const unifiedPatterns = [];
+      for (const combo of combinations) {
+        const unified = {};
+
+        // Add typed parts with unique IDs
+        for (const { type, pattern } of combo) {
+          for (const rank in pattern) {
+            if (pattern[rank] > 0) {
+              const uniqueId = createUniquePartId(type, rank);
+              unified[uniqueId] = pattern[rank];
+            }
+          }
+        }
+
+        // Add untyped parts (no recomposition)
+        for (const rank of rankOrder) {
+          if (inventory.untyped[rank] > 0) {
+            const uniqueId = createUniquePartId('Generic', rank);
+            unified[uniqueId] = inventory.untyped[rank];
+          }
+        }
+
+        unifiedPatterns.push(unified);
+      }
+
+      // If no typed parts, still need to add untyped
+      if (typeNames.length === 0) {
+        const unified = {};
+        for (const rank of rankOrder) {
+          if (inventory.untyped[rank] > 0) {
+            const uniqueId = createUniquePartId('Generic', rank);
+            unified[uniqueId] = inventory.untyped[rank];
+          }
+        }
+        return [unified];
+      }
+
+      return unifiedPatterns;
     }
 
     function findMatchingPatterns(availableParts) {
