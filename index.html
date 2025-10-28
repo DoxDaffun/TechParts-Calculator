@@ -122,7 +122,6 @@
     .typed-parts-table td { padding: 4px; border: 1px solid #ccc; text-align: center; }
     .typed-parts-table td.part-name { text-align: left; font-weight: bold; }
     .typed-parts-table input[type="number"] { width: 50px; padding: 4px; text-align: center; }
-    .generic-parts-section { border-top: 2px solid #999; padding-top: 20px; }
   </style>
 </head>
 <body>
@@ -138,45 +137,7 @@
       <div id="typed-parts-table"></div>
     </div>
 
-    <!-- 既存の種類なしパーツ入力（オプション） -->
-    <div class="generic-parts-section" style="margin-top: 30px;">
-      <h3 id="generic-parts-title"></h3>
-      <p id="generic-parts-desc" style="font-size: 14px; color: #666;"></p>
-      <div class="parts-input">
-        <div class="part-item">
-          <img src="E.png" alt="E" />
-          <div><label id="label-e"></label></div>
-          <input type="number" id="input-E" value="0" min="0">
-        </div>
-        <div class="part-item">
-          <img src="L0.png" alt="L0" />
-          <div><label id="label-l0"></label></div>
-          <input type="number" id="input-L0" value="0" min="0">
-        </div>
-        <div class="part-item">
-          <img src="L1.png" alt="L1" />
-          <div><label id="label-l1"></label></div>
-          <input type="number" id="input-L1" value="0" min="0">
-        </div>
-        <div class="part-item">
-          <img src="L2.png" alt="L2" />
-          <div><label id="label-l2"></label></div>
-          <input type="number" id="input-L2" value="0" min="0">
-        </div>
-        <div class="part-item">
-          <img src="L3.png" alt="L3" />
-          <div><label id="label-l3"></label></div>
-          <input type="number" id="input-L3" value="0" min="0">
-        </div>
-        <div class="part-item">
-          <img src="L4.png" alt="L4" />
-          <div><label id="label-l4"></label></div>
-          <input type="number" id="input-L4" value="0" min="0">
-        </div>
-      </div>
-    </div>
-
-    <div class="chip-input" style="margin-top:12px;">
+    <div class="chip-input" style="margin-top:20px;">
       <img src="chip_icon.png" alt="Chip" />
       <label id="label-chip"></label>
       <input type="number" id="input-chip" min="0" max="330" value="0" />
@@ -208,11 +169,9 @@
       ja: {
         title:        '共振最適化計算ツール',
         mainTitle:    '共振最適化計算ツール',
-        subtitle:     '「マイパーツ」にあるレジェンド以上のテックパーツの枚数と共振チップの所持数を入力し、「Calculate」を押すと、双生パーツの最適組合せを一覧で表示します。<br>※必要に応じてエピック＋３のパーツが使われることがあります。<br>※「Target」とは、特に強力な効果が発動する共振エネルギーを指します。<br>※実際に装着しているパーツを除いた数を入力してください。<br>※倍率が3.2倍以上の組み合わせが含まれる場合は、素材に必要なパーツ数を表示します。（手持ちのテックパーツを分解しなければならないときがあります）<br><b>レジェンド1~4のパーツは必要に応じて分解・再合成する必要があります。</b>',
-        typedPartsTitle: 'パーツ種類別入力',
-        typedPartsDesc: '各パーツの種類ごとにランクと個数を入力してください。同じ種類のパーツのみが分解・再合成されます。',
-        genericPartsTitle: '種類なしパーツ（オプション）',
-        genericPartsDesc: '種類を指定しないパーツ。分解・再合成は行われず、そのまま使用されます。',
+        subtitle:     '「マイパーツ」にあるレジェンド以上のテックパーツを種類ごとに入力し、「Calculate」を押すと、双生パーツの最適組合せを一覧で表示します。<br>※各パーツの種類ごとにランクと個数を入力してください。<br>※同じ種類のパーツのみが分解・再合成されます。<br>※「Target」とは、特に強力な効果が発動する共振エネルギーを指します。<br>※実際に装着しているパーツを除いた数を入力してください。',
+        typedPartsTitle: 'パーツ入力',
+        typedPartsDesc: '所持している各パーツの種類とランクを選択してください。',
         labelE:       'エターナル',
         labelL0:      'レジェンド',
         labelL1:      'レジェ＋１',
@@ -255,11 +214,9 @@
       en: {
         title:        'Resonance Optimization Calculator',
         mainTitle:    'Resonance Optimization Calculator',
-        subtitle:     'Enter the number of Tech Parts (Legend or higher) and Resonance Chips you own, then press "Calculate" to see all optimal patterns for Twin Parts.<br>*Epic+3 parts may be used as needed.<br>*"Target" means a Resonance Energy that reaches a powerful effect.<br>*Do not include parts currently equipped.<br>*If a combination with a multiplier of 3.2x or higher is included, the required number of materials will be displayed. (In some cases, you may need to salvage your Tech Parts.)<br><b>Legend+1~4 parts may need to be downgraded and re-merged as necessary.</b>',
-        typedPartsTitle: 'Part Type Input',
-        typedPartsDesc: 'Enter rank and count for each part type. Only parts of the same type can be salvaged and re-merged.',
-        genericPartsTitle: 'Generic Parts (Optional)',
-        genericPartsDesc: 'Parts without specific type. These will be used as-is without salvage/re-merge.',
+        subtitle:     'Enter your Tech Parts by type and rank, then press "Calculate" to see optimal Twin Part combinations.<br>*Enter rank and count for each part type you own.<br>*Only parts of the same type can be salvaged and re-merged.<br>*"Target" means a Resonance Energy that reaches a powerful effect.<br>*Do not include parts currently equipped.',
+        typedPartsTitle: 'Part Input',
+        typedPartsDesc: 'Select the type and rank of each part you own.',
         labelE:       'Eternal',
         labelL0:      'Legend',
         labelL1:      'Legend+1',
@@ -302,11 +259,9 @@
       zh: {
         title:        '共振优化计算器',
         mainTitle:    '共振优化计算器',
-        subtitle:     '请输入你拥有的传奇及以上*科技零件数量和共振芯片数量，然后点击"计算"按钮，显示双生件的最优组合一览。<br>*如有需要，可能会使用史诗+3零件。<br>*"目标"是指能够激发强力效果的共振能量。<br>*请不要计入当前已装备的部件。<br>*如果包含倍率达到3.2倍及以上的组合，将会显示所需的材料数量。（在某些情况下，你可能需要分解科技零件。）<br><b>传奇+1~4部件可能需要视情况进行分解与再合成。</b>',
-        typedPartsTitle: '零件类型输入',
-        typedPartsDesc: '为每种零件类型输入等级和数量。只有相同类型的零件才能分解和再合成。',
-        genericPartsTitle: '通用零件（可选）',
-        genericPartsDesc: '没有指定类型的零件。这些将按原样使用，不进行分解/再合成。',
+        subtitle:     '按类型输入你拥有的科技零件，然后点击"计算"显示最优双生件组合。<br>*为每种零件类型输入等级和数量。<br>*只有相同类型的零件才能分解和再合成。<br>*"目标"是指能够激发强力效果的共振能量。<br>*请不要计入当前已装备的部件。',
+        typedPartsTitle: '零件输入',
+        typedPartsDesc: '选择你拥有的每个零件的类型和等级。',
         labelE:       '永恒',
         labelL0:      '传奇',
         labelL1:      '传奇+1',
@@ -349,11 +304,9 @@
       ko: {
         title:        '공진 최적화 계산기',
         mainTitle:    '공진 최적화 계산기',
-        subtitle:     '내 파츠 중 레전드 이상의 테크 파츠 개수와 공진 칩 보유 수를 입력하고 "Calculate"를 누르면, 트윈 파츠 최적 조합을 모두 표시합니다.<br>*필요시 에픽+3 파츠가 사용될 수 있습니다.<br>*"Target"는 강력한 효과가 발동되는 공진 에너지를 의미합니다.<br>*현재 장착 중인 파츠는 제외하고 입력하세요.<br>*배율이 3.2배 이상인 조합이 포함될 경우, 필요한 소재 수가 표시됩니다. (경우에 따라 테크 파츠를 분해해야 할 수 있습니다.)<br><b>레전드 1~4 파츠는 필요에 따라 분해 및 재조합이 필요합니다.</b>',
-        typedPartsTitle: '파츠 유형별 입력',
-        typedPartsDesc: '각 파츠 유형별로 등급과 개수를 입력하세요. 같은 유형의 파츠만 분해 및 재조합할 수 있습니다.',
-        genericPartsTitle: '일반 파츠 (선택사항)',
-        genericPartsDesc: '특정 유형이 없는 파츠. 분해/재조합 없이 그대로 사용됩니다.',
+        subtitle:     '보유한 테크 파츠를 유형별로 입력하고 "Calculate"를 누르면 최적 트윈 파츠 조합을 표시합니다.<br>*각 파츠 유형의 등급과 개수를 입력하세요.<br>*같은 유형의 파츠만 분해 및 재조합할 수 있습니다.<br>*"Target"는 강력한 효과가 발동되는 공진 에너지를 의미합니다.<br>*현재 장착 중인 파츠는 제외하고 입력하세요.',
+        typedPartsTitle: '파츠 입력',
+        typedPartsDesc: '보유한 각 파츠의 유형과 등급을 선택하세요.',
         labelE:       '이터널',
         labelL0:      '레전드',
         labelL1:      '레전드+1',
@@ -448,14 +401,6 @@
       document.getElementById('subtitle').innerHTML        = res.subtitle;
       document.getElementById('typed-parts-title').innerHTML = res.typedPartsTitle;
       document.getElementById('typed-parts-desc').innerHTML = res.typedPartsDesc;
-      document.getElementById('generic-parts-title').innerHTML = res.genericPartsTitle;
-      document.getElementById('generic-parts-desc').innerHTML = res.genericPartsDesc;
-      document.getElementById('label-e').innerHTML         = res.labelE;
-      document.getElementById('label-l0').innerHTML        = res.labelL0;
-      document.getElementById('label-l1').innerHTML        = res.labelL1;
-      document.getElementById('label-l2').innerHTML        = res.labelL2;
-      document.getElementById('label-l3').innerHTML        = res.labelL3;
-      document.getElementById('label-l4').innerHTML        = res.labelL4;
       document.getElementById('label-chip').innerHTML      = res.labelChip;
       document.getElementById('calculate-btn').innerHTML   = res.btnCalculate;
       document.getElementById('result-list').innerHTML     = res.resultList;
@@ -473,28 +418,21 @@
       for (const partType of partTypes) {
         for (const rank of rankOrder) {
           const inputId = `typed-${partType}-${rank}`;
-          const count = parseInt(document.getElementById(inputId).value) || 0;
-          if (count > 0) {
-            typedParts.push({
-              type: partType,
-              rank: rank,
-              count: count
-            });
+          const element = document.getElementById(inputId);
+          if (element) {
+            const count = parseInt(element.value) || 0;
+            if (count > 0) {
+              typedParts.push({
+                type: partType,
+                rank: rank,
+                count: count
+              });
+            }
           }
         }
       }
 
-      // Collect generic (untyped) parts
-      const untypedParts = {
-        E: parseInt(document.getElementById('input-E').value) || 0,
-        L0: parseInt(document.getElementById('input-L0').value) || 0,
-        L1: parseInt(document.getElementById('input-L1').value) || 0,
-        L2: parseInt(document.getElementById('input-L2').value) || 0,
-        L3: parseInt(document.getElementById('input-L3').value) || 0,
-        L4: parseInt(document.getElementById('input-L4').value) || 0
-      };
-
-      return { typed: typedParts, untyped: untypedParts };
+      return { typed: typedParts };
     }
 
     // --- 7. ユニークパーツID生成関数 ---
@@ -510,7 +448,6 @@
 
     let lookupReadyPromise = null;
     // --- 8. ページロード時に適用 ---
-    const inputIDs = ['input-E','input-L0','input-L1','input-L2','input-L3','input-L4','input-chip'];
     window.addEventListener('DOMContentLoaded', function() {
       updateTextsByLang();
       if (!lookupReadyPromise) {
@@ -521,13 +458,12 @@
             lookupCache = {};
           });
       }
-      // 復元
-      inputIDs.forEach(id=>{
-        const val = localStorage.getItem('calc_input_'+id);
-        if(val !== null) document.getElementById(id).value = val;
-        document.getElementById(id).addEventListener('input',e=>{
-          localStorage.setItem('calc_input_'+id, e.target.value);
-        });
+      // チップ入力の復元
+      const chipInput = document.getElementById('input-chip');
+      const savedChip = localStorage.getItem('calc_input_chip');
+      if (savedChip !== null) chipInput.value = savedChip;
+      chipInput.addEventListener('input', e => {
+        localStorage.setItem('calc_input_chip', e.target.value);
       });
 
       // 結果を画像として保存
@@ -705,9 +641,9 @@
       return results;
     }
 
-    // --- Typed Parts用のRecomposition Patterns生成 ---
+    // --- Typed Parts用のRecomposition Patterns生成（最適化版） ---
     function generateRecompositionPatternsForTypedParts(inventory) {
-      // Group typed parts by type
+      // Group typed parts by type (only non-zero counts)
       const byType = {};
       for (const part of inventory.typed) {
         if (!byType[part.type]) {
@@ -716,85 +652,64 @@
         byType[part.type][part.rank] = part.count;
       }
 
-      // Generate recomposition patterns for each type
+      const typeNames = Object.keys(byType);
+
+      // If no typed parts, return empty pattern
+      if (typeNames.length === 0) {
+        return [{}];
+      }
+
+      // Generate recomposition patterns for each type (heavily optimized)
       const patternsByType = {};
       for (const type in byType) {
         const partsOfType = byType[type];
         const converted = convertToL0Equivalent(partsOfType);
         const constraints = { maxRank: converted.maxRank, maxCounts: converted.maxCounts };
-        const recompPatterns = generateRecompositionPatterns(converted.L0Total, constraints);
 
-        // Limit patterns per type to avoid explosion
-        const MAX_PATTERNS_PER_TYPE = 50;
+        // Generate limited patterns - prioritize original and simple recompositions
+        let recompPatterns = generateRecompositionPatterns(converted.L0Total, constraints);
+
+        // Aggressive reduction: only keep first few patterns (original + few alternatives)
+        const MAX_PATTERNS_PER_TYPE = 3;  // Reduced from 50 to 3
         patternsByType[type] = recompPatterns.slice(0, MAX_PATTERNS_PER_TYPE);
       }
 
-      // Compute cartesian product of all type patterns
-      const typeNames = Object.keys(patternsByType);
-      if (typeNames.length === 0) {
-        // No typed parts, return single empty pattern
-        return [{}];
-      }
+      // Limit total combinations to prevent exponential explosion
+      const MAX_TOTAL_PATTERNS = 30;  // Reduced from 500 to 30
 
-      function cartesianProduct(arrays) {
-        if (arrays.length === 0) return [[]];
-        const [first, ...rest] = arrays;
-        const restProduct = cartesianProduct(rest);
-        const result = [];
-        for (const item of first) {
-          for (const restItem of restProduct) {
-            result.push([item, ...restItem]);
-          }
-        }
-        return result;
-      }
-
-      const patternArrays = typeNames.map(type =>
-        patternsByType[type].map(pattern => ({ type, pattern }))
-      );
-
-      const MAX_TOTAL_PATTERNS = 500;
-      const combinations = cartesianProduct(patternArrays).slice(0, MAX_TOTAL_PATTERNS);
-
-      // Convert to unified inventory format with unique IDs
+      // Generate combinations iteratively with early stopping
       const unifiedPatterns = [];
-      for (const combo of combinations) {
-        const unified = {};
 
-        // Add typed parts with unique IDs
-        for (const { type, pattern } of combo) {
+      // Start with a base pattern using first pattern of each type
+      function generateCombinations(typeIndex, currentUnified) {
+        if (unifiedPatterns.length >= MAX_TOTAL_PATTERNS) return;
+
+        if (typeIndex >= typeNames.length) {
+          unifiedPatterns.push({ ...currentUnified });
+          return;
+        }
+
+        const type = typeNames[typeIndex];
+        const patterns = patternsByType[type];
+
+        for (const pattern of patterns) {
+          if (unifiedPatterns.length >= MAX_TOTAL_PATTERNS) break;
+
+          const newUnified = { ...currentUnified };
           for (const rank in pattern) {
             if (pattern[rank] > 0) {
               const uniqueId = createUniquePartId(type, rank);
-              unified[uniqueId] = pattern[rank];
+              newUnified[uniqueId] = pattern[rank];
             }
           }
-        }
 
-        // Add untyped parts (no recomposition)
-        for (const rank of rankOrder) {
-          if (inventory.untyped[rank] > 0) {
-            const uniqueId = createUniquePartId('Generic', rank);
-            unified[uniqueId] = inventory.untyped[rank];
-          }
+          generateCombinations(typeIndex + 1, newUnified);
         }
-
-        unifiedPatterns.push(unified);
       }
 
-      // If no typed parts, still need to add untyped
-      if (typeNames.length === 0) {
-        const unified = {};
-        for (const rank of rankOrder) {
-          if (inventory.untyped[rank] > 0) {
-            const uniqueId = createUniquePartId('Generic', rank);
-            unified[uniqueId] = inventory.untyped[rank];
-          }
-        }
-        return [unified];
-      }
+      generateCombinations(0, {});
 
-      return unifiedPatterns;
+      return unifiedPatterns.length > 0 ? unifiedPatterns : [{}];
     }
 
     function findMatchingPatterns(availableParts) {
@@ -1305,7 +1220,7 @@
         if (idx === chips.length) return [[]];
         const combos = getCombosMemo(inventory, 3);
         let res = [];
-        const MAX_RESULTS = 300;
+        const MAX_RESULTS = 100;  // Reduced from 300 to 100
         for (let parts of combos) {
           const sortedKey = parts.slice().sort().join('|');
           if (patternSet && patternSet.size > 0) {
@@ -1331,7 +1246,7 @@
       for (let { cD, cR, cL, cS, cER, rem } of enumerateChipSplits(C_total)) {
         const dpMemo = new Map();
         const solutions = search(0, { ...inv }, [cD, cR, cL, cS, cER], dpMemo);
-        const limited = solutions.slice(0, 1500);
+        const limited = solutions.slice(0, 200);  // Reduced from 1500 to 200
         for (let sol of limited) {
           const [d, r, l, s, e] = sol;
           // 目標値を算出
